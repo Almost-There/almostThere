@@ -53,14 +53,14 @@
 .youTube {padding:0px 15px;width:630px;height:405px;}
 .youTube iframe {border:0;width:630px;height:405px;}
 #breadcrumbs {float:left;text-align:left;}
-#fileTable tr th a:link, .fileTable {color:#222222;text-decoration:none;}
-#fileTable tr th a:hover, .fileTable a:active {text:decoration:underline;}
+#fileTable tr th a:link, .fileTable {color:#222222;text-decoration:none}
+#fileTable tr th a:hover, .fileTable a:active {text:decoration:underline}
 
 .sourceCode {font-size:10px;padding-left:30px;width:900px;overflow:scroll;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;overflow:scroll;overflow-y:hidden;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAYCAYAAADd5VyeAAAAIUlEQVQYlWM8c+bMfwYkwMSABoaOAOP////PDAJ3UEMAAH+KB1vUYYu4AAAAAElFTkSuQmCC');background-repeat:repeat;background-size:auto 5px;background-size:auto 20px;background-position:0px;}
 .sourceCode span {font-family:Verdana;color:#333333 !important;}
 
 #settingsMenu {display:none;color:#EFEFEF;padding:0px;background-color:#232323;position:absolute;right:0px;top:22px}
-.settingsMenuBlock {width:200px;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:0px 0px 160px 0px}
+.settingsMenuBlock {width:200px;height:60px !important;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:0px 0px 160px 0px}
 #settingsButton {float:right;margin-right:6px;font-weight:bold;color:#EDEDED;}
 #settingsButton:hover {color:#FFFFFF;cursor:pointer;}
 
