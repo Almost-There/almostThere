@@ -1,0 +1,41 @@
+/* Important global styles */
+* {margin:0;padding:0;text-decoration:none;border:0;}
+body {color:#222222;font-size:14px;background-color:#111111;line-height:1.4;font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-weight:300;}
+body:before {content:"";height:100%;float:left;width:0;margin-top:-32767px;}
+html, body {height:100%;}
+/* MicroClearFix */
+.cf:before, .cf:after {content:' ';display: table;} .cf:after {clear: both;} 
+#ninjas {display:none;color:#000000;}
+
+.logo {position:absolute;top:30px;left:10px;z-index:+1;width:400px;height:40px;}
+
+
+#navBody * {list-style:none;}
+#navBody {float:left;width:100%;height:22px;margin:0 auto;background-color:#232323;}
+#navBody li {float:left;margin-left:6px;}
+#navBody li a {color:#888888;font-weight:bold;}
+#navBody li a:hover {color:#FFFFFF;cursor:pointer;}
+#navBody li:before {content:'/ ';font-weight:bold;}
+
+#world {display:block;overflow:hidden;margin:0;border:0;width:100%;height:125px;}
+
+#settingsMenu {display:none;color:#EFEFEF;width:200px;padding:20px;background-color:#232323;position:absolute;right:0px;top:147px}
+#settingsButton {float:right;margin-right:6px;font-weight:bold;color:#888888;}
+#settingsButton:hover {color:#FFFFFF;cursor:pointer;}
+
+.allOfTheThings {min-height: 100%;}
+.everything {overflow:auto;padding-bottom:20px;}
+
+#footer {position:relative;margin-top:-23px;height:20px;clear:both;}
+#footerLeft {margin-left:8px;float:left;}
+#footerRight {margin-right:8px;float:right;}
+
+/* colorPicker styles */
+#colorPicker {background-color:#222222;}
+#colorPicker a {font-size:30px;margin:1px;font-weight:bold;line-height:0.8;overflow:hidden;}
+#colorPicker a:hover {cursor:pointer;background-color:#444444;}
+#colorPicker a:active {cursor:pointer;background-color:#FFFFFF;}
+
+#frontBody {display:block;height:150px;width:175px;margin:10px 0px 0px 10px;float:left;}
+#frontBody h3 {font-size:20px;font-weight:500;padding:5px;}
+#frontBody ul {margin-left:20px;}
