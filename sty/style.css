@@ -50,7 +50,8 @@
 	#navBody li a:hover {cursor:pointer;color:#FFFFFF;}
 	#navBody li:before {content:'/ ';font-weight:bold;}
 
-
+.youTube {padding:0px 15px;width:630px;height:405px;}
+.youTube iframe {border:0;width:630px;height:405px;}
 #breadcrumbs {float:left;text-align:left;}
 #fileTable tr th a:link, .fileTable {color:#222222;text-decoration:none;}
 #fileTable tr th a:hover, .fileTable a:active {text:decoration:underline;}

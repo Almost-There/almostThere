@@ -1,6 +1,5 @@
 <?php
 
-
 // Use this variable with a dummy query string afterCSS/JS documents to prevent caching
 $pageSeed=rand(1, 1024);
 // colors chooseable in the ColorPicker
@@ -100,9 +99,7 @@ echo "
 			$class = min((int)log($bytes , $base) , count($si_prefix) - 1);
 	echo sprintf('%1.2f' , $bytes / pow($base,$class)) . ' ' . $si_prefix[$class] . ' is available.<br />';
 	echo "</div>";
-	
-	
-	
+
 	echo "<div class='settingsMenuBlock'>
 					<span class='fl cf'>Fancy animations</span>
 					<label class='switch fr'>
@@ -178,7 +175,7 @@ echo "
 </div><!-- allOfTheThings -->
 <div class='theColor' id='footer'>
 	<div class='fl'>Welcome  Guest</div>
-	<div class='fr'>&copy; Copyright LOL Almost - There</div>
+	<div class='fr'>Put stuff here</div>
 </div>";
 echo "\n<!-- /postBody -->\n";
 } 
