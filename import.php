@@ -92,14 +92,21 @@ echo "
 		echo "Welcome " . $_COOKIE["almostUser"] . "!<br>";
 	else
 		echo "<div class='settingsMenuBlock'><a class='theColor' href='http://www.almost-there.org/forums/misc.php?action=steam_login'>Click here to Login</a></div>";
-		echo "<div class='settingsMenuBlock'>";
-			$bytes = disk_free_space(".");
-			$si_prefix = array( 'B', 'KB', 'MB', 'GB', 'TB', 'EB', 'ZB', 'YB' );
-			$base = 1024;
-			$class = min((int)log($bytes , $base) , count($si_prefix) - 1);
-	echo sprintf('%1.2f' , $bytes / pow($base,$class)) . ' ' . $si_prefix[$class] . ' is available.<br />';
-	echo "</div>";
+/*
+// default onOff, Fancy Name, technical name.
+$configMatrix = array();
+$configMatrix[0][0] = "settingName";
+$configMatrix[1]['Fancy animations'] = "fancyAnimations";
+$configMatrix[1]['Show NSFW Things?'] = "nsfw";
+$configMatrix[1]['Sounds'] = "Sounds";
 
+
+foreach ($configMatrix as $v1) {
+    foreach ($v1 as $v2) {
+        echo "$v2\n";
+    }
+}
+*/
 	echo "<div class='settingsMenuBlock'>
 					<span class='fl cf'>Fancy animations</span>
 					<label class='switch fr'>
