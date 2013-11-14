@@ -1,24 +1,5 @@
 <?php
-/* IMPORT.PHP the finest in functionPacking Technology!
-	Code by Charlie Redden AKA LuckyMonkey; luckymonkey AT almost-there DOT org
-	For use only on almost-there.org
-	Currently under US Copyright, no alterations or public modifications allowed until final version.
-	
-	What the fuck this document is:
-		To give a space for functions and various arrays that will be needed when building pages
-		on almost-there.org
-		Almost-There has many versions of its website, this shall serve as the final version
-		to be built on and will be made to be as future proof and expandable as possible
-		to the point of possibly becoming its own CMS and website framework.
-	What this document is NOT: Evidence in court (hopefully)
-	
-	Guidelines: All functions must take into account all other functions when being written
-	this is not a strict rule, however allowing the inner workings of the website are consistent
-	and work dynamically with each other is a mainstay.
-	
-	http://forums.steampowered.com/forums/showthread.php?t=1430511
-	
-*/
+
 
 // Use this variable with a dummy query string afterCSS/JS documents to prevent caching
 $pageSeed=rand(1, 1024);
