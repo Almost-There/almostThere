@@ -50,7 +50,7 @@ function head() {
 	echo "
 		<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
 		<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'></script>
-		<script src='/new/scr/cookie.jquery.js'></script>";
+		<script src='/new/scr/cookie.jquery.js'></script>
 		<script src='/new/scr/animations.jquery.js?rnd=" . $pageSeed . "'></script>
 		<script src='/new/scr/bubbles.jquery.js?rnd=" . $pageSeed . "'></script>";
 	
