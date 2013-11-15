@@ -60,7 +60,7 @@
 .sourceCode span {font-family:Verdana;color:#333333 !important;}
 
 #settingsMenu {display:none;color:#EFEFEF;padding:0px;background-color:#232323;position:absolute;right:0px;top:22px}
-.settingsMenuBlock {width:200px;height:60px !important;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:0px 0px 160px 0px}
+.settingsMenuBlock {width:200px;border-left:1px dashed #757575;border-bottom:1px dashed #757575;}
 #settingsButton {float:right;margin-right:6px;font-weight:bold;color:#EDEDED;}
 #settingsButton:hover {color:#FFFFFF;cursor:pointer;}
 

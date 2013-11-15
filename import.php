@@ -18,7 +18,7 @@ function colorForm() {
 
 	echo "<div id='colorPicker'>";
 	//Set color clientside with jquery, while saving the cookie to be read on next load with PHP
-	foreach ($colorPick as $v) { echo "<a class='changeColor' style='background$v'></a>\n"; };
+	foreach ($colorPick as $v) { echo "<a class='changeColor' style='background:$v'></a>\n"; };
 	echo "\n<br /></div>";
 	
 echo "\n<!-- /colorPicker() -->"; };
