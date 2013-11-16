@@ -157,20 +157,6 @@ echo "<!-- preBody function End -->";
 //so they may have multiable sizes, content, backgrounds, ansd elements
 function squares( $squareTitle = "squareTitle \not defined!" ) { echo "<div class=' frontBody animateSquare theBGcolor cf'> <h3>" . $squareTitle . "</h3>"; echo "</div>"; }
 
-function displaySource() {
-	echo "
-	<br /><br /><br /><br />
-	<script>
-		$(document).ready(function(){
-		$(\".shSource\").click(function(){
-		$(\".sourceCode\").toggle();
-		}); });
-	</script>";
-	echo "<div  class='sourceCode' >";
-		show_source(__FILE__);
-	echo "</div>";
-};
-
 function postBody() {
 echo "\n<!-- /postBody()-->";
 

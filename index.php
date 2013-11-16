@@ -27,7 +27,7 @@ else { include 'import.php'; } ?>
 	$yt= $yts[$rYt];
 	echo $yt;
 	?>?autoplay=0&amp;theme=dark&amp;color=white" allowfullscreen></iframe>
-</div><br />
+</div><div style="width:100%;display:block;">
 <div style='height:200px;display:block;' class='cf'>
 <?
 	squares( $squareTitle='Forum Activity'		);

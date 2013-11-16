@@ -1,0 +1,15 @@
+W3lcum 2 the \and.0f.misf!t.c0d3
+
+function displaySource() {
+	echo "
+	<br /><br /><br /><br />
+	<script>
+		$(document).ready(function(){
+		$(\".shSource\").click(function(){
+		$(\".sourceCode\").toggle();
+		}); });
+	</script>";
+	echo "<div  class='sourceCode' >";
+		show_source(__FILE__);
+	echo "</div>";
+};
