@@ -10,7 +10,7 @@ else { include 'import.php'; } ?>
 
 <? preBody(); ?>
 
-<div class='fl youTube' >
+<div class='fl youTube cf' >
 	<iframe src="//www.youtube.com/embed/<? 
 	$yts = array(
 	"OKxaPkIx4WY", /* Oxygen - Moguai feat. Fiora */
@@ -27,7 +27,7 @@ else { include 'import.php'; } ?>
 	$yt= $yts[$rYt];
 	echo $yt;
 	?>?autoplay=0&amp;theme=dark&amp;color=white" allowfullscreen></iframe>
-</div>
+</div><br />
 <div style='height:200px;display:block;' class='cf'>
 <?
 	squares( $squareTitle='Forum Activity'		);

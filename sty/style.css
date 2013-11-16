@@ -133,13 +133,11 @@ h1 {margin: 0 0 10px 8px;padding:0;}
   5% {bottom: 0;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity: 1;}
   99% {filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity: 1;}
   100% {bottom: 100%;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity: 0;}}
-@-webkit-keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left: 2px;}}
-@-moz-keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left: 2px;}}
-@-ms-keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left: 2px;}}
-@keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left: 2px;}}
-@keyframes caret{ 
-	50%{ opacity:0.1; transform:scaleY(.8); } 
-}
+@-webkit-keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left:0px;}}
+@-moz-keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left:0px;}}
+@-ms-keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left:0px;}}
+@keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left:0px;}}
+@keyframes caret{ 50%{ opacity:0.1; transform:scaleY(.8); } }
 @-webkit-keyframes caret{
 	50%{ opacity:0.1; -webkit-transform:scaleY(.8); } 
 }
