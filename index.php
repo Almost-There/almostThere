@@ -39,8 +39,6 @@ else { include 'import.php'; } ?>
 	squares( $squareTitle='Global Settings'	); 
 ?>
 </div>
-<br /><br /><br /><br /><br /><br /><br /><br />
-<? displaySource(); ?>
 
 <? postBody(); ?>
 </body>
