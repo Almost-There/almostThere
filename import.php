@@ -64,7 +64,7 @@ function preBody() {
 	<div id='allOfTheThings'>
 	<div id='everything'>
 		<div id='header' class='theBGcolor'>
-			<div class='bubbles' style='z-index:+1;'>
+			<div class='bubbles' style='z-index:+1;'></div>
 			<!--<a class='bubble-toggle' href='#'>Bubbles Off</a>-->
 		</div>
 	<img class='logo cf' style='z-index:+2;' width='400' height='50' src='img/logo.png'  alt='Click here to return Home'/><span class='logo'  style='z-index:+2;font-size:12px;opacity:0.6;font-weight:bold;margin-left:60px;'><span class='msg-type' id='msg'>";
@@ -81,9 +81,7 @@ echo "
 		<li><a href='#servers'>Servers</a></li>
 		<li><a href='#users'>Users</a></li>
 	</ul>
-	<div id='settingsButton'>
-		<span id='settingsSpan'>Open Settings</span><span style='color:" . $theColor . "'>&#9881;</span>
-	</div>
+	<div id='settingsButton'><span id='settingsSpan'>Open Settings</span><span style='color:" . $theColor . "'>&#9881;</span></div>
 	<div id='settingsMenu'>";
 	echo "<div class='settingsMenuBlock'>";
 		colorForm();

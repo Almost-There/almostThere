@@ -38,7 +38,7 @@
 /*  Header Styles */
 	
 	.logo {position:absolute;top:20px;left:10px;z-index:+1;width:400px;height:50px;}
-	.msg-type {position:absolute;top:50px;}
+	.msg-type {position:absolute;top:50px;color:#222222;}
 	.theLinkColor a {padding-left:3px;padding-right:3px;text-decoration:underline;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 	
 /* Navigation Bar Styles */

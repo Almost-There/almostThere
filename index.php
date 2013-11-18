@@ -17,6 +17,8 @@ else { include 'import.php'; } ?>
 	"d1wGFgoocKk", /* Schoolboy - Project No-Autotune */
 	"v6_qfgHak0Q", /* Hellberg, Teqq & Taylr Renee - Air (Monstercat Remix) */
 	"n9nntf5_JXc", /* MSD - I Feel You (Bluescreens Remix) */
+	"lG5aSZBAuPs" /* XXYYXX - About You */
+	"2qN5ewi44N8" /* Motionless in WHite - AMERICA */
 	"uxelXPg961M", /* Mastodon - Divinations */
 	"FaJytyOISmE", /* Pasafire - Rubber Bands */
 	"VuwwvokPaQ", /* The Airplane Boys - Beau Monde */
