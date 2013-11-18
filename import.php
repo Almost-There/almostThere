@@ -82,7 +82,7 @@ echo "
 		<li><a href='#users'>Users</a></li>
 	</ul>
 	<div id='settingsButton'>
-		<span>Open Settings</span><span style='color:" . $theColor . "'>&#9881;</span>
+		<span id='settingsSpan'>Open Settings</span><span style='color:" . $theColor . "'>&#9881;</span>
 	</div>
 	<div id='settingsMenu'>";
 	echo "<div class='settingsMenuBlock'>";

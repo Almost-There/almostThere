@@ -1,10 +1,26 @@
 //Genisis
 $(function () {
+    var i = 0; //used in the settings toggle. Probably a better way to do this
 
-    $("#settingsButton").click(function () {
-        $("#settingsMenu").toggleClass("hover");
-        $("#settingsMenu").slideToggle(250);
+    $("#settingsButton").click(function() {
+        $("#settingsMenu").toggleClass( "hover" );
+        $("#settingsMenu").slideToggle( 250 );
+        switchSettingsText();
     });
+
+    function switchSettingsText() {
+        if (i % 2 == 0) {
+            $("#settingsSpan").html("Open Settings");
+        }
+        else if (i % 2 != 0) {
+            $("#settingsSpan").html("Close Settings");
+        }
+        else {
+            $("#settingsSpan").html("Close Settings");
+        }
+
+        i++;    
+    }
 
     var button = $('.changeColor');
     var color;

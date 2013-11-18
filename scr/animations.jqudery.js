@@ -140,6 +140,7 @@ var MyDiv2 = document.getElementById('first-text');
 	$("#settingsButton").click(function() {
 		$("#settingsMenu").toggleClass( "hover" );
 		$("#settingsMenu").slideToggle( 250 );
+		$("#settingsSpan").html("Close Settings");
 	});
 	
 	$(".todoButton").click(function() {
