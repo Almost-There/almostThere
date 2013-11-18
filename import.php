@@ -73,7 +73,7 @@ echo "</span></span></div>";
 echo "
 <div class='cf' id='navBody'> 
 	<ul class='animateNav'>
-		<li><a href='/new/index.php'>Squares></a></li>
+		<li><a href='/new/index.php'>Squares</a></li>
 		<li><a href='/forums/'>Forums</a></li>
 		<li><a href='/new/fridge.php'>Fridge</a></li>
 		<li><a href='steam://url/GroupSteamIDPage/103582791430342520'>Steam</a></li>
