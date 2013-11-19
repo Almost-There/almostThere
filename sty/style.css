@@ -45,9 +45,8 @@
 	#navBody * {list-style:none;}
 	#navBody {float:left;width:100%;height:22px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+10;position:relative;top:-42px;}
 	#navBody li {float:left;margin-left:6px;}
-	#navBody li a {color:#EDEDED;font-weight:bold;}
-		/* #navBody li a:hover:after {content: ' GO>>';} */
-	#navBody li a:hover {cursor:pointer;color:#FFFFFF;}
+	#navBody li a, #navBody li a:link {color:#EDEDED;font-weight:bold;text-decoration:none;}
+	#navBody li a:hover {cursor:pointer;color:#FFFFFF;text-decoration:underline;}
 	#navBody li:before {content:'/ ';font-weight:bold;}
 
 .youTube {padding:0px 15px;width:630px;height:370px;}
