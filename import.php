@@ -83,10 +83,8 @@ echo "
 	</ul>
 	<div id='settingsButton'><span id='settingsSpan'>Open Settings</span><span style='color:" . $theColor . "'>&#9881;</span></div>
 	<div id='settingsMenu'>";
-	echo "<div class='settingsMenuBlock'>";
-		colorForm();
-	echo "</div>";
-	echo "<div class='settingsMenuBlock'>\n<span>Hello " . $_SERVER['REMOTE_ADDR'] . "!</span></div>";
+		echo "<div class='settingsMenuBlock'>" . colorForm() . "</div>";
+	
 	if (isset($_COOKIE["almostUser"]))
 		echo "Welcome " . $_COOKIE["almostUser"] . "!<br>";
 	else
@@ -106,49 +104,19 @@ foreach ($configMatrix as $v1) {
     }
 }
 */
+
+// GO TO THE LAND OF MISFIT CODE TO GET MORE OF THESE
 	echo "<div class='settingsMenuBlock'>
-					<span class='fl cf'>Fancy animations</span>
+					<span class='fl cf'>Example Switch</span>
 					<label class='switch fr'>
 					  <input type='checkbox' class='switch-input' checked>
 					  <span class='switch-label' data-on='On' data-off='Off'></span>
 					  <span class='switch-handle'></span>
 					</label><br />
-				</div>
-				<div class='settingsMenuBlock'>				
-					<span class='fl cf'>Show NSFW things?</span>
-							<label class='switch fr'>
-							  <input type='checkbox' class='switch-input'>
-							  <span class='switch-label' data-on='Yes' data-off='No'></span>
-							  <span class='switch-handle'></span>
-							</label><br />
-				</div>
-				<div class='settingsMenuBlock'>				
-					<span class='fl cf'>Sounds</span>
-							<label class='switch fr'>
-							  <input type='checkbox' class='switch-input' checked>
-							  <span class='switch-label' data-on='On' data-off='Off'></span>
-							  <span class='switch-handle'></span>
-							</label><br />
-				</div>
-				<div class='settingsMenuBlock'>
-					<span class='fl cf'>Mobile Version</span>
-					<label class='switch fr'>
-					  <input type='checkbox' class='switch-input'>
-					  <span class='switch-label' data-on='On' data-off='Off'></span>
-					  <span class='switch-handle'></span>
-					</label><br />
-				</div>
-				<div class='settingsMenuBlock'>				
-					<span class='fl cf'>Developer Options</span>
-							<label class='switch fr'>
-							  <input type='checkbox' class='switch-input'>
-							  <span class='switch-label' data-on='On' data-off='Off'></span>
-							  <span class='switch-handle'></span>
-							</label><br />
 				</div>";
-	echo "<!-- End of SettingsMenu -->";
+	echo "<!-- /SettingsMenu() -->";
 echo "\n</div>\n</div>\n<div class='contentBody cf' >";
-echo "<!-- preBody function End -->";
+echo "<!-- /preBody() -->";
 }
 
 //This function will be expanded in the future to allow squares to be read from a configuration array
