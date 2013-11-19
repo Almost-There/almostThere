@@ -83,13 +83,15 @@ echo "
 	</ul>
 	<div id='settingsButton'><span id='settingsSpan'>Open Settings</span><span style='color:" . $theColor . "'>&#9881;</span></div>
 	<div id='settingsMenu'>";
-		echo "<div class='settingsMenuBlock'>" . colorForm() . "</div>";
-echo "<div class='settingsMenuBlock'>"
+		echo "<div class='settingsMenuBlock'>";
+			colorForm();
+		echo "</div>";
+		
+		echo "<div class='settingsMenuBlock'>";
 	if (isset($_COOKIE["almostUser"]))
 		echo "Welcome " . $_COOKIE["almostUser"] . "!<br>";
 	else
-		echo "<a class='theColor' href='http://www.almost-there.org/forums/misc.php?action=steam_login'>Click here to Login</a>";
-echo "</div>";
+		echo "<a class='theColor' href='http://almost-there.org/forums/misc.php?action=steam_login'>Click here to Login</a></div>";
 
 
 // GO TO THE LAND OF MISFIT CODE TO GET MORE OF THESE
