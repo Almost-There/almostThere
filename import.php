@@ -84,26 +84,13 @@ echo "
 	<div id='settingsButton'><span id='settingsSpan'>Open Settings</span><span style='color:" . $theColor . "'>&#9881;</span></div>
 	<div id='settingsMenu'>";
 		echo "<div class='settingsMenuBlock'>" . colorForm() . "</div>";
-	
+echo "<div class='settingsMenuBlock'>"
 	if (isset($_COOKIE["almostUser"]))
 		echo "Welcome " . $_COOKIE["almostUser"] . "!<br>";
 	else
-		echo "<div class='settingsMenuBlock'><a class='theColor' href='http://www.almost-there.org/forums/misc.php?action=steam_login'>Click here to Login</a></div>";
-/*
-// default onOff, Fancy Name, technical name.
-$configMatrix = array();
-$configMatrix[0][0] = "settingName";
-$configMatrix[1]['Fancy animations'] = "fancyAnimations";
-$configMatrix[1]['Show NSFW Things?'] = "nsfw";
-$configMatrix[1]['Sounds'] = "Sounds";
+		echo "<a class='theColor' href='http://www.almost-there.org/forums/misc.php?action=steam_login'>Click here to Login</a>";
+echo "</div>";
 
-
-foreach ($configMatrix as $v1) {
-    foreach ($v1 as $v2) {
-        echo "$v2\n";
-    }
-}
-*/
 
 // GO TO THE LAND OF MISFIT CODE TO GET MORE OF THESE
 	echo "<div class='settingsMenuBlock'>

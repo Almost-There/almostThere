@@ -48,3 +48,20 @@ function displaySource() {
 							  <span class='switch-handle'></span>
 							</label><br />
 				</div>
+
+
+				/*
+// default onOff, Fancy Name, technical name.
+$configMatrix = array();
+$configMatrix[0][0] = "settingName";
+$configMatrix[1]['Fancy animations'] = "fancyAnimations";
+$configMatrix[1]['Show NSFW Things?'] = "nsfw";
+$configMatrix[1]['Sounds'] = "Sounds";
+
+
+foreach ($configMatrix as $v1) {
+    foreach ($v1 as $v2) {
+        echo "$v2\n";
+    }
+}
+*/
