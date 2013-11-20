@@ -15,10 +15,14 @@ else { include 'import.php'; } ?>
 	"OKxaPkIx4WY", 		/* Oxygen - Moguai feat. Fiora */
 	"d1wGFgoocKk",		/* Schoolboy - Project No-Autotune */
 	"v6_qfgHak0Q", 		/* Hellberg, Teqq & Taylr Renee - Air (Monstercat Remix) */
-	"n9nntf5_JXc", 			/* MSD - I Feel You (Bluescreens Remix) */
+	"n9nntf5_JXc", 		/* MSD - I Feel You (Bluescreens Remix) */
 	"lG5aSZBAuPs",		/* XXYYXX - About You */
 	"2qN5ewi44N8",		/* Motionless in White - AMERICA */
 	"uxelXPg961M", 		/* Mastodon - Divinations */
+	"8rvdzrX3gZE",		/* Chromatics - Ceremony */
+	"7kCyPj6ZFTA",		/* AWOLNATION - Sail (Borgore Remix) */
+	"reHGIYHAR2Q",		/* Borgore - Nympho */
+	"fxvGHQHiY70",		/* Animal Collective - Peacebone */
 	"FaJytyOISmE", 		/* Pasafire - Rubber Bands */
 	"k8gpHUIZaVQ",		/* Boreta - Honey Heart */
 	"8wCgxkQj_Qo", 		/* Pretty Lights - I Know The Truth */
@@ -27,8 +31,8 @@ else { include 'import.php'; } ?>
 	"8mYd2X_9rrs",		/* Pendulum - Hold your Colour */
 	"VuwwvokPaQ", 		/* The Airplane Boys - Beau Monde */
 	"3LqsWSvnjGs", 		/* Deadmau5 - asdfghjkl */
-	"Z0NefmRM81Y", 	/* Sunchase feat. Yana Kay - Remember Me */
-	"Q1KAjQRdTUE");	/* Fatboy Slim - Right Here Right Now (Trumpdisco Remix) */
+	"Z0NefmRM81Y", 		/* Sunchase feat. Yana Kay - Remember Me */
+	"Q1KAjQRdTUE");		/* Fatboy Slim - Right Here Right Now (Trumpdisco Remix) */
 	$rYt = rand(0,count($yts)-1);
 	$yt= $yts[$rYt];
 	echo $yt;
