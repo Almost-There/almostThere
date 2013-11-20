@@ -2,59 +2,60 @@
 
 // Use this variable with a dummy query string afterCSS/JS documents to prevent caching
 $pageSeed=rand(1, 1024);
-// colors chooseable in the ColorPicker
-$colorPick = array("#EE5078", "#FF8039", "#FFA533", "#FFC233", "#FFE030", "#FFF933", "#D7FF20", "#15FF3E", "#03BCFF", "#00FF7F","#90EE90", "#3CB371", "#00FA9A", "#808000", "#2E8B57", "#FF0000", "#FF4500", "#FF8C00", "#FFA500", "#ED2939","#800000", "#A52A2A", "#D2691E", "#FF7F50", "#DC143C", "#E9967A", "#FF1493", "#B22222", "#FF69B4", "#CD5C5C","#F08080",  "#6495ED", "#008B8B", "#483D8B", "#00BFFF", "#1E90FF", "#ADD8E6", "#20B2AA", "#87CEFA", "#B0C4DE", "#76608A", "#7B68EE", "#4169E1", "#6A5ACD", "#708090","#4682B4", "#008080", "#40E0D0", "#0099CC");
 
-//If a user has a color in the setColor cookie we read it, otherwise use theColor
-if (isset($_COOKIE["setColor"])) $theColor=$_COOKIE["setColor"];
-else 
-	$theColor= "#0099FF";
-	$antiColor= "#111111";
-
-//Build ColorPicker
-function colorForm() {
-	echo "\n<!-- colorPicker() -->";
-	global $colorPick;
-
-	echo "<div id='colorPicker'>";
-	//Set color clientside with jquery, while saving the cookie to be read on next load with PHP
-	foreach ($colorPick as $v) { echo "<a class='changeColor' style='background:$v'></a>\n"; };
-	echo "\n</div>";
-	
-echo "\n<!-- /colorPicker() -->"; };
+/* Color Changing Function */
+		// colors chooseable in the ColorPicker
+		$colorPick = array("#EE5078", "#FF8039", "#FFA533", "#FFC233", "#FFE030", "#FFF933", "#D7FF20", "#15FF3E", "#03BCFF", "#00FF7F","#90EE90", "#3CB371", "#00FA9A", "#808000", "#2E8B57", "#FF0000", "#FF4500", "#FF8C00", "#FFA500", "#ED2939","#800000", "#A52A2A", "#D2691E", "#FF7F50", "#DC143C", "#E9967A", "#FF1493", "#B22222", "#FF69B4", "#CD5C5C","#F08080",  "#6495ED", "#008B8B", "#483D8B", "#00BFFF", "#1E90FF", "#ADD8E6", "#20B2AA", "#87CEFA", "#B0C4DE", "#76608A", "#7B68EE", "#4169E1", "#6A5ACD", "#708090","#4682B4", "#008080", "#40E0D0", "#0099CC");
+		//If a user has a color in the setColor cookie we read it, otherwise use theColor
+		if (isset($_COOKIE["setColor"])) $theColor=$_COOKIE["setColor"];
+		else 
+			$theColor= "#0099FF";
+			$antiColor= "#111111";
+		//Build ColorPicker
+		function colorForm() {
+			echo "\n<!-- colorForm() -->";
+			global $colorPick;
+			echo "<div id='colorPicker'>";
+			//Set color clientside with jquery, while saving the cookie to be read on next load with PHP
+			foreach ($colorPick as $v) { echo "<a class='changeColor' style='background:$v'></a>\n"; };
+			echo "\n</div>";
+			echo "\n<!-- /colorForm() -->\n";
+		};
 
 
 function head() {
 	global $pageSeed, $theColor, $antiColor;
-	echo "\n<!-- /head() -->";
-
-	echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n";
+	echo "\n<!-- head() -->\n";
 	
-	//THIS FUCKING SUCKS
-	echo " 
-		<style>
-			.theColor {color:" . $theColor . ";}
-			.theLinkColor a:link {color:" . $theColor . ";}
-			.switch-input:checked ~ .switch-label {background-color:" . $theColor . ";}
-				/* #navBody li a:hover {color:" . $theColor . ";} */
-			#navBody li a:hover:after {color:" . $theColor . ";}
-			.theLinkColor a:visited {color:" . $theColor . ";} .titleWindow {border: 2px solid " . $theColor . ";} a:hover {color:" . $theColor . ";}
-			.theLinkColor a:hover {color:" . $antiColor . ";background-color:" . $theColor . ";}
-			.theLinkColor a:active {color:" . $antiColor . ";background-color:" . $theColor . ";}
-			.theBGcolor, table th {color:#222222;background-color:" . $theColor . ";}	
-			#navBody li:before {color:" . $theColor . ";}
-		</style>
-		<!-- <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'> --> 
-		<link rel='stylesheet' type='text/css' href='/new/sty/style.css?rnd=" . $pageSeed . "'>";
-			
 	echo "
-		<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-		<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'></script>
-		<script src='/new/scr/cookie.jquery.js'></script>
-		<script src='/new/scr/animations.jquery.js?rnd=" . $pageSeed . "'></script>
-		<script src='/new/scr/bubbles.jquery.js?rnd=" . $pageSeed . "'></script>";
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
+		";
+	echo "
+			<link rel='stylesheet' type='text/css' href='/new/sty/dyn.style.php?rnd=" . $pageSeed . "'>
+			<style>\n
+				.theColor {color:" . $theColor . ";}
+				.theLinkColor a:link {color:" . $theColor . ";}
+				.switch-input:checked ~ .switch-label {background-color:" . $theColor . ";}
+				/* #navBody li a:hover {color:" . $theColor . ";} */
+				#navBody li a:hover:after {color:" . $theColor . ";}
+				theLinkColor a:visited {color:" . $theColor . ";} .titleWindow {border: 2px solid " . $theColor . ";} a:hover {color:" . $theColor . ";}
+				theLinkColor a:hover {color:" . $antiColor . ";background-color:" . $theColor . ";}
+				.theLinkColor a:active {color:" . $antiColor . ";background-color:" . $theColor . ";}
+				.theBGcolor, table th {color:#222222;background-color:" . $theColor . ";}
+				#navBody li:before {color:" . $theColor . ";}
+			</style>\n
+			<!-- <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'> --> 
+			<link rel='stylesheet' type='text/css' href='/new/sty/style.css?rnd=" . $pageSeed . "'>
+		";
+	echo "
+			<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>\n
+			<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'></script>\n
+			<script src='/new/scr/cookie.jquery.js'></script>\n
+			<script src='/new/scr/animations.jquery.js?rnd=" . $pageSeed . "'></script>\n
+			<script src='/new/scr/bubbles.jquery.js?rnd=" . $pageSeed . "'></script>\n
+		";
 	
-echo "\n<!-- /head() -->"; };
+echo "\n<!-- /head() -->\n"; };
 
 function preBody() {
 	echo "\n<!-- preBody() -->";
@@ -83,16 +84,12 @@ echo "
 	</ul>
 	<div id='settingsButton'><span id='settingsSpan'>Open Settings</span><span style='color:" . $theColor . "'>&#9881;</span></div>
 	<div id='settingsMenu'>";
+		echo "<div class='settingsMenuBlock'>"; colorForm(); echo "</div>";
 		echo "<div class='settingsMenuBlock'>";
-			colorForm();
-		echo "</div>";
-		
-		echo "<div class='settingsMenuBlock'>";
-	if (isset($_COOKIE["almostUser"]))
-		echo "Welcome " . $_COOKIE["almostUser"] . "!<br>";
-	else
-		echo "<a class='theColor' href='http://almost-there.org/forums/misc.php?action=steam_login'>Click here to Login</a></div>";
-
+			if (isset($_COOKIE["almostUser"]))
+				echo "Welcome " . $_COOKIE["almostUser"] . "!<br>";
+			else
+				echo "<a class='theColor' href='http://almost-there.org/forums/misc.php?action=steam_login'>Click here to Login</a></div>";
 
 // GO TO THE LAND OF MISFIT CODE TO GET MORE OF THESE
 	echo "<div class='settingsMenuBlock'>
@@ -109,16 +106,13 @@ echo "<!-- /preBody() -->";
 }
 
 //This function will be expanded in the future to allow squares to be read from a configuration array
-//so they may have multiable sizes, content, backgrounds, ansd elements
+//so they may have multiable sizes, content, backgrounds, and elements
 function squares( $squareTitle = "squareTitle \not defined!" ) { echo "<div class=' frontBody animateSquare theBGcolor cf'> <h3>" . $squareTitle . "</h3>"; echo "</div>"; }
-
 function postBody() {
 echo "\n<!-- /postBody()-->";
-
 //StickyFooter requires two closing div tags
 echo "
-<br /><br />
-			
+<br /><br />			
 		</div><!-- content body -->
 	</div><!-- everything -->
 </div><!-- allOfTheThings -->
@@ -129,5 +123,5 @@ echo "
 	</div>
 </div>";
 echo "\n<!-- /postBody -->\n";
-} 
+}
 ?>
