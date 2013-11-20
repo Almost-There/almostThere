@@ -72,7 +72,7 @@
 
 .code{background-repeat:repeat;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAIAAABFHomwAAAAF0lEQVQYlWPk5+dnIAUwkaSaHA2DEAAAORIAM3eYX7kAAAAASUVORK5CYII=');text-size:12px;color:#0099FF;border:3px solid #0099FF;display:block;}
 
-#footer {position:relative;margin-top:-23px;height:20px;clear:both;padding-left:8px;padding-right:8px;}
+#footer {position:relative;margin-top:-27.99px;height:28px;clear:both;padding-left:8px;padding-right:8px;background-color:rgba(22, 22, 22, 0.6);}
 
 .frontBody {display:block;overflow:hidden;height:0px;width:175px;margin:10px 0px 0px 10px;float:left;}
 .frontBody h3 {font-size:16px;padding:5px;font-weight:bold;}
