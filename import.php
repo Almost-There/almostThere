@@ -31,6 +31,7 @@ function head() {
 			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
 		";
 	echo "
+            <link rel='stylesheet' type='text/css' href='/new/sty/icomoon.css'>
 			<link rel='stylesheet' type='text/css' href='/new/sty/dyn.style.php?rnd=" . $pageSeed . "'>
 			<style>\n
 				.theColor {color:" . $theColor . ";}
