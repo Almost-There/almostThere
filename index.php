@@ -7,7 +7,6 @@ else { include 'import.php'; } ?>
 <title class='dynTitle'>Almost There - Home</title>
 </head>
 <body>
-
 <? preBody(); ?>
 <br /><br /><div class='fl youTube cf' >
 	<iframe src="//www.youtube.com/embed/<? 
@@ -46,10 +45,9 @@ else { include 'import.php'; } ?>
 	squares( $squareTitle='New Users'			);
 	squares( $squareTitle='Recent Logins'		); 
 	squares( $squareTitle='Currently Online'	);
-	squares( $squareTitle='Global Settings'	); 
+	squares( $squareTitle='Global Settings'		); 
 ?>
 </div>
-
 <? postBody(); ?>
 </body>
 </html>
