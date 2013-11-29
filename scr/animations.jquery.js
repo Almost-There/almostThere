@@ -133,4 +133,11 @@ $(function () {
         })();
     }
 	
+    window.onresize = displayWindowSize;
+    window.onload = displayWindowSize;
+    function displayWindowSize() {
+        $( window ).width()
+    document.getElementById("dimensions").innerHTML = myWidth + "x" + myHeight;
+    };
+
 });
