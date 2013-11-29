@@ -132,7 +132,5 @@ $(function () {
                 }, 50, "linear", arguments.callee);
         })();
     }
-
-	};
 	
 });
