@@ -134,3 +134,10 @@ $(function () {
     }
 	
 });
+
+window.onresize = displayWindowSize;
+window.onload = displayWindowSize;
+function displayWindowSize() {
+    document.write( $( window ).width() )
+    document.getElementById("dimensions").innerHTML = myWidth + "x" + myHeight;
+};
