@@ -65,3 +65,10 @@ foreach ($configMatrix as $v1) {
     }
 }
 */
+
+
+    function myFunction()
+    {
+    var x = "Total Width: " + screen.width + "px";
+    document.getElementById("dimensions").innerHTML=x;
+    }

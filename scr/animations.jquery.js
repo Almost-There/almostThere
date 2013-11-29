@@ -132,12 +132,7 @@ $(function () {
                 }, 50, "linear", arguments.callee);
         })();
     }
-	
-	window.onresize = displayWindowSize;
-	window.onload = displayWindowSize;
-	function displayWindowSize() {
 
-    document.getElementById("dimensions").innerHTML = myWidth + "x" + myHeight;
 	};
 	
 });
