@@ -119,7 +119,7 @@ echo "
 </div><!-- allOfTheThings -->
 <div class='theBGcolor'>
 	<div id='footer' class='theColor'>
-		<div class='fl'>Welcome  Guest</div>
+		<div class='fl' id='dimensions'></div>
 		<div class='fr'><a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a></div>
 	</div>
 </div>";
