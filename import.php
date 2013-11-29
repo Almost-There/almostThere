@@ -120,7 +120,7 @@ echo "
 <div class='theBGcolor'>
 	<div id='footer' class='theColor'>
 		<div class='fl'>Welcome  Guest</div>
-		<div class='fr'>Put stuff here</div>
+		<div class='fr'><a href='https://github.com/Almost-There/almostThere' class='icon-github5'></a></div>
 	</div>
 </div>";
 echo "\n<!-- /postBody -->\n";
