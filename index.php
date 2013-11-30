@@ -8,7 +8,7 @@ else { include 'import.php'; } ?>
 </head>
 <body>
 <? preBody(); ?>
-<br /><br /><div class='fl youTube cf' >
+<div class='flex-item ninjas fl youTube cf' >
 	<iframe src="//www.youtube.com/embed/<? 
 	$yts = array(
 	"OKxaPkIx4WY", 		/* Oxygen - Moguai feat. Fiora */
@@ -36,7 +36,7 @@ else { include 'import.php'; } ?>
 	$yt= $yts[$rYt];
 	echo $yt;
 	?>?autoplay=0&amp;theme=dark&amp;color=white" allowfullscreen></iframe>
-</div><div style="width:100%;display:block;">
+</div>
 <div style='height:200px;display:block;' class='cf'>
 <?
 	squares( $squareTitle='Forum Activity'		);
@@ -47,7 +47,6 @@ else { include 'import.php'; } ?>
 	squares( $squareTitle='Currently Online'	);
 	squares( $squareTitle='Global Settings'		); 
 ?>
-</div>
 <? postBody(); ?>
 </body>
 </html>

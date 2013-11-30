@@ -66,6 +66,7 @@ function preBody() {
 	echo "
 	<div id='allOfTheThings'>
 	<div id='everything'>
+		<header>
 		<div id='header' class='theBGcolor'>
 			<div class='bubbles' style='z-index:+1;'></div>
 			<!--<a class='bubble-toggle' href='#'>Bubbles Off</a>-->
@@ -103,13 +104,13 @@ echo "
 					</label><br />
 				</div>";
 	echo "<!-- /SettingsMenu() -->";
-echo "\n</div>\n</div>\n<div class='contentBody cf' >";
+echo "\n</div>\n</div>\n</header>\n<div class='flex-container contentBody cf' >";
 echo "<!-- /preBody() -->";
 }
 
 //This function will be expanded in the future to allow squares to be read from a configuration array
 //so they may have multiable sizes, content, backgrounds, and elements
-function squares( $squareTitle = "squareTitle \not defined!" ) { echo "<div class=' frontBody animateSquare theBGcolor cf'> <h3>" . $squareTitle . "</h3>"; echo "</div>"; }
+function squares( $squareTitle = "squareTitle \not defined!" ) { echo "<div class='flex-item frontBody animateSquare theBGcolor cf'> <h3>" . $squareTitle . "</h3>"; echo "</div>"; }
 function postBody() {
 echo "\n<!-- /postBody()-->";
 //StickyFooter requires two closing div tags
@@ -119,6 +120,7 @@ echo "
 	</div><!-- everything -->
 </div><!-- allOfTheThings -->
 <div class='theBGcolor'>
+	<footer>
 	<div id='footer' class='theColor'>
 		<div class='fl' id='dimensions'><script>        
 		window.onresize = displayWindowSize;
@@ -132,6 +134,7 @@ echo "
 			<a href='https://github.com/Almost-There/almostThere' class='icon-facebook2'></a>
 			</div>
 	</div>
+	</footer>
 </div>";
 echo "\n<!-- /postBody -->\n";
 }
