@@ -1,15 +1,6 @@
 //Genisis
 $(function () {
 
-    function browserWidth () {
-        window.onresize = displayWindowSize;
-        window.onload = displayWindowSize;
-        function displayWindowSize() {
-            $( window ).width()
-        document.getElementById("dimensions").innerHTML = myWidth + "x" + myHeight;
-        };
-    }
-
     var i = 0; //used in the settings toggle. Probably a better way to do this
 
     $("#settingsButton").click(function() {
