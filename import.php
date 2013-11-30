@@ -41,6 +41,7 @@ function head() {
 				#navBody li a:hover:after {color:" . $theColor . ";}
 				theLinkColor a:visited {color:" . $theColor . ";} .titleWindow {border: 2px solid " . $theColor . ";} a:hover {color:" . $theColor . ";}
 				theLinkColor a:hover {color:" . $antiColor . ";background-color:" . $theColor . ";}
+				icn a:hover {color:" . $theColor . ";}
 				.theLinkColor a:active {color:" . $antiColor . ";background-color:" . $theColor . ";}
 				.theBGcolor, table th {color:#222222;background-color:" . $theColor . ";}
 				#navBody li:before {color:" . $theColor . ";}
@@ -124,8 +125,12 @@ echo "
         window.onload = displayWindowSize;
         function displayWindowSize() {
         	document.getElementById ('dimensions').innerHTML = $( window ).width();
-        };</script</div>
-		<div class='icn fr'><a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a></div>
+        };</script></div>
+		<div class='fade icn fr'>
+			<a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a>
+			<a href='steam://url/GroupSteamIDPage/103582791430342520' class='icon-steam2'></a>
+			<a href='https://github.com/Almost-There/almostThere' class='icon-facebook2'></a>
+			</div>
 	</div>
 </div>";
 echo "\n<!-- /postBody -->\n";
