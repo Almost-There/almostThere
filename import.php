@@ -125,7 +125,7 @@ echo "
         function displayWindowSize() {
         	document.getElementById ('dimensions').innerHTML = $( window ).width();
         };</script</div>
-		<div class='fr'><a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a></div>
+		<div class='icn fr'><a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a></div>
 	</div>
 </div>";
 echo "\n<!-- /postBody -->\n";
