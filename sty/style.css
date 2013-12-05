@@ -1,9 +1,12 @@
 ﻿/* Font Imports */
-	@import url('/sty/neoSans.css');
+	@import url('sty/neoSans.css');
 /* Important global styles */
 	* {margin:0;padding:0;text-decoration:none;border:0;}
-	body {color:#FFFFFF;font-size:14px;background-color:#111111;line-height:1.4;font-family: 'NeoSans';font-weight:200;}
+	body {color:#FFFFFF;font-size:14px;background-color:#111111;line-height:1.4;font-family: 'neoSans';font-weight:200;}
 	body:before {content:"";height:100%;float:left;width:0;margin-top:-32767px;}
+
+/* ClearFix */
+	.cf:before, .cf:after {content:' ';display: table;} .cf:after {clear: both;} 
 
 /* Reset HTML Styles */
 	a, a:link {color:#FFFFFF;text-decoration:underline;}
@@ -33,8 +36,6 @@
 	.small {font-size:9px;}
 	.ninjas {display:none;color:#000000;} /* Hide dat shit */
 
-/* ClearFix */
-	.cf:before, .cf:after {content:' ';display: table;} .cf:after {clear: both;}
 
 /* Link Fading Styles NOT WORKING */
 	.fade {-o-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -khtml-transition: all 0.5s linear; -webkit-transition: all 0.5s linear; -ms-transition: all 0.5; linear;transition: all 0.5s linear;}
