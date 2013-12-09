@@ -23,7 +23,7 @@ else { include 'import.php'; } ?>
 	"fxvGHQHiY70",		/* Animal Collective - Peacebone */
 	"FaJytyOISmE", 		/* Pasafire - Rubber Bands */
 	"k8gpHUIZaVQ",		/* Boreta - Honey Heart */
-	"HEkLU2AiJCs"		/* Shiny Toy Guns - Stripped */
+	"HEkLU2AiJCs",		/* Shiny Toy Guns - Stripped */
 	"8wCgxkQj_Qo", 		/* Pretty Lights - I Know The Truth */
 	"f9EM8T5K6d8",		/* Modstep - Another Day (Xcore Remix) */
 	"PQ1PU1XOQIk",		/* Styles of Beyond - Bleach */

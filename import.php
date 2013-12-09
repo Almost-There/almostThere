@@ -27,9 +27,8 @@ function head() {
 	global $pageSeed, $theColor, $antiColor;
 	echo "\n<!-- head() -->\n";
 	
-	echo "
-			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
-		";
+	echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n";
+
 	echo "
 			<link rel='stylesheet' type='text/css' href='/new/sty/dyn.style.php?rnd=" . $pageSeed . "'>
 			<style>\n
@@ -85,7 +84,7 @@ echo "
 		<li><a href='#users'>Users</a></li>
 	</ul>
 	<div id='settingsButton'>
-		<span id='settingsSpan'><a class='icn icon-plus'></a></span> Settings
+		<span id='settingsSpan'> Settings</span>
 	</div>
 	<div id='settingsMenu'>";
 		echo "<div class='settingsMenuBlock'>"; colorForm(); echo "</div>";
