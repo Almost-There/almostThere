@@ -167,33 +167,6 @@ $quotes = array(
 "4chan won't even fuck with us", 
 "Protected by CloudFlare!<br />because we need it...",
 "Like Cuba, but with respawn!",
-"That was just sheer thirst, it had nothing to do with alcoholism",
-"SOPA doesn't know shit", 
-"If Jesus calls, We aren't here",
-"Too busy playing TF2 to see your probation officer",
-"This website uses cookies to store data on your computer, I'm okay with this",
-"... And the hidden bonus Track!",
-"By the time you read this you've already read it",
-"Kenny and Orca sittin in a tree",
-"Someday love will find you",
-"So here we are again. It's always such a pleasure!",
-"scratch here to reveal today's status!",
-"scratch here to reveal today's winner!",
-"Open 24 hours a day, 7 days a week at Almost-There.org!",
-"crap on a cracker!",
-"we make this look good!",
-"always keep a backup of the live environment!",
-"the cake is ALWAYS a lie",
-"If the laws of physics do not not apply in the future, god help you!",
-"sarcasm self-test complete *boop*",
-"We're sort of like 7-Eleven - We're not always doing business, But we're always open.");
-$rQuote = rand(0,count($quotes)-1);
-$quote = $quotes[$rQuote];
-echo $quote;
-
-
-
-/* Begin the NSFW quotes (Oh baby!) 
 "A Sexual Explosion!", 
 "Daddy needs some lovin'", 
 "You have reached ''Bitch Status'",
@@ -242,7 +215,34 @@ echo $quote;
 "That minority over there using a bike must have bought it himself.",
 "Free baby with purchase!",
 "That white stuff all over your convertable's seats isn't bird poop...",
-"Have you seen Jesus?<br />Yeah I saw him yesturday and he was pissed!", */
+"Have you seen Jesus?<br />Yeah I saw him yesturday and he was pissed!",
+"That was just sheer thirst, it had nothing to do with alcoholism",
+"SOPA doesn't know shit", 
+"If Jesus calls, We aren't here",
+"Too busy playing TF2 to see your probation officer",
+"This website uses cookies to store data on your computer, I'm okay with this",
+"... And the hidden bonus Track!",
+"By the time you read this you've already read it",
+"Kenny and Orca sittin in a tree",
+"Someday love will find you",
+"So here we are again. It's always such a pleasure!",
+"scratch here to reveal today's status!",
+"scratch here to reveal today's winner!",
+"Open 24 hours a day, 7 days a week at Almost-There.org!",
+"crap on a cracker!",
+"we make this look good!",
+"always keep a backup of the live environment!",
+"the cake is ALWAYS a lie",
+"If the laws of physics do not not apply in the future, god help you!",
+"sarcasm self-test complete *boop*",
+"We're sort of like 7-Eleven - We're not always doing business, But we're always open.");
+$rQuote = rand(0,count($quotes)-1);
+$quote = $quotes[$rQuote];
+echo $quote;
+
+
+
+/* Begin the NSFW quotes (Oh baby!)  */
 
 ?>
 <!-- End of quotes.sharky.php -->
