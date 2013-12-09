@@ -85,7 +85,7 @@ echo "
 		<li><a href='#users'>Users</a></li>
 	</ul>
 	<div id='settingsButton'>
-		<span id='settingsSpan'>Open Settings<a class='icn icon-cog2'></a></span>
+		<span id='settingsSpan'><a class='icn icon-plus'></a></span> Settings
 	</div>
 	<div id='settingsMenu'>";
 		echo "<div class='settingsMenuBlock'>"; colorForm(); echo "</div>";

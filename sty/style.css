@@ -1,17 +1,11 @@
 ﻿/* Font Imports */
 	@import url('neoSans.css');
 	@import url('icomoon.css');
+
 /* Important global styles */
 	* {margin:0;padding:0;text-decoration:none;border:0;}
 	body {color:#FFFFFF;font-size:14px;background-color:#111111;line-height:1.4;font-family: 'neoSans';font-weight:200;}
 	body:before {content:"";height:100%;float:left;width:0;margin-top:-32767px;}
-
-/* Font AntiAliasing */
-	.antialias { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
-
-/* ClearFix */
-	.cf:before, .cf:after {content:' ';display: table;} .cf:after {clear: both;} 
-
 /* Reset HTML Styles */
 	a, a:link {color:#FFFFFF;text-decoration:underline;}
 	a:hover {text-decoration:none;}
@@ -29,6 +23,12 @@
 	hr {margin-top:3px;margin-bottom:3px;width:100%;border-bottom:1px dashed #757575;}
 	ul li {margin-left:20px;}
 
+/* Font AntiAliasing */
+	.antialias { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+
+/* ClearFix */
+	.cf:before, .cf:after {content:' ';display: table;} .cf:after {clear: both;} 
+
 /* Quick Styles */
 	.b {font-weight:bold;}
 	.ul {text-decoration:underline;} /* Not to be confused with Unordered list! */
@@ -41,14 +41,7 @@
 	.ninjas {display:none;color:#000000;} /* Hide dat shit */
 
 /* Flexbox Styles */
-	.flex-world {display: flex;
-		width:100%;height:100%;
-		flex-wrap:wrap;
-		flex-direction:column;
-		justify-content:flex-start;
-		float:left;
-		display: -webkit-flex;
-			}
+	.flex-world {display: flex;width:100%;height:100%;flex-wrap:wrap;flex-direction:column;justify-content:flex-start;float:left;display: -webkit-flex;}
 
 /* Divine body layout Settings */
 	#allOfTheThings {min-height: 100%;}
@@ -95,6 +88,7 @@
 /* Settings Menu Styles */
 	#settingsMenu {display:none;color:#EFEFEF;padding:0px;background-color:#232323;position:absolute;right:0px;top:22px}
 	#settingsButton {float:right;margin-right:6px;}
+	#settingsButton .icn {position:relative;top:2px;}
 	#settingsButton:hover {color:#FFFFFF;cursor:pointer;}
 	.settingsMenuBlock {width:200px;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:10px;}
 	.settingsMenuBlock #colorPicker {height:180px;width:200px;}

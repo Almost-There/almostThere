@@ -10,16 +10,9 @@ $(function () {
     });
 
     function switchSettingsText() {
-        if (i % 2 == 0) {
-            $("#settingsSpan").html("Open Settings");
-        }
-        else if (i % 2 != 0) {
-            $("#settingsSpan").html("Close Settings");
-        }
-        else {
-            $("#settingsSpan").html("Close Settings");
-        }
-
+        if (i % 2 == 0) {$("#settingsSpan").html("<a class='icn icon-plus'></a> ");}
+        else if (i % 2 != 0) {$("#settingsSpan").html("<a class='icn icon-close'></a> ");}
+        else {$("#settingsSpan").html("<a class='icn icon-close'></a> ");}
         i++;    
     }
 
