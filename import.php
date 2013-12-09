@@ -84,7 +84,9 @@ echo "
 		<li><a href='#servers'>Servers</a></li>
 		<li><a href='#users'>Users</a></li>
 	</ul>
-	<div id='settingsButton'><span id='settingsSpan'>Open Settings</span><span class='icn' style='color:" . $theColor . "'>&nbsp;<a class='icn icon-cog2'></a></span></div>
+	<div id='settingsButton'>
+		<span id='settingsSpan'>Open Settings<a class='icn icon-cog2'></a></span>
+	</div>
 	<div id='settingsMenu'>";
 		echo "<div class='settingsMenuBlock'>"; colorForm(); echo "</div>";
 		echo "<div class='settingsMenuBlock'>";

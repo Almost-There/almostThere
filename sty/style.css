@@ -40,24 +40,17 @@
 	.small {font-size:9px;}
 	.ninjas {display:none;color:#000000;} /* Hide dat shit */
 
-
-/* Link Fading Styles NOT WORKING */
-	.fade {-o-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -khtml-transition: all 0.5s linear; -webkit-transition: all 0.5s linear; -ms-transition: all 0.5; linear;transition: all 0.5s linear;}
-
-/* Flexbox Styles NOT WORKING */
-	.flex-world {
-		padding:10px;
-		width:100%;
-		height:100%;
+/* Flexbox Styles */
+	.flex-world {display: flex;
+		width:100%;height:100%;
 		flex-wrap:wrap;
 		flex-direction:column;
 		justify-content:flex-start;
 		float:left;
 		display: -webkit-flex;
-		display: flex;
-				}
+			}
 
-/* Divine body layout settings */
+/* Divine body layout Settings */
 	#allOfTheThings {min-height: 100%;}
 	#everything {padding-bottom:20px;}
 	#header {display:block;overflow:hidden;margin:0;border:0;width:100%;height:137px;}
@@ -80,16 +73,16 @@
 	a:hover .icn {text-decoration:none;}
 
 /* Navigation Bar Styles */
-	#navBody * {list-style:none;}
+	#navBody * {list-style:none;font-size:16px;}
 	#navBody {float:left;width:100%;height:22px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+10;position:relative;top:-42px;}
 	#navBody li {float:left;margin-left:6px;}
-	#navBody li a, #navBody li a:link {color:#EDEDED;font-weight:bold;text-decoration:none;}
-	#navBody li a:hover {cursor:pointer;color:#FFFFFF;text-decoration:underline;}
+	#navBody li a, #navBody li a:link {color:#D6D6D6;text-decoration:none;}
+	#navBody li a:hover {cursor:pointer;text-decoration:none;text-shadow: 0 0 4px #FFFFFF;color:#FFFFFF;}
 	#navBody li:before {content:'/ ';font-weight:bold;}
 
 /* Video Player Styles */
-	.youTube {padding:0px 15px;width:630px;height:370px;}
-	.youTube iframe {border:0;width:630px;height:370px;}
+	.youTube {width:650px;height:390px;overflow:hidden;}
+	.youTube iframe {border:0;width:630px;height:370px;padding:10px;}
 
 /* Table Styles */	
 	#fileTable tr th a:link, .fileTable {color:#222222;text-decoration:none}
@@ -101,12 +94,12 @@
 
 /* Settings Menu Styles */
 	#settingsMenu {display:none;color:#EFEFEF;padding:0px;background-color:#232323;position:absolute;right:0px;top:22px}
-	#settingsButton {float:right;margin-right:6px;font-weight:bold;color:#EDEDED;}
+	#settingsButton {float:right;margin-right:6px;}
 	#settingsButton:hover {color:#FFFFFF;cursor:pointer;}
 	.settingsMenuBlock {width:200px;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:10px;}
 	.settingsMenuBlock #colorPicker {height:180px;width:200px;}
 
-/* colorPicker styles */
+/* Color Picker Styles */
 	#colorPicker {background-color:#222222;}
 	#colorPicker a {float:left;width:18px;height:18px;border:4px solid #222222;display:block;}
 	#colorPicker a:hover {cursor:pointer;border:4px solid #444444;}

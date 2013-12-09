@@ -310,3 +310,7 @@ foreach ($configMatrix as $v1) {
 -	
 -	
 -	})
+
+
+/* Link Fading Styles NOT WORKING */
+	.fade {-o-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -khtml-transition: all 0.5s linear; -webkit-transition: all 0.5s linear; -ms-transition: all 0.5; linear;transition: all 0.5s linear;}
