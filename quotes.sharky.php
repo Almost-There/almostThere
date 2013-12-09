@@ -1,7 +1,7 @@
 <!-- Begining of qutoes.sharky.php -->
 <?php
 $quotes = array(
-"Almost-There, driving you're gaming addiction... One game at a time!",
+"Almost-There, driving your gaming addiction... One game at a time!",
 "She is offending my thinkin' words with her talkin' brains",
 "I said whale jine ??",
 "We know what It feels like to chew five gum...",
