@@ -13,17 +13,17 @@ else { include 'import.php'; } ?>
 	$yts = array(
 	"OKxaPkIx4WY", 		/* Oxygen - Moguai feat. Fiora */
 	"d1wGFgoocKk",		/* Schoolboy - Project No-Autotune */
-	"v6_qfgHak0Q", 		/* Hellberg, Teqq & Taylr Renee - Air (Monstercat Remix) */
 	"n9nntf5_JXc", 		/* MSD - I Feel You (Bluescreens Remix) */
 	"lG5aSZBAuPs",		/* XXYYXX - About You */
+	"lM7XgAmcXp8",		/* InnerPartySystem - American Trash */
 	"2qN5ewi44N8",		/* Motionless in White - AMERICA */
 	"uxelXPg961M", 		/* Mastodon - Divinations */
-	"8rvdzrX3gZE",		/* Chromatics - Ceremony */
 	"7kCyPj6ZFTA",		/* AWOLNATION - Sail (Borgore Remix) */
 	"reHGIYHAR2Q",		/* Borgore - Nympho */
 	"fxvGHQHiY70",		/* Animal Collective - Peacebone */
 	"FaJytyOISmE", 		/* Pasafire - Rubber Bands */
 	"k8gpHUIZaVQ",		/* Boreta - Honey Heart */
+	"HEkLU2AiJCs"		/* Shiny Toy Guns - Stripped */
 	"8wCgxkQj_Qo", 		/* Pretty Lights - I Know The Truth */
 	"f9EM8T5K6d8",		/* Modstep - Another Day (Xcore Remix) */
 	"PQ1PU1XOQIk",		/* Styles of Beyond - Bleach */
