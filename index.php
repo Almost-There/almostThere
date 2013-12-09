@@ -8,7 +8,7 @@ else { include 'import.php'; } ?>
 </head>
 <body>
 <? preBody(); ?>
-<div class='flex-item ninjas fl youTube cf' >
+<div class='fl youTube' >
 	<iframe src="//www.youtube.com/embed/<? 
 	$yts = array(
 	"OKxaPkIx4WY", 		/* Oxygen - Moguai feat. Fiora */
@@ -37,7 +37,7 @@ else { include 'import.php'; } ?>
 	echo $yt;
 	?>?autoplay=0&amp;theme=dark&amp;color=white" allowfullscreen></iframe>
 </div>
-<div style='height:200px;display:block;' class='cf'>
+<div class='fl'>
 <?
 	squares( $squareTitle='Forum Activity'		);
 	squares( $squareTitle='Steam Activity'		);
@@ -46,7 +46,8 @@ else { include 'import.php'; } ?>
 	squares( $squareTitle='Recent Logins'		); 
 	squares( $squareTitle='Currently Online'	);
 	squares( $squareTitle='Global Settings'		); 
-?>
+?></div>
+<div class='fl' style='font-size:10px;'>Look at how fucking pretty this website is with this antialiased fucking font, this means that even though this text is like 10 pixels high you can still read it crisp as fuck</div>
 <? postBody(); ?>
 </body>
 </html>

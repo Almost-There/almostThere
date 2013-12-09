@@ -1,9 +1,13 @@
 ﻿/* Font Imports */
-	@import url('sty/neoSans.css');
+	@import url('neoSans.css');
+	@import url('icomoon.css');
 /* Important global styles */
 	* {margin:0;padding:0;text-decoration:none;border:0;}
 	body {color:#FFFFFF;font-size:14px;background-color:#111111;line-height:1.4;font-family: 'neoSans';font-weight:200;}
 	body:before {content:"";height:100%;float:left;width:0;margin-top:-32767px;}
+
+/* Font AntiAliasing */
+	.antialias { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 
 /* ClearFix */
 	.cf:before, .cf:after {content:' ';display: table;} .cf:after {clear: both;} 
@@ -41,8 +45,17 @@
 	.fade {-o-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -khtml-transition: all 0.5s linear; -webkit-transition: all 0.5s linear; -ms-transition: all 0.5; linear;transition: all 0.5s linear;}
 
 /* Flexbox Styles NOT WORKING */
-	.flex-container {display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-direction: row; -ms-flex-direction: row;flex-direction: row; -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap;flex-wrap: nowrap; -webkit-justify-content: flex-start; -ms-flex-pack: start;justify-content: flex-start; -webkit-align-content: stretch; -ms-flex-line-pack: stretch;align-content: stretch; -webkit-align-items: flex-start; -ms-flex-align: start;align-items: flex-start;}
-	.flex-item:nth-child {-webkit-order: 0; -ms-flex-order: 0; order: 0; -webkit-flex: 0 1 auto; -ms-flex: 0 1 auto;flex: 0 1 auto; -webkit-align-self: auto; -ms-flex-item-align: auto;align-self: auto;}
+	.flex-world {
+		padding:10px;
+		width:100%;
+		height:100%;
+		flex-wrap:wrap;
+		flex-direction:column;
+		justify-content:flex-start;
+		float:left;
+		display: -webkit-flex;
+		display: flex;
+				}
 
 /* Divine body layout settings */
 	#allOfTheThings {min-height: 100%;}

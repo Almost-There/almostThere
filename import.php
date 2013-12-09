@@ -31,7 +31,6 @@ function head() {
 			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
 		";
 	echo "
-            <link rel='stylesheet' type='text/css' href='/new/sty/icomoon.css'>
 			<link rel='stylesheet' type='text/css' href='/new/sty/dyn.style.php?rnd=" . $pageSeed . "'>
 			<style>\n
 				.theColor {color:" . $theColor . ";}
@@ -104,7 +103,7 @@ echo "
 					</label><br />
 				</div>";
 	echo "<!-- /SettingsMenu() -->";
-echo "\n</div>\n</div>\n</header>\n<div class='flex-container contentBody cf' >";
+echo "\n</div>\n</div>\n</header>\n<div class='flex-world contentBody' >";
 echo "<!-- /preBody() -->";
 }
 
