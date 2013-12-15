@@ -304,13 +304,7 @@ foreach ($configMatrix as $v1) {
 -	}	
 -}
 -	
--	
--	
--	
--	
--	
 -	})
-
 
 /* Link Fading Styles NOT WORKING */
 	.fade {-o-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -khtml-transition: all 0.5s linear; -webkit-transition: all 0.5s linear; -ms-transition: all 0.5; linear;transition: all 0.5s linear;}
@@ -379,3 +373,5 @@ foreach ($configMatrix as $v1) {
 	<li><a href='steam://url/GroupSteamIDPage/103582791430342520'>Steam</a></li>
 			<li><a href='#servers'>Servers</a></li>
 			<li><a href='#users'>Users</a></li>
+
+		function squares( $squareTitle = "squareTitle \not defined!" ) { echo "<div class='flex-item frontBody animateSquare theBGcolor cf'> <h3>" . $squareTitle . "</h3>"; echo "</div>"; }

@@ -8,7 +8,7 @@ else { include 'import.php'; } ?>
 </head>
 <body>
 <? preBody(); ?>
-
+<div style='flex:auto'>
 <div id='sqField'> <!-- Box that contains all the squares -->
 	
 	<!-- Recent Logins Square -->
@@ -46,9 +46,17 @@ else { include 'import.php'; } ?>
 				"lM7XgAmcXp8",		/* InnerPartySystem - American Trash */
 				"2qN5ewi44N8",		/* Motionless in White - AMERICA */
 				"uxelXPg961M", 		/* Mastodon - Divinations */
+				"9QZ2ZvueDbA",		/* Neonlight - Computer Music */
+				"uQu71l1WQ3g",		/* Becky - Less than Three */
 				"7kCyPj6ZFTA",		/* AWOLNATION - Sail (Borgore Remix) */
 				"reHGIYHAR2Q",		/* Borgore - Nympho */
 				"fxvGHQHiY70",		/* Animal Collective - Peacebone */
+				"xAEhBQZ-k7U",		/* InnerPartySystem - And Together */
+				"_NBrrCn5_zo",		/* Pendulum - Comprachicos */
+				"EjAoBKagWQA",		/* Bjork - All is full of love */
+				"u7K72X4eo_s",		/* Massive Attack - Teardrop */
+				"YXdOAUKCc0k",		/* Red Hot Chili Peppers - By The Way */
+				"QRg-aDBaVdc",		/* Gorillaz - Dare */
 				"FaJytyOISmE", 		/* Pasafire - Rubber Bands */
 				"xsV8TrF4gN0",		/* Not In Love - Crystal Castles */
 				"C-9v68o5Gfs",		/* Voicans - Loyal Friend */
@@ -145,9 +153,28 @@ else { include 'import.php'; } ?>
 	</div>
 	<!-- End Unreads Square -->
 
+	<!-- Facebook Square
+	<div class='sqDub  theBGcolor'>
+		<div class='sqTitle'>Facebook<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
+			<ul>
+				<li>Cannot Connect to Facbook</li>
+			</ul>
+		</div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Like Button</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	End Facebook Square -->
+
 	<!-- Forum Threads Square -->
 	<div class='sq  theBGcolor'>
-		<div class='sqTitle'>New Forum Threads<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqTitle'>New Chan Posts<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
 			<ul>
 				<li>Cannot Connect - Error</li>
@@ -207,11 +234,32 @@ else { include 'import.php'; } ?>
 		</div>
 	</div>
 	<!-- Movie Nights Square -->
-	<br />	<br />	<br />	<br />	<br />	<br />	<br />	<br /><br /><br /><br /><br />	<br />	<br />	<br />	<br />	<br />	<br /><br />	<br />	<br />	<br />	<br /><br />
+
+	<!-- Points Square -->
+	<div class='sq  theBGcolor'>
+		<div class='sqTitle'>Points<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
+			<ul>
+				<li>0 Points</li>
+				<li>0 Points Earned</li>
+				<li>0 Redeemable Points</li>
+			</ul>
+		</div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- End Points Square -->
+</div>
+
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 	<h1 class='theColor'>This is all fake data!<sup>(for now)</sup></h1>
 
 </div>
-
 <? postBody(); ?>
 </body>
 </html>

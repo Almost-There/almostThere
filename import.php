@@ -56,8 +56,8 @@ function preBody() {
 		<header id='header' class='theBGcolor'>
 			<div class='bubbles' style='z-index:+1;'></div>
 			<!--<a class='bubble-toggle' href='#'>Bubbles Off</a>-->
-			<a style='width:400px;height:50px;display:block;' href='/new/index.php'>
-				<img class='logo cf' style='width:400px;height:50px;z-index:+2;' src='img/logo.png'  alt='Click here to return Home'/>
+			<a style='width:400px;height:50px;z-index:+2;' class='logo cf' href='/new/index.php'>
+				<img style='width:400px;height:50px;' src='img/logo.png'  alt='Click here to return Home'/>
 			</a>
 			<span class='logo'  style='z-index:+2;font-size:12px;opacity:0.6;font-weight:bold;margin-left:60px;'>
 				<span class='msg-type' id='msg'>"; 
@@ -91,14 +91,13 @@ function preBody() {
 						</div>";
 			echo "<!-- /SettingsMenu() -->";
 		echo "\n</div>\n</div>\n</header>\n<div class='flex-world contentBody' >";
+
+
 		echo "\n<!-- /preBody() -->\n";
 		}
 
-		//This function will be expanded in the future to allow squares to be read from a configuration array
-		//so they may have multiable sizes, content, backgrounds, and elements
-		function squares( $squareTitle = "squareTitle \not defined!" ) { echo "<div class='flex-item frontBody animateSquare theBGcolor cf'> <h3>" . $squareTitle . "</h3>"; echo "</div>"; }
 		function postBody() {
-		echo "\n<!-- /postBody()-->";
+		echo "\n<!-- postBody()-->";
 		//StickyFooter requires two closing div tags
 		echo "
 		<br /><br />			
