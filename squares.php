@@ -108,6 +108,7 @@ else { include 'import.php'; } ?>
 		<div class='sqTitle'>Visits<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
 			<ul>
+				<li>0 Visits by You</li>
 				<li>0 Visits Today</li>
 				<li>0 Visits this Week</li>
 				<li>0 Visits Ever</li>
@@ -122,6 +123,90 @@ else { include 'import.php'; } ?>
 		</div>
 	</div>
 	<!-- End HitCounter Square -->
+
+	<!-- Unreads Square -->
+	<div class='sq  theBGcolor'>
+		<div class='sqTitle'>Unreads<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
+			<ul>
+				<li>0 Unread Chan Threads</li>
+				<li>0 Unread Messages</li>
+				<li>0 Unopened Packages</li>
+				<li>0 Unread Warnings</li>
+			</ul>
+		</div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- End Unreads Square -->
+
+	<!-- Forum Threads Square -->
+	<div class='sq  theBGcolor'>
+		<div class='sqTitle'>New Forum Threads<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
+			<ul>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+			</ul>
+		</div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Forum Threads Square -->
+
+	<!-- Steam Group Square -->
+	<div class='sqDub  theBGcolor'>
+		<div class='sqTitle'>Steam Announcements<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
+			<ul>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+			</ul>
+		</div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Steam Group Square -->
+
+	<!-- Movie Nights Square -->
+	<div class='sqDub  theBGcolor'>
+		<div class='sqTitle'>Upcoming Movie Nights<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
+			<ul>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+				<li>Cannot Connect - Error</li>
+			</ul>
+		</div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Movie Nights Square -->
 
 </div>
 
