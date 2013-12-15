@@ -98,8 +98,7 @@
 	
 /* Square Classes */
 	.sqField {width:100%;height:100%;}
-	.sqField:first-child {margin-left:none;}
-	.sq, .sqDub {float:left;height:180px;margin-left:10px;margin-top:10px;overflow:hidden;}
+	.sq, .sqDub {float:left;height:180px;margin-right:10px;margin-top:10px;overflow:hidden;}
 	.sq	{width:180px;}
 	.sqDub	{width:380px}
 	.sqTitle, .sqContent, .sqAltContent {padding:5px;}
