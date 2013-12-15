@@ -8,7 +8,7 @@ else { include 'import.php'; } ?>
 </head>
 <body>
 <? preBody(); ?>
-<a href='/new/squares.php'><img src='/img/home.png' alt='Click Here' /></a>
+<a class='theBGcolor' href='/new/squares.php'><img class='theBGcolor' src='/img/home.png' alt='Click Here' /></a>
 <? postBody(); ?>
 </body>
 </html>
