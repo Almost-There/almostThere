@@ -27,8 +27,9 @@ function head() {
 	global $pageSeed, $theColor, $antiColor;
 	echo "\n<!-- head() -->\n";
 	
-	echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n";
-
+	echo "
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n
+		";
 	echo "
 			<link rel='stylesheet' type='text/css' href='/new/sty/dyn.style.php?rnd=" . $pageSeed . "'>
 			<style>\n
@@ -75,13 +76,16 @@ echo "</span></span></div>";
 echo "
 <div class='cf' id='navBody'> 
 	<ul class='animateNav'>
-		<li><a href='/new/squares.php'>Squares</a></li>
+		<li><a href='/new/index.php'>Squares</a></li>
 		<li><a href='/forums/'>Forums</a></li>
 		<li><a href='/new/fridge.php'>Fridge</a></li>
-		<li><a href='/new/irc.php'>Chat</a></li>
+		<li><a href='steam://url/GroupSteamIDPage/103582791430342520'>Steam</a></li>
+		<li><a href='/new/irc.php'>IRC</a></li>
+		<li><a href='#servers'>Servers</a></li>
+		<li><a href='#users'>Users</a></li>
 	</ul>
 	<div id='settingsButton'>
-		<span id='settingsSpan'> Settings</span>
+		<span id='settingsSpan'><a class='icn icon-plus'></a></span> Settings
 	</div>
 	<div id='settingsMenu'>";
 		echo "<div class='settingsMenuBlock'>"; colorForm(); echo "</div>";
