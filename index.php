@@ -8,7 +8,7 @@ else { include 'import.php'; } ?>
 </head>
 <body>
 <? preBody(); ?>
-<div style='font-family:neoSans;font-size:10px;'>Nothing to see here... Move along...</div>
+<a href='/new/squares.php'><img src='/img/home.png' alt='Click Here' /></a>
 <? postBody(); ?>
 </body>
 </html>
