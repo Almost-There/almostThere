@@ -12,7 +12,7 @@ else { include 'import.php'; } ?>
 <div id='sqField'> <!-- Box that contains all the squares -->
 	
 	<!-- Recent Logins Square -->
-	<div class='sq'>
+	<div class='sq theBGcolor'>
 		<div class='sqContent'>
 		<span class='sqTitle'>Recent Logins<a href='' class='sqAltButton'>#</a></span>
 		<ul>
@@ -109,7 +109,7 @@ else { include 'import.php'; } ?>
 
 	<!-- HitCounter Square -->
 	<div class='sq'>
-		<div class='sqContent'>
+		<div class='sqContent theBGcolor'>
 			<span class='sqTitle'>Visits<a href='' class='sqAltButton'>#</a></span>
 			<ul>
 				<li>0 Visits Today</li>
