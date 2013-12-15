@@ -12,34 +12,32 @@ else { include 'import.php'; } ?>
 <div id='sqField'> <!-- Box that contains all the squares -->
 	
 	<!-- Recent Logins Square -->
-	<div class='sq theBGcolor'>
+	<div class='sq  theBGcolor'>
+		<div class='sqTitle'>Recent Logins<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
-		<span class='sqTitle'>Recent Logins<a href='' class='sqAltButton'>#</a></span>
-		<ul>
-			<li>| LuckyMonkey<span class='fr'>3m</span></li>
-			<li>| Kenny<span class='fr'>10m</span></li>
-			<li>| LuckyMonkey<span class='fr'>2h</span></li>
-			<li>| Bluecoatz<span class='fr'>13h</span></li>
-			<li>| Bluecoatz<span class='fr'>1d</span></li>
-		</ul>
+			<ul>
+				<li>| LuckyMonkey<span class='fr'>3m</span></li>
+				<li>| Kenny<span class='fr'>10m</span></li>
+				<li>| LuckyMonkey<span class='fr'>2h</span></li>
+				<li>| Bluecoatz<span class='fr'>13h</span></li>
+				<li>| Bluecoatz<span class='fr'>1d</span></li>
+			</ul>
 		</div>
-		<div id='sqAltContent'>
-			<span class='sqTitle'>Settings<a href='' class='sqAltButton'>#</a></span>
+		<div class='sqAltContent'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
-				<!-- <li><a>Put Tile in Bag</a></li> -->
+				<li><a>Put Tile in Bag</a></li>
 			</ul>
 		</div>
 	</div>
 	<!-- End of Recent Logins Square -->
 
 	<!-- Youtube Square -->
-	<div class='sqDub sqYoutube'>
-		<div class='sqContent'>
-			<span class='sqTitle'>Youtube<a href='' class='sqAltButton'>#</a></span>
-			<div class='youTube' >
-				<iframe src="//www.youtube.com/embed/<? 
+	<div class='sqDub theBGcolor'>
+		<div class='sqTitle'>Youtube<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqYt'>
+			<iframe src="//www.youtube.com/embed/<?
 				$yts = array(
 				"OKxaPkIx4WY", 		/* Oxygen - Moguai feat. Fiora */
 				"d1wGFgoocKk",		/* Schoolboy - Project No-Autotune */
@@ -65,28 +63,27 @@ else { include 'import.php'; } ?>
 				"3LqsWSvnjGs", 		/* Deadmau5 - asdfghjkl */
 				"Z0NefmRM81Y", 		/* Sunchase feat. Yana Kay - Remember Me */
 				"Q1KAjQRdTUE");		/* Fatboy Slim - Right Here Right Now (Trumpdisco Remix) */
-				$rYt = rand(0,count($yts)-1);
-				$yt= $yts[$rYt];
-				echo $yt; ?>?autoplay=0&amp;theme=dark&amp;color=white" allowfullscreen></iframe>
-			</div>
+			$rYt = rand(0,count($yts)-1);
+			$yt= $yts[$rYt];
+			echo $yt; ?>?autoplay=0&amp;theme=dark&amp;color=white;wmode=transparent" allowfullscreen>
+			</iframe>
 		</div>
-		<div id='sqAltContent'>
-			<span class='sqTitle'>Settings<a href='' class='sqAltButton'>#</a></span>
+		<div class='sqAltContent'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
 				<li><a>AutoPlay Videos</a></li>
 				<li><a>Copy Video URL to Clipboard</a></li>
-				<!-- <li><a>Put Tile in Bag</a></li> -->
+				<li><a>Put Tile in Bag</a></li> -->
 			</ul>
 		</div>
 	</div>
 	<!-- End of Youtube Square -->
 
 	<!-- Minecraft Server Status Square -->
-	<div class='sqDub minecraftBG'>
+	<div class='sqDub minecraftBG theBGcolor'>
+		<div class='sqTitle'>Minecraft Server<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
-			<span class='sqTile'>Minecraft Server<a href='' class='sqAltButton'>#</a></span>
 			<ul>
 				<li>Almost-There Minecraft Addiction</li>
 				<li>mc.almost-there.org</li>
@@ -95,30 +92,28 @@ else { include 'import.php'; } ?>
 				<li>Visit Page</li>
 			</ul>
 		</div>
-		<div id='sqAltContent'>
-			<span class='sqTitle'>Settings<a href='' class='sqAltButton'>#</a></span>
+		<div class='sqAltContent'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
 				<li><a>Copy Server URL to Clipboard</a></li>
-				<!-- <li><a>Put Tile in Bag</a></li> -->
+				<li><a>Put Tile in Bag</a></li>
 			</ul>
 		</div>
 	</div>
 	<!-- End of Minecraft Server Status Square -->
 
 	<!-- HitCounter Square -->
-	<div class='sq'>
-		<div class='sqContent theBGcolor'>
-			<span class='sqTitle'>Visits<a href='' class='sqAltButton'>#</a></span>
+	<div class='sq  theBGcolor'>
+		<div class='sqTitle'>Visits<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
 			<ul>
 				<li>0 Visits Today</li>
 				<li>0 Visits this Week</li>
 				<li>0 Visits Ever</li>
 			</ul>
 		</div>
-		<div>
-			<span class='sqTitle'>Settings<a href='' class='sqAltButton'>#</span>a>
+		<div class='sqAltContent'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>

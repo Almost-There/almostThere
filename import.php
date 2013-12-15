@@ -78,10 +78,7 @@ echo "
 		<li><a href='/new/index.php'>Squares</a></li>
 		<li><a href='/forums/'>Forums</a></li>
 		<li><a href='/new/fridge.php'>Fridge</a></li>
-		<li><a href='steam://url/GroupSteamIDPage/103582791430342520'>Steam</a></li>
-		<li><a href='/new/irc.php'>IRC</a></li>
-		<li><a href='#servers'>Servers</a></li>
-		<li><a href='#users'>Users</a></li>
+		<li><a href='/new/irc.php'>Chat</a></li>
 	</ul>
 	<div id='settingsButton'>
 		<span id='settingsSpan'> Settings</span>

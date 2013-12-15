@@ -3,7 +3,7 @@
 	@import url('icomoon.css');
 
 /* Important global styles */
-	* {margin:0;padding:0;text-decoration:none;border:0;{list-style:none outside none;}}
+	* {margin:0;padding:0;text-decoration:none;border:0;list-style:none;}
 	body {color:#FFFFFF;font-size:14px;background-color:#111111;line-height:1.4;font-family: 'neoSans';font-weight:200;}
 	body:before {content:"";height:100%;float:left;width:0;margin-top:-32767px;}
 /* Reset HTML Styles */
@@ -97,18 +97,20 @@
 	#colorPicker a:hover {cursor:pointer;border:4px solid #444444;}
 	
 /* Square Classes */
-	.sqField {width:100%;height:100%;flexbox container}
-	.sq, .sqDub {height:200px;margin:20px;}
-	.sq	{width:200px;}
-	.sqDub	{width:400px}
+	.sqField {width:100%;height:100%;}
+	.sqField:first-child {margin-left:none;}
+	.sq, .sqDub {float:left;height:180px;margin-left:10px;margin-top:10px;overflow:hidden;}
+	.sq	{width:180px;}
+	.sqDub	{width:380px}
+	.sqTitle, .sqContent, .sqAltContent {padding:5px;}
 	.sqTitle {font-size:22px;z-index:+1;}
-	.sqContent {padding:2 5px;}
+	.sqContent {display:block;}
 	.sqAltButton {text-align:right;display:none;}
-	.sqAltContent {padding:20}
+	.sqAltContent {padding:20;display:none;}
 	.sqAltContent ul {list-style:none;}
 	.sqAltContent ul li {float:left;}
-	.sqYt iframe {height:196px;width:396px;border:0;padding:2px}
-	.sqYt .sqTitle {position:relative;z-index:+2}
+	.sqYt iframe {height:180px;width:380px;border:0;}
+	.sqYt .sqTitle {position:relative;color:#FFFFFF;z-index:+2}
 	.sqYtSneezeGuard {width:100%;opactiy:0.0;display:block;background:transparent;height:60px;z-index:+3;}
 	
 

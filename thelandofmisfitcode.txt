@@ -375,3 +375,7 @@ foreach ($configMatrix as $v1) {
 	squares( $squareTitle='Logged in Today'			);
 	squares( $squareTitle='Trending Profanities'	); 
 ?></div>
+
+	<li><a href='steam://url/GroupSteamIDPage/103582791430342520'>Steam</a></li>
+			<li><a href='#servers'>Servers</a></li>
+			<li><a href='#users'>Users</a></li>
