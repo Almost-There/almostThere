@@ -11,13 +11,7 @@ else { include 'import.php'; } ?>
 <? preBody(); ?>
 <div>
 <iframe src="https://kiwiirc.com/client/irc.gamesurge.net/?nick=AT-Web_|?&theme=cli#almostthere" style="border:0; width:100%; height:450px;"></iframe>
-<div><?
-	squares( $squareTitle='Active AT Channels'		);
-	squares( $squareTitle='IRC Users in-game'		);
-	squares( $squareTitle='IRC Users Total'		);
-	squares( $squareTitle='Logged in Today'			);
-	squares( $squareTitle='Trending Profanities'	); 
-?></div>
+
 </div>
 <? postBody(); ?>
 </body>

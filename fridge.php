@@ -4,19 +4,20 @@ if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; F
 else { include 'import.php'; }
 
 
-// If this script is being included, define the URL to this variable script (relative from the host)
 $includeurl = false;
-// Must be relative to this file, can't cd up either ghey....
+	// If this script is being included, define the URL to this variable script (relative from the host)
 $startdir = './uploads/';
-// gen thumbnails for images
+	// Must be relative to this file, can't cd up either ghey....
 $showthumbnails = false;
+	// gen thumbnails for images
 $memorylimit = false;
-// View directories?
+	// Set memory limit in MB
 $showdirs = true;
+	// View directories?
 $forcedownloads = false;
-// type this, expressions allowed to hide shit
+	// type this, expressions work with this as well
 $hide = array( 'dlf', 'index.php', 'Thumbs', '.htaccess', '.htpasswd');
-// comment out to disable this, must add file extention to list to view it etc.
+	// comment out to disable this, must add file extention to list to view it etc.
 $showtypes = array( 'jpg', 'png', 'gif', 'zip', 'txt', 'mp3' );
 $displayindex = false;
 $allowuploads = true;

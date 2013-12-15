@@ -367,3 +367,11 @@ foreach ($configMatrix as $v1) {
 	.frontBody h3 {font-size:18px;padding:5px;}
 	.frontBody ul {margin-left:20px;}
 	.frontBody hr {opacity:0.3;width:95%;border-bottom:1px solid #D3D3D3;clear:both;}
+
+<div><?
+	squares( $squareTitle='Active AT Channels'		);
+	squares( $squareTitle='IRC Users in-game'		);
+	squares( $squareTitle='IRC Users Total'		);
+	squares( $squareTitle='Logged in Today'			);
+	squares( $squareTitle='Trending Profanities'	); 
+?></div>

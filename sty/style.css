@@ -103,13 +103,14 @@
 	.sq, .sqDub {height:200px;margin:20px;}
 	.sq	{width:200px;}
 	.sqDub	{width:400px}
-	.sqTitle {font-size:20px;}
+	.sqTitle {font-size:20px;position:relative;z-index:+1;}
 	.sqContent {padding:20}
 	.sqAltButton {text-align:right;}
 	.sqAltContent {padding:20}
 	.sqAltContent ul {list-style:none;}
 	.sqAltContent ul li {float:left;}
 	.sqYoutube iframe {height:196px;width:396px;border:0;padding:2px}
+	.sqYoutube .sqTitle {}
 	
 
 /* Fridge Styles */
