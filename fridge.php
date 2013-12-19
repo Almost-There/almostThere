@@ -202,46 +202,31 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 </head>
 <body>
 <? preBody(); ?>
-  
-  	<br />
-	<div style="height:155px;" id='cf'>
-		<?
-			squares( $squareTitle='Directory'		);
-			squares( $squareTitle='Store'		); 
-			squares( $squareTitle='Uploader'		);
-			squares( $squareTitle='Torrent Stats'		);
-			squares( $squareTitle='Tracker Status'		);
-			squares( $squareTitle='HDD Stats'		);
-			squares( $squareTitle='Packager'		); 	
-		?>
-	</div><br />
-		<table class='cf' id='fileTable'>
+<table class='cf' id='fileTable'>
 <tr style="display:none;"><td colspan='3' class='theBGcolor'><span style='color:#222222;' >Fridge Listing of <?php echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;?></span></td></tr>
 <tr style="display:none;">
 <td colspan='3'>		
 		<div  class='theLinkColor' id="breadcrumbs">
-	<a href="<?php echo strip_tags($_SERVER['PHP_SELF']);?>">/Fridge/</a> 
-  <?php
- 	 $breadcrumbs = split('/', str_replace($startdir, '', $leadon));
-  	if(($bsize = sizeof($breadcrumbs))>0) {
-  		$sofar = '';
-  		for($bi=0;$bi<($bsize-1);$bi++) {
-			$sofar = $sofar . $breadcrumbs[$bi] . '/';
-			echo ' &gt; <a href="'.strip_tags($_SERVER['PHP_SELF']).'?dir='.strip_tags($sofar).'">'.$breadcrumbs[$bi].'</a></div></td></tr>';
-		}
-  	}
-  
-	$baseurl = strip_tags($_SERVER['PHP_SELF']) . '?dir='.strip_tags($_GET['dir']) . '&amp;';
-	$fileurl = 'sort=name&amp;order=asc';
-	$sizeurl = 'sort=size&amp;order=asc';
-	$dateurl = 'sort=date&amp;order=asc';
-	
-	switch ($_GET['sort']) {
-		case 'name': if($_GET['order']=='asc') $fileurl = 'sort=name&amp;order=desc'; break;
-		case 'size': if($_GET['order']=='asc') $sizeurl = 'sort=size&amp;order=desc'; break;
-		case 'date': if($_GET['order']=='asc') $dateurl = 'sort=date&amp;order=desc'; break;  
-		default: $fileurl = 'sort=name&amp;order=desc'; break;}
-  ?>
+			<a href="<?php echo strip_tags($_SERVER['PHP_SELF']);?>">/Fridge/</a> 
+		  <?php
+		 	 $breadcrumbs = split('/', str_replace($startdir, '', $leadon));
+		  	if(($bsize = sizeof($breadcrumbs))>0) {
+		  		$sofar = '';
+		  		for($bi=0;$bi<($bsize-1);$bi++) {
+					$sofar = $sofar . $breadcrumbs[$bi] . '/';
+					echo ' &gt; <a href="'.strip_tags($_SERVER['PHP_SELF']).'?dir='.strip_tags($sofar).'">'.$breadcrumbs[$bi].'</a></div></td></tr>';
+				}
+		  	}
+			$baseurl = strip_tags($_SERVER['PHP_SELF']) . '?dir='.strip_tags($_GET['dir']) . '&amp;';
+			$fileurl = 'sort=name&amp;order=asc';
+			$sizeurl = 'sort=size&amp;order=asc';
+			$dateurl = 'sort=date&amp;order=asc';
+			switch ($_GET['sort']) {
+				case 'name': if($_GET['order']=='asc') $fileurl = 'sort=name&amp;order=desc'; break;
+				case 'size': if($_GET['order']=='asc') $sizeurl = 'sort=size&amp;order=desc'; break;
+				case 'date': if($_GET['order']=='asc') $dateurl = 'sort=date&amp;order=desc'; break;  
+				default: $fileurl = 'sort=name&amp;order=desc'; break;}
+		  ?>
 			<tr>
 				<th class='theBGcolor'><a id="headerfile" href="<?php echo $baseurl . $fileurl;?>">File</a></th>
 				<th class='theBGcolor'><a id="headersize" href="<?php echo $baseurl . $sizeurl;?>">Size</a></th>
@@ -263,37 +248,26 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 		$ext = strtolower(substr($files[$i], strrpos($files[$i], '.')+1));
 		$supportedimages = array('gif', 'png', 'jpeg', 'jpg');
 		$thumb = '';
-		
 		if($showthumbnails && in_array($ext, $supportedimages)) {
 			$thumb = '<span><img src="dlf/trans.gif" alt="'.$files[$i].'" name="thumb'.$i.'" /></span>';
 			$thumb2 = ' onmouseover="o('.$i.', \''.urlencode($leadon . $files[$i]).'\');" onmouseout="f('.$i.');"';
 		}
-		
 		if($filetypes[$ext]) { $icon = $filetypes[$ext]; }
-		
 		$filename = $files[$i];
 		if(strlen($filename)>43) { $filename = substr($files[$i], 0, 40) . '...'; }
-		
 		$fileurl = $includeurl . $leadon . $files[$i];
-		if($forcedownloads) { $fileurl = $_SESSION['PHP_SELF'] . '?dir=' . urlencode(str_replace($startdir,'',$leadon)) . '&download=' . urlencode($files[$i]); }
-
-	?>
-	<? //<?php echo $thumb2; ?? <img src="<?php echo $includeurl; ?? sty/icons<?php echo $icon; ?? " alt="??php echo $files[$i];??" />
+		if($forcedownloads) { $fileurl = $_SESSION['PHP_SELF'] . '?dir=' . urlencode(str_replace($startdir,'',$leadon)) . '&download=' . urlencode($files[$i]); }?>
+	
+		<? //<?php echo $thumb2; ?? <img src="<?php echo $includeurl; ?? sty/icons<?php echo $icon; ?? " alt="??php echo $files[$i];??" />
 		//replace ?? with end-tags to re-enable ?>
+		
 		<td class='theLinkColor' id='fileName'> <a target="_blank" href="<? echo $fileurl;?>"><?php echo $filename;?></a></td>
 		<td id='fileSize'><?php echo round(filesize($includeurl.$leadon.$files[$i])/1024);?> KB</td>
 		<td id='fileDate'>
 			<?php echo date ("M d Y h:i:s A", filemtime($includeurl.$leadon.$files[$i]));?>
-			<?php
-				echo $thumb;
-				echo '</td> </tr>';
-			?>
-		<?php
-			if($class=='b') $class='w';
-			else $class = 'b';	}
-	?>
+			<?php echo $thumb; echo '</td> </tr>'; ?>
+			<?php if($class=='b') $class='w'; else $class = 'b';	} ?>
 	</table>
-
 	<?php
 	if($allowuploads) {
 		$phpallowuploads = (bool) ini_get('file_uploads');		

@@ -153,7 +153,7 @@ else { include 'import.php'; } ?>
 	</div>
 	<!-- End Unreads Square -->
 
-	<!-- Facebook Square
+	<!-- Facebook Square -->
 	<div class='sqDub  theBGcolor'>
 		<div class='sqTitle'>Facebook<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
@@ -170,7 +170,7 @@ else { include 'import.php'; } ?>
 			</ul>
 		</div>
 	</div>
-	End Facebook Square -->
+	<!-- End Facebook Square -->
 
 	<!-- Forum Threads Square -->
 	<div class='sq  theBGcolor'>

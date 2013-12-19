@@ -90,7 +90,7 @@ function preBody() {
 							</label><br />
 						</div>";
 			echo "<!-- /SettingsMenu() -->";
-		echo "\n</div>\n</div>\n</header>\n<div class='flex-world contentBody' >";
+		echo "\n</div>\n</div>\n</header>\n<div class='flex-world' id='contentBody' >";
 
 
 		echo "\n<!-- /preBody() -->\n";
