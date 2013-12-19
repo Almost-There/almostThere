@@ -2,15 +2,32 @@
 	@import url('neoSans.css');
 	@import url('icomoon.css');
 
-/* Important global styles */
-	* {margin:0;padding:0;text-decoration:none;border:0;list-style:none;font-weight:200;}
-	body {color:#FFFFFF;font-size:14px;background-color:#111111;line-height:1.4;font-family: 'neoSans';}
+/* Divine body layout Settings */
+	* {margin:0;padding:0;border:0;text-decoration:none;list-style:none;font-weight:200;}
+	body {display: flex; min-height: 100vh; flex-direction: column;color:#FFFFFF;font-size:14px;background-color:#111111;line-height:1.4;font-family: 'neoSans';}
 	body:before {content:"";height:100%;float:left;width:0;margin-top:-32767px;}
+	/*  Header Styles */
+		header {height:140px;overflow:hidden;}
+		.logo {position:absolute;top:20px;left:10px;z-index:+1;width:400px;height:50px;}
+		.msg-type {position:absolute;top:50px;color:#222222;}
+		.theLinkColor a {padding-left:3px;padding-right:3px;text-decoration:underline;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+	/* Content Styles */
+		main {flex: 1;}
+	/* Footer Styles */
+		footer {height:28px;padding-left:8px;padding-right:8px;background-color:rgba(22, 22, 22, 0.6);}
+		footer .icn {font-size:20px;margin:auto 2px;} */
+		.icn {text-decoration:none;}
+		.icn * {text-decoration:none;}
+		.icn a:before {text-decoration:none;}
+		.icn a:link {text-decoration:none;}
+		.icn a:hover {text-decoration:none;}
+		a:link .icn {text-decoration:none;}
+		a:hover .icn {text-decoration:none;}
+	
 /* Reset HTML Styles */
 	a, a:link {color:#FFFFFF;text-decoration:underline;}
 	a:hover {text-decoration:none;}
 	a:visited {color:#FFFFFF;}
-	html, body {height:100%;}
 	iframe {border:0;}
 	h1 {margin: 0 0 10px 8px;padding:0;}
 	table {width:100%;margin:0px auto;background-color:#222222;}
@@ -37,121 +54,6 @@
 	.big {font-size:28px;}
 	.small {font-size:9px;}
 	.ninjas {display:none;color:#000000;} /* Hide dat shit */
-
-/* Flexbox Styles */
-	.flex-world {width:100%;height:100%; {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -moz-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: stretch;
-    -ms-flex-line-pack: stretch;
-    align-content: stretch;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    }
-
-header {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-box-flex: 0;
-    -moz-box-flex: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-    }
-
-#contentBody {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-box-flex: 0;
-    -moz-box-flex: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-    }
-
-footer {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-box-flex: 0;
-    -moz-box-flex: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-    }
-
-/*
-    Legacy Firefox implementation treats all flex containers
-    as inline-block elements.
-*/
-
-@-moz-document url-prefix() {
-.flex-container {
-    width: 100%;
-    -moz-box-sizing: border-box;
-    }
-
-}
-
-/* Divine body layout Settings */
-	#allOfTheThings {min-height: 100%;}
-	#everything {padding-bottom:20px;display:flex;}
-	#header {display:flex;overflow:hidden;margin:0;border:0;height:140px;}
-	div .contentBody {margin-left:10px;margin-top:-42px;}
-	#footer {position:relative;margin-top:-28.5px;height:28px;clear:both;padding-left:8px;padding-right:8px;background-color:rgba(22, 22, 22, 0.6);}
-	#footer .icn {font-size:20px;margin:auto 2px;}
-
-/*  Header Styles */
-	.logo {position:absolute;top:20px;left:10px;z-index:+1;width:400px;height:50px;}
-	.msg-type {position:absolute;top:50px;color:#222222;}
-	.theLinkColor a {padding-left:3px;padding-right:3px;text-decoration:underline;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
-
-/* Footer Styles */
-	.icn {text-decoration:none;}
-	.icn * {text-decoration:none;}
-	.icn a:before {text-decoration:none;}
-	.icn a:link {text-decoration:none;}
-	.icn a:hover {text-decoration:none;}
-	a:link .icn {text-decoration:none;}
-	a:hover .icn {text-decoration:none;}
 
 /* Navigation Bar Styles */
 	#navBody * {list-style:none;font-size:16px;}

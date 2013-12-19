@@ -51,9 +51,7 @@ function preBody() {
 	echo "\n<!-- preBody() -->";
 	global $pageSeed , $theColor;
 	echo "
-	<div id='allOfTheThings'>
-	<div id='everything'>
-		<header id='header' class='theBGcolor'>
+		<header class='theBGcolor'>
 			<div class='bubbles' style='z-index:+1;'></div>
 			<!--<a class='bubble-toggle' href='#'>Bubbles Off</a>-->
 			<a style='width:400px;height:50px;z-index:+2;' class='logo cf' href='/new/index.php'>
@@ -90,7 +88,7 @@ function preBody() {
 							</label><br />
 						</div>";
 			echo "<!-- /SettingsMenu() -->";
-		echo "\n</div>\n</div>\n</header>\n<div class='flex-world' id='contentBody' >";
+		echo "\n</div>\n</div>\n</header>\n<main>";
 
 
 		echo "\n<!-- /preBody() -->\n";
@@ -101,12 +99,9 @@ function preBody() {
 		//StickyFooter requires two closing div tags
 		echo "
 		<br /><br />			
-				</div><!-- content body -->
-			</div><!-- everything -->
-		</div><!-- allOfTheThings -->
-<div class='theBGcolor'>
-	<footer>
-	<div id='footer' class='theColor'>
+				</main>
+<!-- <div class='theBGcolor'> -->
+	<footer class='theColor'>
 		<div class='fl' id='dimensions'><script>        
 		window.onresize = displayWindowSize;
         window.onload = displayWindowSize;
@@ -118,9 +113,8 @@ function preBody() {
 			<a href='steam://url/GroupSteamIDPage/103582791430342520' class='icon-steam2'></a>
 			<a href='https://github.com/Almost-There/almostThere' class='icon-facebook2'></a>
 			</div>
-	</div>
 	</footer>
-</div>";
+<!-- </div> -->";
 echo "\n<!-- /postBody -->\n";
 }
 ?>
