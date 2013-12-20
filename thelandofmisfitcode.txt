@@ -12,9 +12,102 @@ function displaySource() {
 	echo "<div  class='sourceCode' >";
 		show_source(__FILE__);
 	echo "</div>";
-};
+};		#allOfTheThings {flex: 1;display: flex; min-height: 100vh; flex-direction: column;}
+		#header, #footer, #allOfTheThings {}
 
 	echo "<div class='settingsMenuBlock'>\n<span>Hello " . $_SERVER['REMOTE_ADDR'] . "!</span></div>";
+
+
+
+
+<?php
+function styleDynamics() {
+if (isset($_COOKIE["setColor"])) $theColor=$_COOKIE["setColor"];
+else $theColor= "#0099FF";
+echo "
+
+";
+};
+styleDynamics();
+ ?>
+
+
+<?php
+	$pageSeed=rand(1, 1024);
+	// Use this variable with a dummy query string afterCSS/JS documents to prevent caching
+
+
+	// Color Changing Function
+	// Colors chooseable in the ColorPicker
+
+	//Build ColorPicker
+	function colorForm() {
+		echo "\n<!-- colorForm() -->\n";
+		global $colorPick;
+		echo "<div id='colorPicker'>";
+		//Set color clientside with jquery, while saving the cookie to be read on next load with PHP
+		foreach ($colorPick as $v) { echo "<a class='changeColor' style='background:$v'></a>\n"; };
+		echo "\n</div>";
+		echo "\n<!-- /colorForm() -->\n";
+	};
+
+
+function preBody() {
+	echo "\n<!-- preBody() -->";
+	global $pageSeed , $theColor;
+	echo "<header class='theBGcolor'>
+			<div class='bubbles' style='z-index:+1;'></div>
+			<!--<a class='bubble-toggle' href='#'>Bubbles Off</a>-->
+			<a style='width:400px;height:50px;z-index:+2;' class='logo cf' href='/new/index.php'>
+				<img style='' src=''  alt=>
+			</a>
+			<span class='logo'  style=''>
+				<span class='msg-type' id='msg'>
+		";
+		echo "</span></span>
+		<div class='cf' id='navBody'> 
+		<ul class='animateNav'>
+			<li><a href='/new/squares.php'>Squares</a></li>
+			<li><a href='/forums/'>Forums</a></li>
+			<li><a href='/new/fridge.php'>Fridge</a></li>
+			<li><a href='/new/irc.php'>Chat</a></li>
+		</ul>
+		<div id='settingsButton'>
+			<span id='settingsSpan'> Settings</span>
+		</div>
+		<div id='settingsMenu'>";
+			echo "<div class='settingsMenuBlock'>"; colorForm(); echo "</div>";
+			echo "<div class='settingsMenuBlock'>";
+				if (isset($_COOKIE["almostUser"]))
+					echo "Welcome " . $_COOKIE["almostUser"] . "!<br>";
+				else
+					echo "<a class='theColor' href='http://almost-there.org/forums/misc.php?action=steam_login'>Click here to Login</a></div>";
+				// GO TO THE LAND OF MISFIT CODE TO GET MORE OF THESE
+			echo "<div class='settingsMenuBlock'>
+							<span class='fl cf'>Example Switch</span>
+							<label class='switch fr'>
+							  <input type='checkbox' class='switch-input' checked>
+							  <span class='switch-label' data-on='On' data-off='Off'></span>
+							  <span class='switch-handle'></span>
+							</label><br />
+						</div>";
+			echo "<!-- /SettingsMenu() -->";
+		echo "\n</div>\n</div>\n</header>\n<div id='allOfTheThings'>";
+
+		echo "\n<!-- /preBody() -->\n";
+		}
+
+		function postBody() {
+		echo "\n<!-- postBody()-->";
+		echo "</div>
+	<!-- <div class='theBGcolor'> -->
+		<footer class='theColor'>
+
+	</footer>
+	<!-- </div> -->";
+echo "\n<!-- /postBody -->\n";
+}
+?>
 
 	<div class='settingsMenuBlock'>				
 					<span class='fl cf'>Show NSFW things?</span>

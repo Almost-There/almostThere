@@ -58,7 +58,7 @@ $quotes = array(
 "If you're a member here, I feel so bad for you...",
 "A the mercy of our Illustrious Web Developer",
 "Skateboarding isn't a crime!",
-"wACK WAKC WAKC A WAKC A MO!"
+"wACK WAKC WAKC A WAKC A MO!",
 "Known to cause insanity in laboratory mice",
 "Voted ''Best''",
 "Transmitido en Maid en SAP",
@@ -251,11 +251,4 @@ $quotes = array(
 "We're sort of like 7-Eleven - We're not always doing business, But we're always open.");
 $rQuote = rand(0,count($quotes)-1);
 $quote = $quotes[$rQuote];
-echo $quote;
-
-
-
-/* Begin the NSFW quotes (Oh baby!)  */
-
 ?>
-<!-- End of quotes.sharky.php -->
