@@ -1,30 +1,32 @@
-﻿/* Font Imports */
+﻿ /* Font Imports */
 	@import url('neoSans.css');
 	@import url('icomoon.css');
 
 /* Divine body layout Settings */
-	* {margin:0;padding:0;border:0;text-decoration:none;list-style:none;font-weight:200;}
-	body {color:#FFFFFF;font-size:14px;background-color:#111111;line-height:1.4;font-family: 'neoSans';}
-	/*  Header Styles */
+	* {margin:0;padding:0;border:0;text-decoration:none;list-style:none;font-weight:200;font-size:14px;}
+	body {color:#FFFFFF;background-color:#111111;line-height:1.4;font-family: 'neoSans';display:flex;min-height:100vh;flex-direction:column;}
+	header {height:140px;overflow:hidden;}		/* This thing goes ontop of */
+	#allofthethings {width:100%;clear:both;}	/* This thing */
+	footer {height:28px;}						/* Which is ontop of this thing */
 
-		#header {height:140px;overflow:hidden;}
-		.logoArea {position:absolute;top:20px;left:10px;z-index:+1;}
-		.logoArea img {width:400px;height:50px;}
-		.quote {z-index:+2;font-size:12px;opacity:0.6;font-weight:bold;margin-left:60px;}
-		.msg-type {position:absolute;top:50px;color:#222222;}
-		.theLinkColor a {padding-left:3px;padding-right:3px;text-decoration:underline;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
-	/* Content Styles */
-		#allofthethings {width:100%;clear:both;}
-	/* Footer Styles */
-		#footer {height:28px;padding-left:8px;padding-right:8px;background-color:rgba(22, 22, 22, 0.6);}
-		#footer .icn {font-size:20px;margin:auto 2px;} */
-		.icn {text-decoration:none;}
-		.icn * {text-decoration:none;}
-		.icn a:before {text-decoration:none;}
-		.icn a:link {text-decoration:none;}
-		.icn a:hover {text-decoration:none;}
-		a:link .icn {text-decoration:none;}
-		a:hover .icn {text-decoration:none;}
+/* Header Styles */
+	header .logoArea {position:absolute;top:20px;left:10px;z-index:+1;}
+	header .logoArea img {width:400px;height:50px;}
+	header .quote {position:absolute;top:50px;color:#222222;z-index:+2;font-size:12px;opacity:0.6;font-weight:bold;margin-left:60px;}
+
+/* Footer Styles */	 	
+	footer .fl {padding-left:8px;}
+	footer .fr {padding-right:8px;}
+	footer .icn {font-size:20px;margin:auto 2px;}
+	
+/* Icon Reset Styles */
+	.icn {text-decoration:none;}
+	.icn * {text-decoration:none;}
+	.icn a:before {text-decoration:none;}
+	.icn a:link {text-decoration:none;}
+	.icn a:hover {text-decoration:none;}
+	a:link .icn {text-decoration:none;}
+	a:hover .icn {text-decoration:none;}
 	
 /* Reset HTML Styles */
 	a, a:link {color:#FFFFFF;text-decoration:underline;}
@@ -40,14 +42,16 @@
 	table tr:nth-child(odd) {background-color:#222222;}
 	del {text-decoration:line-through;opacity:0.6;}
 	hr {margin-top:3px;margin-bottom:3px;width:100%;border-bottom:1px dashed #757575;}
+	
 /* Font AntiAliasing */
 	.antialias { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 
 /* Quick Styles */
 	.bold {font-weight:bold;}
 	.underline {text-decoration:underline;} /* Not to be confused with Unordered list! */
-	.floatL {float:left}
-	.floatR {float:right}
+	.nudge {margin-left:10px;}
+	.fl {float:left}
+	.fr {float:right}
 	.full {width:100%;height:100%;}
 	.tint {background-color:rgba(22, 22, 22, 0.6);}
 	.ma {margin-left:auto;margin-right:auto;} /* This is a pretty hack to cener things with a width attribute applied */
@@ -59,6 +63,8 @@
 /* Navigation Bar Styles */
 	#navBody * {list-style:none;font-size:16px;}
 	#navBody {position:absolute;top:120px;width:100%;height:20px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+5;}
+	#navBody a {text-decoration:none;}
+	#navBody a:link {text-decoration:none;}
 	#navBody li {float:left;margin-left:6px;}
 	#navBody li a, #navBody li a:link {color:#D6D6D6;text-decoration:none;}
 	#navBody li a:hover {cursor:pointer;text-decoration:none;text-shadow: 0 0 4px #FFFFFF;color:#FFFFFF;}
@@ -79,6 +85,7 @@
 /* Settings Menu Styles */
 	#settingsMenu {display:none;color:#EFEFEF;padding:0px;background-color:#232323;position:absolute;right:0px;top:22px}
 	#settingsButton {float:right;margin-right:6px;}
+	#settingsButton a, #settingsButton a:link {text-decoration:none;}
 	#settingsButton .icn {position:relative;top:2px;}
 	#settingsButton:hover {color:#FFFFFF;cursor:pointer;}
 	.settingsMenuBlock {width:200px;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:10px;}
@@ -93,7 +100,7 @@
 	.sqField {display: flex;flex-flow: row wrap;}
 	.sq, .sqDub {float:left;height:180px;margin-right:10px;margin-top:10px;overflow:hidden;}
 	.sq	{width:180px;}
-	.sqDub	{width:380px}
+	.sqDub, .sqYt iframe {width:370px}
 	.sqTitle, .sqContent, .sqAltContent {padding:5px;}
 	.sqTitle {font-size:22px;z-index:+1;}
 	.sqContent {display:block;}
@@ -101,11 +108,10 @@
 	.sqAltContent {padding:20;display:none;}
 	.sqAltContent ul {list-style:none;}
 	.sqAltContent ul li {float:left;}
-	.sqYt iframe {height:180px;width:380px;border:0;}
+	.sqYt iframe {height:180px;border:0;}
 	.sqYt .sqTitle {position:relative;color:#FFFFFF;z-index:+2}
 	.sqYtSneezeGuard {width:100%;opactiy:0.0;display:block;background:transparent;height:60px;z-index:+3;}
 	
-
 /* Fridge Styles */
 	#breadcrumbs {margin: 0 0 8px 8px;}
 	#breadcrumbs {float:left;text-align:left;}
@@ -158,4 +164,4 @@
 	@-webkit-keyframes caret{50%{ opacity:0.1; -webkit-transform:scaleY(.8); } }
 
 /* We hang onto this because we might need it */
-	/* .bubble-toggle {position: absolute;top: 10px;right: 10px;padding: 10px;background: rgba(255, 255, 255, 0.5);font-family: sans-serif;font-size: 13px;color: #333;} .bubble-toggle:hover {background: rgba(255, 255, 255, 0.75);} */
+	/* .bubble-toggle {position: absolute;top: 10px;right: 10px;padding: 10px;background: rgba(255, 255, 255, 0.5);font-family: sans-serif;font-size: 13px;color: #333;} .bubble-toggle:hover {background: rgba(255, 255, 255, 0.75);} 

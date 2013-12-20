@@ -153,6 +153,27 @@ else { include 'import.php'; } ?>
 	</div>
 	<!-- End Unreads Square -->
 
+	<!-- Popular Pages Square -->
+	<div class='sq  theBGcolor'>
+		<div class='sqTitle'>Popular Pages<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
+			<ul>
+				<li>squares.php</li>
+				<li>index.php</li>
+				<li>fridge.php</li>
+				<li>irc.php</li>
+			</ul>
+		</div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- End Popular Pages Square -->
+
 	<!-- Facebook Square -->
 	<div class='sqDub  theBGcolor'>
 		<div class='sqTitle'>Facebook<a href='' class='sqAltButton'>#</a></div>
@@ -255,9 +276,6 @@ else { include 'import.php'; } ?>
 	</div>
 	<!-- End Points Square -->
 </div>
-
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<h1 class='theColor'>This is all fake data!<sup>(for now)</sup></h1>
 
 </div>
 <? postBody(); ?>

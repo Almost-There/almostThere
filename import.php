@@ -46,7 +46,7 @@ function preBody() {
 global $pageSeed , $theColor, $quote;
 	echo "\n<!-- preBody() -->\n";
 	echo "
-	<header id='header' class='theBGcolor'>
+	<header class='theBGcolor'>
 		<div class='bubbles' style='z-index+1'></div>
 		<div class='logoArea'>
 		<a href='/new/index.php'>
@@ -67,22 +67,23 @@ global $pageSeed , $theColor, $quote;
 				<li><a href='/forums/'>Forums</a></li>
 				<li><a href='/new/fridge.php'>Fridge</a></li>
 				<li><a href='/new/irc.php'>Chat</a></li>
-				<li class='floatR'><a id='settingsButton'>Settings</a></li>
 			</ul>
+			<a href='#opensettings' id='settingsButton'>Settings</a>
 		</div><!-- navBody -->
 	</header>
 	";
-	echo "<div id='allOfTheThings'>";
+	echo "<div style='flex:1;' id='allOfTheThings' class='nudge'>";
 	echo "\n<!-- /preBody() -->\n";
 };
 
 function postBody() {
+	global $pageSeed , $theColor;
 	echo "\n<!-- postBody() -->\n";
 	echo "
 		</div><!-- allOfTheThings -->
-	<footer id='footer' class='theBGcolor'>
+	<footer class='theBGcolor'>
 		<div class='full tint'>
-			<div class='floatL' id='dimensions'>
+			<div class='fl' id='dimensions'>
 				<script>
 window.onresize = displayWindowSize;
 window.onload = displayWindowSize;
@@ -91,7 +92,7 @@ function displayWindowSize() {
 	};
 				</script>
 			</div><!-- Left Stuff -->
-		<div class='icn floatR'>
+		<div class='icn fr'>
 			<a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a>
 			<a href='steam://url/GroupSteamIDPage/103582791430342520' class='icon-steam2'></a>
 			<a href='https://github.com/Almost-There/almostThere' class='icon-facebook2'></a>
@@ -100,4 +101,16 @@ function displayWindowSize() {
 	</footer>
 	";
 };
+
+
+function colorForm() {
+	global $colorPick;
+	echo "\n<!-- colorForm() -->\n";
+	echo "<div id='colorPicker'>";
+	//Set color clientside with jquery, while saving the cookie to be read on next load with PHP
+	foreach ($colorPick as $v) { echo "<a class='changeColor' style='background:$v'></a>\n"; };
+	echo "\n</div>";
+	echo "\n<!-- /colorForm() -->\n";
+};
+
 ?>
