@@ -251,4 +251,5 @@ $quotes = array(
 "We're sort of like 7-Eleven - We're not always doing business, But we're always open.");
 $rQuote = rand(0,count($quotes)-1);
 $quote = $quotes[$rQuote];
+echo $quote;
 ?>
