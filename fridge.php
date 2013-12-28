@@ -1,8 +1,6 @@
 <?php
-
 if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
 else { include 'import.php'; }
-
 
 $includeurl = false;
 	// If this script is being included, define the URL to this variable script (relative from the host)
@@ -27,38 +25,48 @@ $uploadtypes = array( 'zip', 'gif', 'doc', 'png' );
 // If a  file gets uploaded with the same name as another file; override it?
 $overwrite = false;
 // Index files - The follow array contains all the index files that will be used if $displayindex (above) is set to true. Feel free to add, delete or alter these
-$indexfiles = array ( 'index.html', 'index.htm', 'default.htm', 'default.html' );
+$indexfiles = array ( 'index.html', 'index.htm', 'default.htm', 'default.html', 'index.php' );
 			
 //File Icons - If you want to add your own special file icons use  this section below. Each entry relates to the extension of the  given file, in the form <extension> => <filename>.  These files must be located within the dlf directory.
 $filetypes = array (
-				'png'		=> 'jpg.gif',
-				'jpeg'		=> 'jpg.gif',
-				'bmp' 	=> 'jpg.gif',
-				'jpg' 		=> 'jpg.gif', 
-				'gif' 		=> 'gif.gif',
-				'zip' 		=> 'archive.png',
-				'rar' 		=> 'archive.png',
-				'exe' 		=> 'exe.gif',
-				'setup' 	=> 'setup.gif',
-				'txt' 		=> 'text.png',
-				'htm' 		=> 'html.gif',
-				'html' 	=> 'html.gif',
-				'fla' 		=> 'fla.gif',
-				'swf' 		=> 'swf.gif',
-				'xls' 		=> 'xls.gif',
-				'doc' 	=> 'doc.gif',
-				'sig' 		=> 'sig.gif',
-				'fh10'	=> 'fh10.gif',
-				'pdf' 		=> 'pdf.gif',
-				'psd' 		=> 'psd.gif',
-				'rm' 		=> 'real.gif',
-				'mpg' 	=> 'video.gif',
-				'mpeg' 	=> 'video.gif',
-				'mov' 	=> 'video2.gif',
-				'avi' 		=> 'video.gif',
-				'eps' 		=> 'eps.gif',
-				'gz' 		=> 'archive.png',
-				'asc' 		=> 'sig.gif',
+				//Audio Types
+		'mp3'		=> 'music.png',		// MPEG-3 Digital Audio Format
+		'ogg'		=> 'music.png',		// Ogg-Vorbis Digital Audio Format
+		'flac'		=> 'music.png',		// Vorbis Compressionless Audio Format
+		'wav'		=> 'audio.png',		// Windows Compressed Wave Sound Format
+				//Video Types
+		'mp4'		=> 'video.png',		// MPEG-4 Part 14 Video Container Format
+		'mkv'		=> 'video.png',		// Matroska Video Container Format
+		'mpg' 		=> 'video.png',		// MPEG Video Format
+		'mpeg' 		=> 'video.png',		// MPEG Video Format
+		'mov' 		=> 'video.png',		// QuickTime Video File Format
+		'avi' 		=> 'video.png',		// Audio Video Interleaved File Format
+				//Image Types
+		'png'		=> 'images.png',	// Portable Notable Graphics Vector Format
+		'bmp' 		=> 'images.png',	// Bitmap Image Format
+		'jpeg'		=> 'images.png',	// JPEG Compressed Image Format
+		'jpg' 		=> 'images.png', 	// JPEG Compressed Image Format
+		'gif' 		=> 'images.png',	// Graphics Interchange Format
+				//Document Types
+		'fla' 		=> 'fla.png',		// Adobe Flash Source File
+		'txt' 		=> 'text.png',		// Plaintext File
+		'pdf' 		=> 'pdf.png',		// Adobe PDF Document
+		'psd' 		=> 'psd.png',		// Photoshop Document
+		'xls' 		=> 'xls.png',		// Microsoft Excel Document
+		'doc' 		=> 'doc.png',		// Microsoft Word Document
+				//Website Types
+		'swf' 		=> 'swf.png',		// Adobe Shockwave Flash Format
+		'htm' 		=> 'html.png',
+		'html'	 	=> 'html.png',
+				//Archives Types
+		'zip' 		=> 'archive.png',
+		'rar' 		=> 'archive.png',
+				//Executable Types
+		'php'		=> 'web.png',		//PHP Script
+		'sh'		=> 'shell.png',		//Shell Script
+		'apk'		=> 'android.png',	//Android Package File
+		'jar'		=> 'java.png'		//Java Executable File
+		'exe' 		=> 'exe.png',		//NT Executable File
 			);
 
 if($includeurl)

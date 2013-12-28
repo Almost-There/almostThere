@@ -53,6 +53,7 @@ else { include 'import.php'; } ?>
 				"fxvGHQHiY70",		/* Animal Collective - Peacebone */
 				"xAEhBQZ-k7U",		/* InnerPartySystem - And Together */
 				"_NBrrCn5_zo",		/* Pendulum - Comprachicos */
+				"5AA1rfKkWkI",		/* Ellie Goulding - Explosions (Gemini Remix) */
 				"EjAoBKagWQA",		/* Bjork - All is full of love */
 				"u7K72X4eo_s",		/* Massive Attack - Teardrop */
 				"YXdOAUKCc0k",		/* Red Hot Chili Peppers - By The Way */
@@ -178,9 +179,7 @@ else { include 'import.php'; } ?>
 	<div class='sqDub  theBGcolor'>
 		<div class='sqTitle'>Facebook<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
-			<ul>
-				<li>Cannot Connect to Facbook</li>
-			</ul>
+			<div class="fb-like-box" data-href="https://www.facebook.com/AlmostThereGaming" data-width="370" data-height="137" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
 		</div>
 		<div class='sqAltContent'>
 			<ul>
@@ -198,9 +197,9 @@ else { include 'import.php'; } ?>
 		<div class='sqTitle'>New Chan Posts<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
 			<ul>
+				<li>Cannot Parse RSS Feed!</li>
 				<li>Cannot Connect - Error</li>
-				<li>Cannot Connect - Error</li>
-				<li>Cannot Connect - Error</li>
+				<li>Cannot Parse RSS Feed!</li>
 				<li>Cannot Connect - Error</li>
 			</ul>
 		</div>
@@ -214,14 +213,30 @@ else { include 'import.php'; } ?>
 	</div>
 	<!-- Forum Threads Square -->
 
+	<!-- Color Picker Square -->
+	<div class='sqDub theBGcolor'>
+		<div class='sqTitle'>Color Picker<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqContent'>
+			<? colorForm(); ?>
+		</div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Color Picker Square -->
+
 	<!-- Steam Group Square -->
 	<div class='sqDub  theBGcolor'>
 		<div class='sqTitle'>Steam Announcements<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
 			<ul>
+				<li>Cannot Parse RSS Feed!</li>
 				<li>Cannot Connect - Error</li>
-				<li>Cannot Connect - Error</li>
-				<li>Cannot Connect - Error</li>
+				<li>Cannot Parse RSS Feed!</li>
 				<li>Cannot Connect - Error</li>
 			</ul>
 		</div>
@@ -236,13 +251,13 @@ else { include 'import.php'; } ?>
 	<!-- Steam Group Square -->
 
 	<!-- Movie Nights Square -->
-	<div class='sqDub  theBGcolor'>
+	<div class='sq  theBGcolor'>
 		<div class='sqTitle'>Upcoming Movie Nights<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
 			<ul>
+				<li>Cannot Parse RSS Feed!</li>
 				<li>Cannot Connect - Error</li>
-				<li>Cannot Connect - Error</li>
-				<li>Cannot Connect - Error</li>
+				<li>Cannot Parse RSS Feed!</li>
 				<li>Cannot Connect - Error</li>
 			</ul>
 		</div>

@@ -45,22 +45,29 @@ function head() {
 function preBody() {
 global $pageSeed , $theColor, $quote;
 	echo "\n<!-- preBody() -->\n";
+	// Here we include the Facebook API
+	echo "<div id='fb-root'></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = '//connect.facebook.net/en_US/all.js#xfbml=1';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>";
 	echo "
 	<header class='theBGcolor'>
 		<div class='bubbles' style='z-index+1'></div>
 		<div class='logoArea'>
 		<a href='/new/index.php'>
-			<img alt='Click here to return home' src='img/logo.png' />
+			<img alt='Click here to return home' src='img/logo.png' />	</a>
 			<span class='quote msg-type' id='msg'>
-		</a>
-		</div>
 		";
 	echo 
 		// import snarky quotes
  		include("quotes.sharky.php"); 
  	echo "
  	</span>
- 		</div><!-- logoArea -->
+		</div><!-- logoArea -->
 		<div id='navBody'>
 			<ul>
 				<li><a href='/new/squares.php'>Squares</a></li>
@@ -84,13 +91,8 @@ function postBody() {
 	<footer class='theBGcolor'>
 		<div class='full tint'>
 			<div class='fl' id='dimensions'>
-				<script>
-window.onresize = displayWindowSize;
-window.onload = displayWindowSize;
-function displayWindowSize() {
-	document.getElementById ('dimensions').innerHTML = $( window ).width();
-	};
-				</script>
+				<script> window.onresize = displayWindowSize; window.onload = displayWindowSize;
+						function displayWindowSize() { document.getElementById ('dimensions').innerHTML = $( window ).width(); }; </script>
 			</div><!-- Left Stuff -->
 		<div class='icn fr'>
 			<a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a>
@@ -100,8 +102,8 @@ function displayWindowSize() {
 	</div><!-- full tint -->
 	</footer>
 	";
+	echo "\n<!-- /postBody() -->\n";
 };
-
 
 function colorForm() {
 	global $colorPick;
