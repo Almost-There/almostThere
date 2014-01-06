@@ -23,10 +23,10 @@ $(function () {
         color = $(this).css("background-color");
         $(".theBGcolor").animate({
             backgroundColor: color
-        }, 500);
-        $(".theColor").animate({
+        }, 350);
+        $(".theColor" , ".theLinkColor a:link" , "#navBody li a:hover:after" , "theLinkColor a:visited" , ".titleWindow").animate({
             color: color
-        }, 500);
+        }, 350);
         $.cookie('setColor', color, {
             expires: 365,
             path: '/'

@@ -8,10 +8,10 @@ else { include 'import.php'; } ?>
 </head>
 <body>
 <? preBody(); ?>
-<div style='flex:auto'>
+<div style='flex:1'>
 <div id='sqField'> <!-- Box that contains all the squares -->
 	
-	<!-- Recent Logins Square -->
+    <!-- Recent Logins Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'>Recent Logins<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
@@ -35,7 +35,7 @@ else { include 'import.php'; } ?>
 
 	<!-- Youtube Square -->
 	<div class='sqDub theBGcolor'>
-		<div class='sqTitle'>Youtube<a href='' class='sqAltButton'>#</a></div>
+		<div class='youtubeTitle sqTitle'>Youtube Player<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqYt'>
 			<iframe src="//www.youtube.com/embed/<?
 				$yts = array(
