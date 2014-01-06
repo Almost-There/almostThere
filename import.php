@@ -20,23 +20,26 @@ function head() {
 			<link rel='stylesheet' type='text/css' href='/new/sty/style.css?=" . $pageSeed ."'>
 			<style>
 			.theColor {color:" . $theColor . ";}
-			.theLinkColor a:link {color:" . $theColor . ";}
-			.switch-input:checked ~ .switch-label {background-color:" . $theColor . ";}
 			#navBody li a:hover:after {color:" . $theColor . ";}
-			theLinkColor a:visited {color:" . $theColor . ";} .titleWindow {border: 2px solid " . $theColor . ";} a:hover {color:" . $theColor . ";}
-			theLinkColor a:hover {background-color:" . $theColor . ";}
+			.titleWindow {border: 2px solid " . $theColor . ";} a:hover {color:" . $theColor . ";}
 			icn a:hover {color:" . $theColor . ";}
-			.theLinkColor a:active {background-color:" . $theColor . ";}
 			.theBGcolor, table th {color:#222222;background-color:" . $theColor . ";}
 			#navBody li:before {color:" . $theColor . ";}
 			</style>
 			";
 	//Echo Javascript, jQuery and Page Scripts
 		echo	"
+		<!-- jQuery -->
 			<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+		<!-- jQuery UI -->
 			<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'></script>
+		<!-- jQuery Cookie Reading plugin -->
 			<script src='/new/scr/cookie.jquery.js'></script>
+		<!-- jQuery Sizzle CSS Selector support plugin -->
+			<script src='/new/scr/sizzle.jquery.js'></script>
+		<!-- Custom jQuery Animations script -->
 			<script src='/new/scr/animations.jquery.js?rnd=" . $pageSeed . "'></script>
+		<!-- Floating header bubbles script -->
 			<script src='/new/scr/bubbles.jquery.js?rnd=" . $pageSeed . "'></script>
 			";
 			echo "\n<!-- /head() -->\n";
@@ -62,26 +65,29 @@ global $pageSeed , $theColor, $quote;
 			<img alt='Click here to return home' src='img/logo.png' />	</a>
 			<span class='quote msg-type' id='msg'>
 		";
-	echo 
-		// import snarky quotes
- 		include("quotes.sharky.php"); 
+	 // import snarky quotes
+ 	include("quotes.sharky.php"); 
  	echo "
  	</span>
 		</div><!-- logoArea -->
 		<div id='navBody'>
 			<ul>
-				<li><a href='/new/squares.php'>Squares</a></li>
-				<li><a href='/forums/'>Forums</a></li>
-				<li><a href='/new/fridge.php'>Fridge</a></li>
-				<li><a href='/new/irc.php'>Chat</a></li>
+				<li><a href='squares.php'>Squares</a></li>
+				<li><a href='chan.php?AT'>Chan</a></li>
+				<li><a href='fridge.php'>Fridge</a></li>
+				<li><a href='irc.php'>Chat</a></li>
 			</ul>
 			<a href='#opensettings' id='settingsButton'>Settings</a>
 		</div><!-- navBody -->
 	</header>
 	";
-	echo "<div style='flex:1;' id='allOfTheThings' class='nudge'>";
+	echo "<div style='flex:1' id='allOfTheThings' class='nudge'>";
 	echo "\n<!-- /preBody() -->\n";
 };
+
+	  /////////////////////////////////////////////////////////
+	 /* This is where all of the page content magic happens */
+	/////////////////////////////////////////////////////////
 
 function postBody() {
 	global $pageSeed , $theColor;

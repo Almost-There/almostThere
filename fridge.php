@@ -20,7 +20,7 @@ $showtypes = array( 'jpg', 'png', 'gif', 'zip', 'txt', 'mp3' );
 $displayindex = false;
 $allowuploads = true;
 // allowed file types to be uploaded.
-$uploadtypes = array( 'zip', 'gif', 'doc', 'png' );
+$uploadtypes = array( 'zip', 'gif', 'doc', 'png', 'jpg', 'mp4', 'mp3', 'mov', 'swf' );
 
 // If a  file gets uploaded with the same name as another file; override it?
 $overwrite = false;
@@ -65,8 +65,8 @@ $filetypes = array (
 		'php'		=> 'web.png',		//PHP Script
 		'sh'		=> 'shell.png',		//Shell Script
 		'apk'		=> 'android.png',	//Android Package File
-		'jar'		=> 'java.png'		//Java Executable File
-		'exe' 		=> 'exe.png',		//NT Executable File
+		'jar'		=> 'java.png',		//Java Executable File
+		'exe' 		=> 'exe.png'		//NT Executable File
 			);
 
 if($includeurl)
@@ -211,7 +211,7 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 <body>
 <? preBody(); ?>
 <table class='cf' id='fileTable'>
-<tr style="display:none;"><td colspan='3' class='theBGcolor'><span style='color:#222222;' >Fridge Listing of <?php echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;?></span></td></tr>
+<tr><td colspan='3' class='theBGcolor'><span style='color:#FFFFFF;' >Fridge Listing of <?php echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;?></span></td></tr>
 <tr style="display:none;">
 <td colspan='3'>		
 		<div  class='theLinkColor' id="breadcrumbs">
@@ -236,9 +236,9 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 				default: $fileurl = 'sort=name&amp;order=desc'; break;}
 		  ?>
 			<tr>
-				<th class='theBGcolor'><a id="headerfile" href="<?php echo $baseurl . $fileurl;?>">File</a></th>
+				<th class='theBGcolor'><a id="headerfile" href="<?php echo $baseurl . $fileurl;?>">Filename</a></th>
 				<th class='theBGcolor'><a id="headersize" href="<?php echo $baseurl . $sizeurl;?>">Size</a></th>
-				<th class='theBGcolor'><a class='theAntiColor' id="headermodified" href="<?php echo $baseurl . $dateurl;?>">Last Modified</a></th>
+				<th class='theBGcolor'><a id="headermodified" href="<?php echo $baseurl . $dateurl;?>">Last Modified</a></th>
 			</tr>
 		<tr>
 	<?php if($dirok) { ?>
@@ -269,7 +269,7 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 		<? //<?php echo $thumb2; ?? <img src="<?php echo $includeurl; ?? sty/icons<?php echo $icon; ?? " alt="??php echo $files[$i];??" />
 		//replace ?? with end-tags to re-enable ?>
 		
-		<td class='theLinkColor' id='fileName'> <a target="_blank" href="<? echo $fileurl;?>"><?php echo $filename;?></a></td>
+		<td id='fileName'> <a target="_blank" href="<? echo $fileurl;?>"><?php echo $filename;?></a></td>
 		<td id='fileSize'><?php echo round(filesize($includeurl.$leadon.$files[$i])/1024);?> KB</td>
 		<td id='fileDate'>
 			<?php echo date ("M d Y h:i:s A", filemtime($includeurl.$leadon.$files[$i]));?>
@@ -286,21 +286,38 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 			case 'g': $phpmaxsize *= 1024;
 			case 'm': $phpmaxsize *= 1024; }
 	?>
-	<div id="upload">
-		<div id="uploadtitle">
+            	<div class='sqDub theBGcolor'>
+		<div class='youtubeTitle sqTitle'>Youtube Player<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqYt'>
+            
+            
+	<div id="frgUpload">
+		<div id="frgUploadTitle">
 			<strong>File Upload</strong> (Max Filesize: <?php echo $phpmaxsize;?>KB)
-			<?php if($uploaderror) echo '<div class="upload-error">'.$uploaderror.'</div>'; ?>
+			<?php if($uploaderror) echo '<div class="frgUploadError">'.$uploaderror.'</div>'; ?>
 		</div>
-		<div id="uploadcontent">
-			<?php
-			if($phpallowuploads) {
-			?>
+		<div id="frgUploadContent">
+			<?php if($phpallowuploads) { ?>
 			<form method="post" action="<?php echo strip_tags($_SERVER['PHP_SELF']);?>?dir=<?php echo urlencode(str_replace($startdir,'',$leadon));?>" enctype="multipart/form-data">
-			<input type="file" name="file" /> <input type="submit" value="Upload" />
+                <input type="file" name="file" />
+                <input type="submit" value="Upload" />
 			</form>
 			<? } else { ?> File uploads are disabled in your php.ini file. <? } ?>
 		</div>
 		</div>
+            
+            </div>
+		<div class='sqAltContent'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>AutoPlay Videos</a></li>
+				<li><a>Copy Video URL to Clipboard</a></li>
+				<li><a>Put Tile in Bag</a></li> -->
+			</ul>
+		</div>
+	</div>
+        
 	<?php
 	}
 	?>
