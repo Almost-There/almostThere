@@ -26,7 +26,6 @@ $uploadtypes = array( 'zip', 'gif', 'doc', 'png', 'jpg', 'mp4', 'mp3', 'mov', 's
 $overwrite = false;
 // Index files - The follow array contains all the index files that will be used if $displayindex (above) is set to true. Feel free to add, delete or alter these
 $indexfiles = array ( 'index.html', 'index.htm', 'default.htm', 'default.html', 'index.php' );
-			
 //File Icons - If you want to add your own special file icons use  this section below. Each entry relates to the extension of the  given file, in the form <extension> => <filename>.  These files must be located within the dlf directory.
 $filetypes = array (
 				//Audio Types
@@ -83,14 +82,14 @@ $startdir = $leadon;
 // Start getting directory information
 if($_GET['dir']) {
 	if(substr($_GET['dir'], -1, 1)!='/') { $_GET['dir'] = strip_tags($_GET['dir']) . '/'; }
-	
+
 	$dirok = true;
 	$dirnames = split('/', strip_tags($_GET['dir']));
 	for($di=0; $di<sizeof($dirnames); $di++) {
 		if($di<(sizeof($dirnames)-2)) { $dotdotdir = $dotdotdir . $dirnames[$di] . '/'; }
 		if($dirnames[$di] == '..') { $dirok = false; }
 	}
-	
+
 	if(substr($_GET['dir'], 0, 1)=='/') {$dirok = false;}
 	if($dirok) {$leadon = $leadon . strip_tags($_GET['dir']);}
 }
@@ -101,7 +100,7 @@ if($_GET['download'] && $forcedownloads) {
 
 	if(file_exists($includeurl . $leadon . $file)) {
 		header("Content-type: application/x-download");
-		header("Content-Length: ".filesize($includeurl . $leadon . $file)); 
+		header("Content-Length: ".filesize($includeurl . $leadon . $file));
 		header('Content-Disposition: attachment; filename="'.$file.'"');
 		readfile($includeurl . $leadon . $file);
 		die();
@@ -110,7 +109,7 @@ if($_GET['download'] && $forcedownloads) {
 if($allowuploads && $_FILES['file']) {
 	$upload = true;
 	if(!$overwrite) { if(file_exists($leadon.$_FILES['file']['name'])) { $upload = false; } }
-	
+
 	if($uploadtypes)
 	{
 		if(!in_array(substr($_FILES['file']['name'], strpos($_FILES['file']['name'], '.')+1, strlen($_FILES['file']['name'])), $uploadtypes))
@@ -127,7 +126,7 @@ if($allowuploads && $_FILES['file']) {
 			}
 		}
 	}
-	
+
 	if($upload) {
 		move_uploaded_file($_FILES['file']['tmp_name'], $includeurl.$leadon . $_FILES['file']['name']);
 	}
@@ -142,7 +141,7 @@ if(!file_exists($opendir)) {
 
 clearstatcache();
 if ($handle = opendir($opendir)) {
-	while (false !== ($file = readdir($handle))) { 
+	while (false !== ($file = readdir($handle))) {
 		//first see if this file is required in the listing
 		if ($file == "." || $file == "..")  continue;
 		$discard = false;
@@ -151,11 +150,9 @@ if ($handle = opendir($opendir)) {
 				$discard = true;
 			}
 		}
-		
 		if($discard) continue;
 		if (@filetype($includeurl.$leadon.$file) == "dir") {
 			if(!$showdirs) continue;
-		
 			$n++;
 			if($_GET['sort']=="date") { $key = @filemtime($includeurl.$leadon.$file) . ".$n"; }
 				else { $key = $n; }
@@ -166,10 +163,8 @@ if ($handle = opendir($opendir)) {
 			if($_GET['sort']=="date") { $key = @filemtime($includeurl.$leadon.$file) . ".$n"; }
 			elseif($_GET['sort']=="size") { $key = @filesize($includeurl.$leadon.$file) . ".$n"; }
 			else { $key = $n; }
-			
 			if($showtypes && !in_array(substr($file, strpos($file, '.')+1, strlen($file)), $showtypes)) unset($file);
 			if($file) $files[$key] = $file;
-			
 			if($displayindex) {
 				if(in_array(strtolower($file), $indexfiles)) {
 					header("Location: $leadon$file");
@@ -178,7 +173,7 @@ if ($handle = opendir($opendir)) {
 			}
 		}
 	}
-	closedir($handle); 
+	closedir($handle);
 }
 
 //sort our files
@@ -187,11 +182,11 @@ if($_GET['sort']=="date") {
 	@ksort($files, SORT_NUMERIC);
 }
 elseif($_GET['sort']=="size") {
-	@natcasesort($dirs); 
+	@natcasesort($dirs);
 	@ksort($files, SORT_NUMERIC);
 }
 else {
-	@natcasesort($dirs); 
+	@natcasesort($dirs);
 	@natcasesort($files);
 }
 
@@ -213,7 +208,7 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 <table class='cf' id='fileTable'>
 <tr><td colspan='3' class='theBGcolor'><span style='color:#FFFFFF;' >Fridge Listing of <?php echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;?></span></td></tr>
 <tr style="display:none;">
-<td colspan='3'>		
+<td colspan='3'>
 		<div  class='theLinkColor' id="breadcrumbs">
 			<a href="<?php echo strip_tags($_SERVER['PHP_SELF']);?>">/Fridge/</a> 
 		  <?php
@@ -232,7 +227,7 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 			switch ($_GET['sort']) {
 				case 'name': if($_GET['order']=='asc') $fileurl = 'sort=name&amp;order=desc'; break;
 				case 'size': if($_GET['order']=='asc') $sizeurl = 'sort=size&amp;order=desc'; break;
-				case 'date': if($_GET['order']=='asc') $dateurl = 'sort=date&amp;order=desc'; break;  
+				case 'date': if($_GET['order']=='asc') $dateurl = 'sort=date&amp;order=desc'; break;
 				default: $fileurl = 'sort=name&amp;order=desc'; break;}
 		  ?>
 			<tr>
@@ -248,7 +243,7 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 				<strong><?php echo $dirs[$i];?></strong>
 			<em>-</em> <?php echo date ("M d Y h:i:s A", filemtime($includeurl.$leadon.$dirs[$i]));?>
 		</a>
-	<?php	
+	<?php
 	}
 	$arsize = sizeof($files);
 	for($i=0;$i<$arsize;$i++) {
@@ -265,10 +260,8 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 		if(strlen($filename)>43) { $filename = substr($files[$i], 0, 40) . '...'; }
 		$fileurl = $includeurl . $leadon . $files[$i];
 		if($forcedownloads) { $fileurl = $_SESSION['PHP_SELF'] . '?dir=' . urlencode(str_replace($startdir,'',$leadon)) . '&download=' . urlencode($files[$i]); }?>
-	
 		<? //<?php echo $thumb2; ?? <img src="<?php echo $includeurl; ?? sty/icons<?php echo $icon; ?? " alt="??php echo $files[$i];??" />
 		//replace ?? with end-tags to re-enable ?>
-		
 		<td id='fileName'> <a target="_blank" href="<? echo $fileurl;?>"><?php echo $filename;?></a></td>
 		<td id='fileSize'><?php echo round(filesize($includeurl.$leadon.$files[$i])/1024);?> KB</td>
 		<td id='fileDate'>
@@ -278,7 +271,7 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 	</table>
 	<?php
 	if($allowuploads) {
-		$phpallowuploads = (bool) ini_get('file_uploads');		
+		$phpallowuploads = (bool) ini_get('file_uploads');
 		$phpmaxsize = ini_get('upload_max_filesize');
 		$phpmaxsize = trim($phpmaxsize);
 		$last = strtolower($phpmaxsize{strlen($phpmaxsize)-1});
@@ -289,8 +282,6 @@ $dirs = @array_values($dirs); $files = @array_values($files);
             	<div class='sqDub theBGcolor'>
 		<div class='youtubeTitle sqTitle'>Youtube Player<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqYt'>
-            
-            
 	<div id="frgUpload">
 		<div id="frgUploadTitle">
 			<strong>File Upload</strong> (Max Filesize: <?php echo $phpmaxsize;?>KB)
@@ -305,7 +296,6 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 			<? } else { ?> File uploads are disabled in your php.ini file. <? } ?>
 		</div>
 		</div>
-            
             </div>
 		<div class='sqAltContent'>
 			<ul>
@@ -317,7 +307,6 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 			</ul>
 		</div>
 	</div>
-        
 	<?php
 	}
 	?>

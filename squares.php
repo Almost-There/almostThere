@@ -8,11 +8,9 @@ else { include 'import.php'; } ?>
 </head>
 <body>
 <? preBody(); ?>
-<div style='flex:1'>
-<div id='sqField'> <!-- Box that contains all the squares -->
-	
+<div id='sqField' class='nudge'>
     <!-- Recent Logins Square -->
-	<div class='sq  theBGcolor'>
+	<div class='sq theBGcolor'>
 		<div class='sqTitle'>Recent Logins<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
 			<ul>
@@ -83,7 +81,7 @@ else { include 'import.php'; } ?>
 				<li><a>Display Order</a></li>
 				<li><a>AutoPlay Videos</a></li>
 				<li><a>Copy Video URL to Clipboard</a></li>
-				<li><a>Put Tile in Bag</a></li> -->
+				<li><a>Put Tile in Bag</a></li>
 			</ul>
 		</div>
 	</div>
@@ -290,8 +288,6 @@ else { include 'import.php'; } ?>
 		</div>
 	</div>
 	<!-- End Points Square -->
-</div>
-
 </div>
 <? postBody(); ?>
 </body>
