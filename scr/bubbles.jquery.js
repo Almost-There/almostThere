@@ -6,18 +6,18 @@ function bubbles() {
 // Settings
 	var
 			min_bubble_count =30,		// min bubbliage
-			max_bubble_count = 110,	// max bubbliage
-			min_bubble_size = 20,			// smallest bubble diameter (px)
+			max_bubble_count = 110,		// max bubbliage
+			min_bubble_size = 20,		// smallest bubble diameter (px)
 			max_bubble_size = 80;		// largest bubble diameter (px)
 
 	// Calculate a random number of bubbles based on our min/max
 		var bubbleCount = min_bubble_count + Math.floor(Math.random() * (max_bubble_count + 1));
 	  
 	// Create the bubbles
-		for (var i = 0; i < bubbleCount; i++) { $bubbles.append('<div class="bubble-container"><div class="bubble"></div></div>'); }
+		for (var i = 0; i < bubbleCount; i++) { $bubbles.append('<div class="bubble-outer"><div class="bubble"></div></div>'); }
 	  
 	// Randomize the various bubble elements
-	$bubbles.find('.bubble-container').each(function(){    
+	$bubbles.find('.bubble-outer').each(function(){    
 		// random the bubble positions (0 - 100%)
 		var pos_rand = Math.floor(Math.random() * 101);
 		// random their size
