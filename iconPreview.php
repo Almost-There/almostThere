@@ -8,6 +8,7 @@ else { include 'import.php'; } ?>
 </head>
 <body>
 <? preBody(); ?>
+<div id='sqField' class='nudge'>
 	<!-- Color Picker Square -->
 	<div class='sqDub fl db theBGcolor'>
 		<div class='sqTitle oneline'>Color Picker<a href='' class='sqAltButton'>#</a></div>
@@ -26,43 +27,13 @@ else { include 'import.php'; } ?>
 
 <?php
 $icons = array( 
-"icon-home",
-"icon-home2",
-"icon-home3",
-"icon-office",
-"icon-newspaper",
-"icon-pencil",
-"icon-pencil2",
-"icon-quill",
-"icon-pen",
-"icon-blog",
-"icon-droplet",
-"icon-paint-format",
-"icon-image",
-"icon-image2",
-"icon-images",
-"icon-camera",
-"icon-music",
-"icon-headphones",
-"icon-play",
-"icon-film",
-"icon-camera2",
-"icon-dice",
-"icon-pacman",
-"icon-spades",
-"icon-clubs",
-"icon-diamonds",
-"icon-pawn",
-"icon-bullhorn",
-"icon-connection",
-"icon-podcast",
-"icon-feed",
-"icon-book",
-"icon-books",
-"icon-library",
-"icon-file",
-"icon-profile",
-"icon-file2",
+"icon-home", "icon-home2", "icon-home3", "icon-office", "icon-newspaper",
+"icon-pencil", "icon-pencil2", "icon-quill", "icon-pen", "icon-blog",
+"icon-droplet", "icon-paint-format", "icon-image", "icon-image2", "icon-images",
+"icon-camera", "icon-music", "icon-headphones", "icon-play", "icon-film", "icon-camera2",
+"icon-dice", "icon-pacman", "icon-spades", "icon-clubs", "icon-diamonds",
+"icon-pawn", "icon-bullhorn", "icon-connection", "icon-podcast", "icon-feed",
+"icon-book", "icon-books", "icon-library", "icon-file", "icon-profile", "icon-file2",
 "icon-file3",
 "icon-file4",
 "icon-copy",
@@ -487,6 +458,7 @@ foreach ($icons as $v) {
 	echo " icn&#39;&gt;&lt;/a&gt;' onclick='this.select();'/></div></div>";
 }
 ?>
+</div>
 <? postBody(); ?>
 </body>
 </html>

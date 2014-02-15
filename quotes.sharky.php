@@ -1,4 +1,4 @@
-<!-- Begining of qutoes.sharky.php -->
+<!-- Begining of quotes.sharky.php -->
 <?php
 $quotes = array(
 "Almost-There, driving you're gaming addiction... One game at a time!",
@@ -170,10 +170,9 @@ $quotes = array(
 "This slogan requires an Almost-There GOLD account<br />Please enter credit card information below", 
 "This confirms that the tracking cookie we installed is working", 
 "Because facebook is too mainstream", 
-"This is not web 2.0, it isn't metro, we arn't sure wtf this design is... but its sexy", 
+"This is not web 2.0, it isn't metro, we aren't sure wtf this design is... but it's sexy", 
 "Go outside and wave at the sky so I can see<br />you on Google Earth", 
 "Shame on Cisco, And I'm not talking about the<br />captian of deep space nine.",
-"New Goal: Get laid before Kenny's dad",
 "4chan won't even fuck with us", 
 "Protected by CloudFlare!<br />because we need it...",
 "The cocaine was not involved with that particular case, your point is invalid!",

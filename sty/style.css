@@ -6,7 +6,7 @@
 	* {margin:0;padding:0;border:0;text-decoration:none;list-style:none;font-weight:200;font-size:14px;}
 	body {color:#FFFFFF;background-color:#111111;line-height:1.4;font-family:Tahoma, Geneva, sans-serif;display:flex;flex-direction:column;min-height:100%;}
 	header {height:140px;overflow:hidden;}		/* This thing goes ontop of */
-	#allOfTheThings {flex: 1;width: 100%;padding: 1.5em; -ms-flex-preferred-size: auto; @include breakpoint("large") {padding-top: 2em;} }
+	#allOfTheThings {flex: 1;width:100%; -ms-flex-preferred-size: auto; @include breakpoint("large") }
 	footer {height:28px;}						/* Which is ontop of this thing */
 
 /* Header Styles */
@@ -15,6 +15,7 @@
 	header .quote {position:absolute;font-family: 'neoSans';top:50px;color:#222222;z-index:+2;font-size:12px;opacity:0.6;font-weight:bold;margin-left:60px;}
 
 /* Footer Styles */	 	
+	footer {display:block;position:fixed;bottom:0px;}
 	footer .fl {padding-left:8px;}
 	footer .fr {padding-right:8px;}
 	footer .icn {font-size:20px;margin:auto 2px;}
@@ -58,14 +59,21 @@
 	.oh {overflow:hidden;}
 	.vw {min-width:100vw;}
 	.vh {min-height:100vh;}
+	.pr {position:relative;}
 	.full {width:100%;height:100%;} 
 	.fullw {width:100%;} 
 	.fullh {height:100%;}
-	.tint {background-color:rgba(22, 22, 22, 0.6);}
+	.tint {background-color:rgba(22, 22, 22, 0.6) !important;}
+	.layerUp {z-index:+1;}
+	.layerDown {z-index:-1;}
 	.ma {margin-left:auto;margin-right:auto;} /* This is a pretty hack to cener things with a width attribute applied */
 	.ctr {text-align:center;margin-left:auto;margin-right:auto;} /* Same as above with Text-Aligh Center */
-	.big {font-size:28px;}
-	.small {font-size:9px;}
+	.big {font-size:28px !important;}
+	.write, .writeDark {font-family:Tahoma, Geneva, sans-serif;font-size:14px;opacity:1;}
+	.write {color:#FFFFFF;}
+	.writeDark {color:#222222;}
+	.small {font-size:9px !important;}
+	.mirror {display:block; -webkit-transform: matrix(-1, 0, 0, 1, 0, 0); -moz-transform: matrix(-1, 0, 0, 1, 0, 0); -o-transform: matrix(-1, 0, 0, 1, 0, 0); transform: matrix(-1, 0, 0, 1, 0, 0); }
 	.ninjas {display:none;color:#000000;} /* Hide dat shit */
 
 /* Navigation Bar Styles */
@@ -104,18 +112,22 @@
 	.settingsMenuBlock #colorPicker {height:180px;width:200px;}
 
 /* Color Picker Styles */
-	#colorPicker a:before {float:left;background:#222222;display:block;border-radius:4px;border:4px solid #222222;margin:2px;}
+	#colorPicker a:before {font-family:'icomoon' !important;font-size:15px;float:left;background:#222222;display:block;border-radius:4px;border:4px solid #222222;margin:2px;}
 	#colorPicker a:hover:before {cursor:pointer;background:#444444;border:4px solid #444444;}
-	
-/* Square Classes */
-	.sq, .sqDub {height:0px;overflow:hidden;margin-right:5px;margin-top:5px;}
-	.sq	{width:180px;}
-	.sqDub, .sqYt iframe {width:360px;}
-	.sqTitle {margin:2px 5px;font-size:18px;height:25px;overflow:hidden;color:#FFFFFF;}
 
+/* Square Classes */
+	.sq, .sqDub {height:0px;overflow:hidden;margin-right:10px;margin-top:10px;}
+	.sq	{width:180px;}
+	.sqDub, .sqYt iframe {width:370px;}
+	.sqTitle {margin:2px 5px;font-size:18px;height:25px;overflow:hidden;color:#222222;font-family: 'neoSans';}
+	.sqBody {margin:4px 0px;font-size:12px;overflow:hidden;}
+	.sqTitleMirror-Frame1 {position:relative;}
+/*	.sqTitle-Frame1 {}
+	.sqTitle-Frame1 {}
+	.sqTitle-Frame1 {}*/
 	.sq ul, .sqDub ul {list-style:none;}
 
-	.sqBody, .sqBody2, .sqBody3, .sqBody4 {margin:5px;height:155px;}
+	.sqBody, .sqBody2, .sqBody3, .sqBody4 {margin:5px;height:155px;color:#222222;}
 	.sqBody2, .sqBody3, .sqBody4 {display:none;}
 
 	 #sqField .sq, #sqField .sqDub {display:block;float:left;}
@@ -130,7 +142,7 @@
 	.sqAltContent {padding:20px;display:none;} 
 /* .sqAltContent ul {list-style:none;} */
 /* .sqAltContent ul li {float:left;} */
-/* .sqYt iframe {height:180px;border:0;} */
+	.sqYt iframe {height:180px;border:0;}
 /* .sqYt .sqTitle {position:relative;color:#FFFFFF;z-index:+2} */
 /* .sqYtSneezeGuard {width:100%;opacity:0.0;display:block;background:transparent;height:60px;z-index:+3;} */
 	

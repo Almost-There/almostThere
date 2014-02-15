@@ -11,8 +11,8 @@ else { include 'import.php'; } ?>
 <div id='sqField' class='nudge'>
     <!-- Recent Logins Square -->
 	<div class='sq theBGcolor'>
-		<div class='sqTitle'>Recent Logins<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqTitle mirror'>Recent Logins<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqBody'>
 			<ul>
 				<li>| LuckyMonkey<span class='fr'>3m</span></li>
 				<li>| Kenny<span class='fr'>10m</span></li>
@@ -90,7 +90,7 @@ else { include 'import.php'; } ?>
 	<!-- Minecraft Server Status Square -->
 	<div class='sqDub minecraftBG theBGcolor'>
 		<div class='sqTitle'>Minecraft Server<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<ul>
 				<li>Almost-There Minecraft Addiction</li>
 				<li>mc.almost-there.org</li>
@@ -113,7 +113,7 @@ else { include 'import.php'; } ?>
 	<!-- HitCounter Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'>Visits<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<ul>
 				<li>0 Visits by You</li>
 				<li>0 Visits Today</li>
@@ -134,7 +134,7 @@ else { include 'import.php'; } ?>
 	<!-- Unreads Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'>Unreads<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<ul>
 				<li>0 Unread Chan Threads</li>
 				<li>0 Unread Messages</li>
@@ -155,7 +155,7 @@ else { include 'import.php'; } ?>
 	<!-- Popular Pages Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'>Popular Pages<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<ul>
 				<li>squares.php</li>
 				<li>index.php</li>
@@ -176,7 +176,7 @@ else { include 'import.php'; } ?>
 	<!-- Facebook Square -->
 	<div class='sqDub  theBGcolor'>
 		<div class='sqTitle'>Facebook<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<div class="fb-like-box" data-href="https://www.facebook.com/AlmostThereGaming" data-width="370" data-height="137" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
 		</div>
 		<div class='sqAltContent'>
@@ -193,7 +193,7 @@ else { include 'import.php'; } ?>
 	<!-- Forum Threads Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'>New Chan Posts<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<ul>
 				<li>Cannot Parse RSS Feed!</li>
 				<li>Cannot Connect - Error</li>
@@ -214,7 +214,7 @@ else { include 'import.php'; } ?>
 	<!-- Color Picker Square -->
 	<div class='sqDub theBGcolor'>
 		<div class='sqTitle'>Color Picker<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<? colorForm(); ?>
 		</div>
 		<div class='sqAltContent'>
@@ -230,7 +230,7 @@ else { include 'import.php'; } ?>
 	<!-- Steam Group Square -->
 	<div class='sqDub  theBGcolor'>
 		<div class='sqTitle'>Steam Announcements<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<ul>
 				<li>Cannot Parse RSS Feed!</li>
 				<li>Cannot Connect - Error</li>
@@ -251,12 +251,12 @@ else { include 'import.php'; } ?>
 	<!-- Movie Nights Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'>Upcoming Movie Nights<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
+		<div class='sqBody'>
 			<ul>
-				<li>Cannot Parse RSS Feed!</li>
-				<li>Cannot Connect - Error</li>
-				<li>Cannot Parse RSS Feed!</li>
-				<li>Cannot Connect - Error</li>
+				<li>Cannot Parse - <span class='fr'>RSS Feed!</span></li>
+				<li>Cannot Connect - <span class='fr'>Error</span></li>
+				<li>Cannot Parse - <span class='fr'>RSS Feed!</span></li>
+				<li>Cannot Connect - <span class='fr'>Error</span></li>
 			</ul>
 		</div>
 		<div class='sqAltContent'>
@@ -268,26 +268,6 @@ else { include 'import.php'; } ?>
 		</div>
 	</div>
 	<!-- Movie Nights Square -->
-
-	<!-- Points Square -->
-	<div class='sq  theBGcolor'>
-		<div class='sqTitle'>Points<a href='' class='sqAltButton'>#</a></div>
-		<div class='sqContent'>
-			<ul>
-				<li>0 Points</li>
-				<li>0 Points Earned</li>
-				<li>0 Redeemable Points</li>
-			</ul>
-		</div>
-		<div class='sqAltContent'>
-			<ul>
-				<li><a>Show/Hide Square</a></li>
-				<li><a>Display Order</a></li>
-				<li><a>Copy Info to Clipboard</a></li>
-			</ul>
-		</div>
-	</div>
-	<!-- End Points Square -->
 </div>
 <? postBody(); ?>
 </body>
