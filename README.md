@@ -7,7 +7,7 @@ The purpose of this website is to connect gamers together from across many games
 We are currently looking to support.
 
 Must Support [OS]
-Windows, Linux, iOS/OSX, Android, Steam OS, bash
+Windows, Linux, iOS/OSX, Android, Steam OS
 
 Must Support [Browser]
 Firefox, Chrome, IE(9+10+?), Safari, Steam In-Game, Lynx

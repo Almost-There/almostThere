@@ -138,24 +138,21 @@ $(function () {
         })();
     }
 
+// This makes one square fade in after another.
+$(function() {
+      $('#sqField div').each(function(i) {
+    $(this).delay((i++) * 50).fadeTo(1000, 1); })
+});
+// This does SOMETHING I forget exactly what though...
 $(function () { 
     var sq=$(".sq")
     var sqDub=$(".sqDub")
-    var sqTitle=$(".sqTitle")
     var youtubeTitle=$(".youtubeTitle")
     sqDub.animate({height:'180px'},"slow");
     sq.delay( 200 ).animate({height:'180px'},"slow");
-    sqTitle.animate({right:'-600px'},"slow");
+
     youtubeTitle.delay( 1000 ).slideUp( "slow" );
 
-    
-
-    sqTitle.removeClass( "mirror" );
-    sqTitle.animate({left:'-600px;'},"10");
-    sqTitle.animate({left:'0px;'},"slow");
-
-
-    // sqTitle.animate({height:'100px',opacity:'0.4'},"slow");
 } );
 
 

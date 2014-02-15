@@ -10,7 +10,7 @@ else { include 'import.php'; } ?>
 <body>
 <? preBody(); ?>
 <div>
-<iframe src="https://kiwiirc.com/client/irc.gamesurge.net/?nick=AT-Web_|?&theme=cli#almostthere" style="border:0; width:100%; height:450px;"></iframe>
+<iframe src="https://kiwiirc.com/client/irc.gamesurge.net/?nick=AT-Web_|?&amp;theme=cli#almostthere" style="border:0; width:100%; height:450px;"></iframe>
 </div>
 <? postBody(); ?>
 </body>

@@ -4,9 +4,8 @@ $pageSeed=rand(1024,2048);
 // Look for setColor Cookie, if it isn't there, set theColor to 0099FF
 if (isset($_COOKIE["setColor"])) $theColor=$_COOKIE["setColor"];
 else $theColor= "#bada55";
-
-$colorPick = array("#EE5078", "#FF8039", "#FFA533", "#FFC233", "#FFE030", "#FFF933", "#D7FF20", "#15FF3E", "#03BCFF", "#00FF7F","#90EE90", "#3CB371", "#00FA9A", "#808000", "#2E8B57", "#FF0000", "#FF4500", "#FF8C00", "#FFA500", "#ED2939","#800000", "#A52A2A", "#D2691E", "#FF7F50", "#DC143C", "#E9967A", "#FF1493", "#B22222", "#FF69B4", "#CD5C5C","#F08080",  "#6495ED", "#008B8B", "#483D8B", "#00BFFF", "#1E90FF", "#ADD8E6", "#20B2AA", "#87CEFA", "#B0C4DE", "#76608A", "#7B68EE", "#4169E1", "#6A5ACD", "#708090","#4682B4", "#008080", "#40E0D0", "#0099CC", "#EA8224", "#BADA55", "#AEE530");
-
+//$colorPick = array("#EE5078", "#FF8039", "#FFA533", "#FFC233", "#FFE030", "#FFF933", "#D7FF20", "#15FF3E", "#03BCFF", "#00FF7F","#90EE90", "#3CB371", "#00FA9A", "#808000", "#2E8B57", "#FF0000", "#FF4500", "#FF8C00", "#FFA500", "#ED2939","#800000", "#A52A2A", "#D2691E", "#FF7F50", "#DC143C", "#E9967A", "#FF1493", "#B22222", "#FF69B4", "#CD5C5C","#F08080",  "#6495ED", "#008B8B", "#483D8B", "#00BFFF", "#1E90FF", "#ADD8E6", "#20B2AA", "#87CEFA", "#B0C4DE", "#76608A", "#7B68EE", "#4169E1", "#6A5ACD", "#708090","#4682B4", "#008080", "#40E0D0", "#0099CC", "#EA8224", "#BADA55", "#AEE530");
+$colorPick = array("#4d55FF", "#5687FF", "#0099CC", "#62BDFF", "#5FE2FF", "#54FDD7", "#45FD9F", "#48FD82", "#3BFD4A", "#6AFD46", "#97FD3F", "#BFFD40", "#BADA55", "#DAD444", "#DAC73A", "#DAB83C", "#DAAA49", "#DA9540", "#DA7F40", "#DA663A", "#DA5839", "#DA4A34", "#DA4033", "#DA2A2F", "#DA2A3E", "#DA2858", "#DA2A81", "#DA27A4", "#DA23C2", "#C731DA", "#AD2CDA", "#901BDA", "#7B1FDA", "#651EDA", "#483CFF");
 function head() {
 		echo "\n<!-- head() -->\n";
 	//Function used to load JS, CSS, and Meta Attributes into the HTML's <head> tag.
@@ -88,28 +87,28 @@ global $pageSeed , $theColor, $quote;
 function postBody() {
 	global $pageSeed , $theColor;
 	function displayAds() {
-		echo "<div style='width:400px;height:50px;' class='write small'>"
-//put this here http://pastebin.com/raw.php?i=NwpQp6ui
-		echo "</div>"
+		echo "<div style='width:400px;height:50px;' class='write small'>";
+		//put this here http://pastebin.com/raw.php?i=NwpQp6ui
+		echo "</div>";
 	};
 	echo "\n<!-- postBody() -->\n";
 	echo "</div>";/* #allOfTheThings */
 	echo "
-	<footer class='theBGcolor'>
+	<footer class='fullw theBGcolor'>
 		<div class='full tint'>
-			<div class='fl'>";			
-	displayAds()
-	echo "!-- Left Stuff -->
-		<div class='icn fr'>
-			<a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a>
-			<a href='steam://url/GroupSteamIDPage/103582791430342520' class='icon-steam2'></a>
-			<a href='https://github.com/Almost-There/almostThere' class='icon-facebook2'></a>
-		</div><!-- Right Stuff -->
-	</div><!-- full tint -->
+			<div class='fl'></div>";
+	echo "<!-- Left Stuff -->
+			<div class='icn fr'>
+				<a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a>
+				<a href='steam://url/GroupSteamIDPage/103582791430342520' class='icon-steam2'></a>
+				<a href='https://github.com/Almost-There/almostThere' class='icon-facebook2'></a>
+			</div><!-- Right Stuff -->
+		</div>
 	</footer>
 	";
 	echo "\n<!-- /postBody() -->\n";
 };
+
 function colorForm() {
 	global $colorPick;
 	echo "\n<!-- colorForm() -->\n";
@@ -119,10 +118,9 @@ function colorForm() {
 	echo "\n</div>";
 	echo "\n<!-- /colorForm() -->\n";
 };
+
 function colorsAvailable() {
 	global $colorPick;
 	$result = count($colorPick);
 	echo $result ;
 };
-
-?>

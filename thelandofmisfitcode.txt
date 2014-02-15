@@ -24,6 +24,18 @@ function displaySource() {
 
 
 
+.3d {display:inline;position: relative;font-family:Tahoma, Geneva, sans-serif;font-size:80px;color: rgba(0,0,255,0.5);}
+.3d:after {position:absolute;left:5px;top:2px;content:inherit;color:rgba(255,0,0,0.5);}
+
+
+var sqTitle=$(".sqTitle")
+    sqTitle.animate({right:'-600px'},"slow");
+    
+    sqTitle.animate({left:'-600px;'},"10");
+    sqTitle.animate({left:'0px;'},"slow");
+
+    // sqTitle.animate({height:'100px',opacity:'0.4'},"slow");
+
 
 <?php
 function styleDynamics() {

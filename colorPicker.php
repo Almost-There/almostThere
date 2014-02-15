@@ -1,5 +1,6 @@
 <?php if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
 else { include 'import.php'; } ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@ else { include 'import.php'; } ?>
 <body>
 <? preBody(); ?>
 <div id='sqField' class='nudge'>
-    <!-- Recent Logins Square -->
+    
 	<!-- Color Picker Square -->
 	<div class='sqDub theBGcolor'>
 		<div class='sqTitle'>Color Picker<a href='' class='sqAltButton'>#</a></div>
@@ -25,6 +26,8 @@ else { include 'import.php'; } ?>
 		</div>
 	</div>
 	<!-- Color Picker Square -->
+
+	<!-- Number of Colors Square -->
 		<div class='sq theBGcolor'>
 			<div class='sqTitle'>Colors Available<a href='' class='sqAltButton'>#</a></div>
 			<div class='sqContent'>
@@ -40,9 +43,9 @@ else { include 'import.php'; } ?>
 			</ul>
 		</div>
 	</div>
-	<!-- Color Picker Square -->
-
-	</div>
+	<!-- Number of Colors Square -->
+	
+</div>
 <? postBody(); ?>
 </body>
 </html>

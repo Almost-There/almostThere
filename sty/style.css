@@ -49,38 +49,59 @@
 	.antialias { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 
 /* Quick Styles */
-	.bold {font-weight:bold;}
-	.underline {text-decoration:underline;} /* Not to be confused with Unordered list! */
+	.bold {font-weight:bold;} .underline {text-decoration:underline;} .Italic {font-style:oblique;}
+	/* Underline, Bold, Italic Text */
 	.oneline {white-space: nowrap;}
+	/* Force text to only occupy one line of space */
 	.nudge {margin-left:10px;}
+	/* Knock Element over to the right 10 pixels */
 	.budge {margin-right:10px;}
+	/* Knock Element over to the left 10 pixels */
 	.fl {float:left;} .fr {float:right;}
+	/* Float Left/Right */
 	.db {display:block;}
+	/* Display Block */ 
 	.oh {overflow:hidden;}
-	.vw {min-width:100vw;}
-	.vh {min-height:100vh;}
+	/* Hide overflowing Elements */
+	.vw {min-width:100vw;} .vh {min-height:100vh;}
+	/* CSS Variable height class */
 	.pr {position:relative;}
+	/* Use relative positioning on Element */
 	.full {width:100%;height:100%;} 
+	/* Fill all available space by Element */
 	.fullw {width:100%;} 
+	/* Fill all horizontal space by Element */
 	.fullh {height:100%;}
+	/* Fill all vertical space by Element */
 	.tint {background-color:rgba(22, 22, 22, 0.6) !important;}
+	/* When an element covering another object to 'darken' its color */
 	.layerUp {z-index:+1;}
+	/* When an element is covering another object */
 	.layerDown {z-index:-1;}
-	.ma {margin-left:auto;margin-right:auto;} /* This is a pretty hack to cener things with a width attribute applied */
-	.ctr {text-align:center;margin-left:auto;margin-right:auto;} /* Same as above with Text-Aligh Center */
-	.big {font-size:28px !important;}
-	.write, .writeDark {font-family:Tahoma, Geneva, sans-serif;font-size:14px;opacity:1;}
-	.write {color:#FFFFFF;}
-	.writeDark {color:#222222;}
-	.small {font-size:9px !important;}
+	/* When you want an element to cover another object */
+	.ma {margin-left:auto;margin-right:auto;}
+	/* This is a pretty hack to cener things with a width attribute applied */
+	.ctr {text-align:center;margin-left:auto;margin-right:auto;}
+	/* Same as above with Text-Align Center also applied */
+	.big {font-size:28px !important;} .small {font-size:9px !important;}
+	/* To be used with text classes ie class='write big' */	
+	.write, .writeDark {font-family:Tahoma, Geneva, sans-serif;font-size:14px;opacity:1;} .write {color:#FFFFFF;} .writeDark {color:#222222;}
+	/* Default Text Styling */
 	.mirror {display:block; -webkit-transform: matrix(-1, 0, 0, 1, 0, 0); -moz-transform: matrix(-1, 0, 0, 1, 0, 0); -o-transform: matrix(-1, 0, 0, 1, 0, 0); transform: matrix(-1, 0, 0, 1, 0, 0); }
-	.ninjas {display:none;color:#000000;} /* Hide dat shit */
+	/* Flip text completely backwards */
+	.reverse {direction: rtl;unicode-bidi:bidi-override;}
+	/* Flip text to read backwards */
+	.upsideDown {-webkit-transform:rotate(-180deg); -moz-transform:rotate(-180deg); -o-transform:rotate(-180deg); transform:rotate(-180deg); ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);}
+	/* Flip text upside down */
+	.ninjas {display:none;color:#000000;}
+	/* Hide Element */
 
 /* Navigation Bar Styles */
 	#navBody * {list-style:none;font-size:15px;}
 	#navBody {position:absolute;top:120px;width:100%;height:20px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+5;}
 	#navBody a {font-family:'neoSans';text-decoration:none;}
 	#navBody a:link {text-decoration:none;}
+	#navBody ul {margin-left:6px;}
 	#navBody li {float:left;margin-left:6px;}
 	#navBody li a, #navBody li a:link {color:#D6D6D6;text-decoration:none;}
 	#navBody li a:hover {cursor:pointer;text-decoration:none;text-shadow: 0 0 4px #FFFFFF;color:#FFFFFF;}
@@ -97,8 +118,6 @@
 	#fileTable tr th a:hover, .fileTable a:active {text-decoration:underline}
 
 /* Code viewer and Pastebin Styles */
-	.sourceCode {font-size:10px;padding-left:30px;width:900px;overflow:scroll;border-radius: 10px;overflow:scroll;overflow-y:hidden;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAYCAYAAADd5VyeAAAAIUlEQVQYlWM8c+bMfwYkwMSABoaOAOP////PDAJ3UEMAAH+KB1vUYYu4AAAAAElFTkSuQmCC');background-repeat:repeat;background-size:auto 5px;background-size:auto 20px;background-position:0px;} /* See Bloat */
-	.sourceCode span {font-family:Verdana;color:#333333 !important;}
 	.previewIcon {font-size:80px;font-family:'icomoon';margin:40px;color:#222222;}
 	.previewIcon:hover {opacity:0.9;color:#FFFFFF !important;text-decoration: none;}
 
@@ -116,21 +135,19 @@
 	#colorPicker a:hover:before {cursor:pointer;background:#444444;border:4px solid #444444;}
 
 /* Square Classes */
-	.sq, .sqDub {height:0px;overflow:hidden;margin-right:10px;margin-top:10px;}
+	#sqField .sq, #sqField .sqDub {float:left;}
+	.sq, .sqDub {height:180px;display:none;overflow:hidden;margin-right:10px;margin-top:10px;}
 	.sq	{width:180px;}
 	.sqDub, .sqYt iframe {width:370px;}
 	.sqTitle {margin:2px 5px;font-size:18px;height:25px;overflow:hidden;color:#222222;font-family: 'neoSans';}
 	.sqBody {margin:4px 0px;font-size:12px;overflow:hidden;}
-	.sqTitleMirror-Frame1 {position:relative;}
-/*	.sqTitle-Frame1 {}
-	.sqTitle-Frame1 {}
-	.sqTitle-Frame1 {}*/
-	.sq ul, .sqDub ul {list-style:none;}
-
 	.sqBody, .sqBody2, .sqBody3, .sqBody4 {margin:5px;height:155px;color:#222222;}
 	.sqBody2, .sqBody3, .sqBody4 {display:none;}
-
-	 #sqField .sq, #sqField .sqDub {display:block;float:left;}
+	.sqTitleMirror-Frame1 {position:relative;}
+/*	.sqTitle-Frame2 {} */
+/*	.sqTitle-Frame3 {} */
+/*	.sqTitle-Frame4 {} */
+	.sq ul, .sqDub ul {list-style:none;}
 /*  .sq {-webkit-box-flex: 0;-moz-box-flex: 0;box-flex: 0;-webkit-box-ordinal-group: 1;-moz-box-ordinal-group: 1;box-ordinal-group: 1;} */
 /* .sq, .sqDub {height:180px;margin-right:10px;margin-top:10px;overflow:hidden;} */
 /* .sq	{width:180px;} */
@@ -144,7 +161,6 @@
 /* .sqAltContent ul li {float:left;} */
 	.sqYt iframe {height:180px;border:0;}
 /* .sqYt .sqTitle {position:relative;color:#FFFFFF;z-index:+2} */
-/* .sqYtSneezeGuard {width:100%;opacity:0.0;display:block;background:transparent;height:60px;z-index:+3;} */
 	
 /* Fridge Styles */
 	#breadcrumbs {margin: 0 0 8px 8px;}

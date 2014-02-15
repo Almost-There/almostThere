@@ -9,9 +9,54 @@ else { include 'import.php'; } ?>
 <body>
 <? preBody(); ?>
 <div id='sqField' class='nudge'>
+    
+<? /*
+
+	 ////////////////////////////////////////////////////
+	// Work in progress here, yes this is intentional //
+   ////////////////////////////////////////////////////
+
+
+
+3 Variables to create each square
+//Square Title, Square Size, Square Data
+
+//Square Title = String = "name of Square"
+//Square Title = Interger = 0="Do not Display", 1="Small Square", 2="Double Square", 3="Resizable Square"
+//Square Data = Function = The function to be executed within the square.
+
+function sq_color() {
+	global $colorPick;
+	foreach ($colorPick as $v) { echo "<a class='changeColor icon-droplet' style='color:$v'></a>\n"; };
+};
+
+function spawnSquare(ColorPicker, 1, $colorPick) {
+	echo "\n<!--  -->\n";
+	echo "<div id='colorPicker'>";
+	//Set color clientside with jquery, while saving the cookie to be read on next load with PHP
+	
+	echo "\n</div>";
+	echo "\n<!-- /colorForm() -->\n";
+}; 
+
+function spawnSquare($=)
+{
+    $numargs = func_num_args();
+    echo "Number of arguments: $numargs<br />\n";
+    if ($numargs >= 2) {
+        echo "Second argument is: " . func_get_arg(1) . "<br />\n";
+    }
+    $arg_list = func_get_args();
+    for ($i = 0; $i < $numargs; $i++) {
+        echo "Argument $i is: " . $arg_list[$i] . "<br />\n";
+    }
+}
+	*/
+?>
+
     <!-- Recent Logins Square -->
 	<div class='sq theBGcolor'>
-		<div class='sqTitle mirror'>Recent Logins<a href='' class='sqAltButton'>#</a></div>
+		<div class='sqTitle'>Recent Logins<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqBody'>
 			<ul>
 				<li>| LuckyMonkey<span class='fr'>3m</span></li>
