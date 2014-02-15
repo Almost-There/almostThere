@@ -89,21 +89,7 @@ function postBody() {
 	global $pageSeed , $theColor;
 	function displayAds() {
 		echo "<div style='width:400px;height:50px;' class='write small'>"
-		echo "$(document).ready( function() {
-				  window.setTimeout( function() {
-				    var bottomad = $('#bottomAd');
-				    if (bottomad.length == 1) {
-				      if (bottomad.height() == 0) {
-				        Ad-Blocking is Against the Almost-There ToS.<br />
-				       	Please disable your adblocker.<br />
-				        You will recieve further warnings otherwise.
-				      } else {
-				        // no adblocker
-				      }
-				    }      
-				  }, 1);
-				}
-		";
+//put this here http://pastebin.com/raw.php?i=NwpQp6ui
 		echo "</div>"
 	};
 	echo "\n<!-- postBody() -->\n";
@@ -111,11 +97,9 @@ function postBody() {
 	echo "
 	<footer class='theBGcolor'>
 		<div class='full tint'>
-			<div class='fl'>
-			" . displayAds() . "
-				<span id='dimensions'><script> window.onresize = displayWindowSize; window.onload = displayWindowSize; function displayWindowSize() { document.getElementById ('dimensions').innerHTML = $( window ).width(); }; </script></span>
-				<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/deed.en_US'><img alt='Creative Commons License' style='border-width:0' src='http://i.creativecommons.org/l/by-sa/4.0/80x15.png' /></a><span xmlns:dct='http://purl.org/dc/terms/' property='dct:title'>Almost-There</span> is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/deed.en_US'>Creative Commons Attribution-ShareAlike 4.0 International License</a>
-			</div><!-- Left Stuff -->
+			<div class='fl'>";			
+	displayAds()
+	echo "!-- Left Stuff -->
 		<div class='icn fr'>
 			<a href='https://github.com/Almost-There/almostThere' class='icon-github2'></a>
 			<a href='steam://url/GroupSteamIDPage/103582791430342520' class='icon-steam2'></a>
