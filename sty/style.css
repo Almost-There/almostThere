@@ -5,7 +5,7 @@
 /* Divine body layout Settings */
 	* {margin:0;padding:0;border:0;text-decoration:none;list-style:none;font-weight:200;font-size:14px;}
 	body {color:#FFFFFF;background-color:#111111;line-height:1.4;font-family:Tahoma, Geneva, sans-serif;display:flex;flex-direction:column;min-height:100%;}
-	header {height:140px;overflow:hidden;}		/* This thing goes ontop of */
+	header {height:150px;overflow:hidden;}		/* This thing goes ontop of */
 	#allOfTheThings {flex: 1;width:100%; -ms-flex-preferred-size: auto; @include breakpoint("large") }
 	footer {height:28px;}						/* Which is ontop of this thing */
 
@@ -21,13 +21,13 @@
 	footer .icn {font-size:20px;margin:auto 2px;}
 	
 /* Icon Reset Styles */
-	.icn {font-family:'icomoon' !important;text-decoration:none;}
-	.icn * {text-decoration:none;}
-	.icn a:before {text-decoration:none;}
-	.icn a:link {text-decoration:none;}
-	.icn a:hover {text-decoration:none;}
-	a:link .icn {text-decoration:none;}
-	a:hover .icn {text-decoration:none;}
+	.icn {font-family:'icomoon' !important;text-decoration:none !important;;}
+	.icn * {text-decoration:none !important;}
+	.icn a:before {text-decoration:none !important;}
+	.icn a:link {text-decoration:none !important;}
+	.icn a:hover {text-decoration:none !important;}
+	a:link .icn {text-decoration:none !important;}
+	a:hover .icn {text-decoration:none !important;}
 	
 /* Reset HTML Styles */
 	a, a:link {color:#FFFFFF;text-decoration:none;}
@@ -84,6 +84,8 @@
 	.ctr {text-align:center;margin-left:auto;margin-right:auto;}
 	/* Same as above with Text-Align Center also applied */
 	.big {font-size:28px !important;} .small {font-size:9px !important;}
+	/* Class to be used on any element to make it blink */
+	.blink {animation:blink 0.4s infinite; -webkit-animation:blink 0.4s infinite;} @keyframes blink { from {opacity:0.1;} to {opacity:1;} } @-webkit-keyframes blink { from {opacity:0.1;} to {opacity:1;} } };
 	/* To be used with text classes ie class='write big' */	
 	.write, .writeDark {font-family:Tahoma, Geneva, sans-serif;font-size:14px;opacity:1;} .write {color:#FFFFFF;} .writeDark {color:#222222;}
 	/* Default Text Styling */
@@ -97,12 +99,13 @@
 	/* Hide Element */
 
 /* Navigation Bar Styles */
-	#navBody * {list-style:none;font-size:15px;}
-	#navBody {position:absolute;top:120px;width:100%;height:20px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+5;}
-	#navBody a {font-family:'neoSans';text-decoration:none;}
+	#navBody * {list-style:none;}
+	#navBody {position:absolute;top:130px;width:100%;height:25px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+5;}
+	#navBody span {font-size:16px;}
+	#navBody a {font-family:'neoSans';text-decoration:none;font-size:18px;}
 	#navBody a:link {text-decoration:none;}
-	#navBody ul {margin-left:6px;}
-	#navBody li {float:left;margin-left:6px;}
+	#navBody ul {margin-left:8px;}
+	#navBody li {float:left;margin:0 4px;}
 	#navBody li a, #navBody li a:link {color:#D6D6D6;text-decoration:none;}
 	#navBody li a:hover {cursor:pointer;text-decoration:none;text-shadow: 0 0 4px #FFFFFF;color:#FFFFFF;}
 
@@ -131,15 +134,18 @@
 	.settingsMenuBlock #colorPicker {height:180px;width:200px;}
 
 /* Color Picker Styles */
-	#colorPicker a:before {font-family:'icomoon' !important;font-size:15px;float:left;background:#222222;display:block;border-radius:4px;border:4px solid #222222;margin:2px;}
-	#colorPicker a:hover:before {cursor:pointer;background:#444444;border:4px solid #444444;}
+	#colorPicker a:before {font-family:'icomoon' !important;font-size:18px;float:left;background:#222222;display:block;border-radius:5px;border:4px solid #222222;margin:2px;}
+	#colorPicker a:hover:before {cursor:pointer;margin:1px;font-size:20px;}
 
 /* Square Classes */
 	#sqField .sq, #sqField .sqDub {float:left;}
 	.sq, .sqDub {height:180px;display:none;overflow:hidden;margin-right:10px;margin-top:10px;}
 	.sq	{width:180px;}
 	.sqDub, .sqYt iframe {width:370px;}
-	.sqTitle {margin:2px 5px;font-size:18px;height:25px;overflow:hidden;color:#222222;font-family: 'neoSans';}
+	.sqTitle {margin:2px 5px;font-size:18px;height:25px;overflow:hidden;color:#222222;font-family:'neoSans';font-weight:bold;}
+	.sqTitle .icn {color:#333333;font-size:16px;}
+	.sqTitle .sqSettings {color:#222222;font-size:18px;opacity:0.2;float:right;}
+	.sqTitle .sqSettings:hover {opacity:0.8;}
 	.sqBody {margin:4px 0px;font-size:12px;overflow:hidden;}
 	.sqBody, .sqBody2, .sqBody3, .sqBody4 {margin:5px;height:155px;color:#222222;}
 	.sqBody2, .sqBody3, .sqBody4 {display:none;}
@@ -183,11 +189,11 @@
 
 /* Bubble Styles */
 	.bubbles {position:relative;overflow:hidden;width:100%;height:180%;margin:0 auto;}
-	.bubble-container {position:absolute;bottom:0;-webkit-animation: bubblerise 4s infinite ease-in; -moz-animation:bubblerise 4s infinite ease-in;-ms-animation: bubblerise 4s infinite ease-in; animation: bubblerise 4s infinite ease-in;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;}
+	.bubble-outer {position:absolute;bottom:0;-webkit-animation: bubblerise 4s infinite ease-in; -moz-animation:bubblerise 4s infinite ease-in;-ms-animation: bubblerise 4s infinite ease-in; animation: bubblerise 4s infinite ease-in;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;}
 	.bubble {opacity:0.9;width:6px;height:6px;margin:0 auto;border:1px solid rgba(255, 255, 255, 0.5);background: rgba(255, 255, 255, 0.5);-webkit-border-radius: 10px;-moz-border-radius: 10px;-ms-border-radius: 10px;-o-border-radius: 10px;border-radius: 10px;-webkit-animation: bubblewobble 0.4s infinite linear;-moz-animation: bubblewobble 0.4s infinite linear;-ms-animation: bubblewobble 0.4s infinite linear;animation: bubblewobble 0.4s infinite linear;}
-	.bubble span {overflow:hidden;font-weight:bold;color:#222222;}
+	.bubble span {overflow:hidden;font-weight:bold;color:#222222;position:relative;top:0px;}
 
-/* Browser Compatibility Bubble Stuff; No need to touch */
+/* Bubble Animations */
 	@-webkit-keyframes bubblerise {0% {bottom: 0;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity: 0;} 5% {bottom: 0;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity: 1;} 99% {filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity: 1;} 100% {bottom: 100%;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity: 0;}}
 	@-moz-keyframes bubblerise {0% {bottom: 0;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity: 0;} 5% {bottom: 0;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity: 1;} 99% {filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity: 1;} 100% {bottom: 100%;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity: 0;}}
 	@-ms-keyframes bubblerise {0% {bottom: 0;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity: 0;} 5% {bottom: 0;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity: 1;}99% {filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);opacity: 1;}100% {bottom: 100%;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity: 0;}}
