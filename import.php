@@ -7,17 +7,27 @@ if (isset($_COOKIE["setColor"]))
 else
 			$theColor = "#bada55";
 $colorPick = array(
-"#EE5078", "#FF8039", "#FFA533", "#FFC233", "#FFE030", "#FFF933", "#D7FF20", "#15FF3E", "#03BCFF", "#00FF7F", "#90EE90",
-"#3CB371", "#00FA9A", "#808000", "#2E8B57", "#FF0000", "#FF4500", "#FF8C00", "#FFA500", "#ED2939", "#800000", "#A52A2A", 
-"#D2691E", "#FF7F50", "#DC143C", "#E9967A", "#FF1493", "#B22222", "#FF69B4", "#CD5C5C", "#F08080", "#6495ED", "#008B8B",
-"#483D8B", "#00BFFF", "#1E90FF", "#ADD8E6", "#20B2AA", "#87CEFA", "#B0C4DE", "#76608A", "#7B68EE", "#4169E1", "#6A5ACD", 
-"#708090", "#4682B4", "#008080", "#40E0D0", "#0099CC", "#EA8224", "#BADA55", "#AEE530", "#4d55FF", "#5687FF", "#0099CC",
-"#62BDFF", "#5FE2FF", "#54FDD7", "#45FD9F", "#48FD82", "#3BFD4A", "#6AFD46", "#97FD3F", "#BFFD40", "#BADA55", "#DAD444",
-"#DAC73A", "#DAB83C", "#DAAA49", "#DA9540", "#DA7F40", "#DA663A", "#DA5839", "#DA4A34", "#DA4033", "#DA2A2F", "#DA2A3E",
-"#DA2858", "#DA2A81", "#DA27A4", "#DA23C2", "#C731DA", "#AD2CDA", "#901BDA", "#7B1FDA", "#651EDA", "#483CFF", "#8771B2",
-"#6E6DB1", "#6B74B7", "#5170B3", "#297CC2", "#008DB8", "#0094AA", "#00A29F", "#00A79D", "#00B081", "#69C264", "#88CB62",
-"#AFD54E", "#D4DD4C", "#E8D958", "#FEE449", "#FFDA41", "#FFD23B", "#FFC92B", "#FFBB40", "#FEB23A", "#FEA348", "#FE9150",
-"#FB8758", "#F67D6C", "#F37873", "#F27289", "#E06794", "#B66DA4", "#B376B2"
+"#EE5078", "#FF8039", "#FFA533", "#FFC233", "#FFE030", "#FFF933", "#D7FF20",
+// Splash lights, thoughts, place
+"#3CB371", "#00FA9A", "#808000", "#2E8B57", "#FF0000", "#FF4500", "#FF8C00",
+// color peace set in time
+"#D2691E", "#FF7F50", "#DC143C", "#E9967A", "#FF1493", "#B22222", "#FF69B4",
+// red green blue all the clues
+"#483D8B", "#00BFFF", "#1E90FF", "#ADD8E6", "#20B2AA", "#87CEFA", "#B0C4DE",
+"#708090", "#4682B4", "#008080", "#40E0D0", "#0099CC", "#EA8224", "#BADA55",
+"#62BDFF", "#5FE2FF", "#54FDD7", "#45FD9F", "#48FD82", "#3BFD4A", "#6AFD46",
+"#DAC73A", "#DAB83C", "#DAAA49", "#DA9540", "#DA7F40", "#DA663A", "#DA5839",
+"#DA2858", "#DA2A81", "#DA27A4", "#DA23C2", "#C731DA", "#AD2CDA", "#901BDA",
+"#6E6DB1", "#6B74B7", "#5170B3", "#297CC2", "#008DB8", "#0094AA", "#00A29F",
+"#00A79D", "#00B081", "#69C264", "#88CB62", "#AFD54E", "#D4DD4C", "#E8D958",
+"#FEE449", "#FFDA41", "#FFD23B", "#FFC92B", "#FFBB40", "#FEB23A", "#FEA348",
+"#FE9150", "#7B1FDA", "#651EDA", "#483CFF", "#8771B2", "#DA4A34", "#DA4033",
+"#DA2A2F", "#DA2A3E", "#97FD3F", "#BFFD40", "#BADA55", "#DAD444", "#AEE530",
+"#4d55FF", "#5687FF", "#0099CC", "#76608A", "#7B68EE", "#4169E1", "#6A5ACD",
+"#CD5C5C", "#F08080", "#6495ED", "#008B8B", "#ED2939", "#800000", "#A52A2A",
+"#FFA500", "#15FF3E", "#03BCFF", "#00FF7F", "#90EE90", "#FB8758", "#F67D6C", 
+"#F37873", "#F27289", "#E06794", "#B66DA4", "#B376B2", "#AD8244", "$FF29DD"
+
 );
 
 function head() {
@@ -79,7 +89,8 @@ function preBody() {
 						"/chan.php" => Chan,
 						"/forums" => Forums,
 						"/fridge.php" => Fridge,
-						"/irc.php" => Chat					);
+						"/irc.php" => Chat
+						);
 		foreach ($navLinks as $k => $v) { echo "<li><a href='$k'> $v</a>" . $slash . "</li>\n"; }
 		echo "</ul><div class='fr budge'><a>Settings</a>&nbsp;<a class='icon-cog icn'></a></div></div>\n";
 		echo "\n<!-- /navList() -->\n"; 
@@ -107,7 +118,9 @@ global $pageSeed, $theColor;
 	echo "
 	<footer class='fullw theBGcolor'>
 		<div class='full tint'>
-			<div class='fl'></div>";
+			<div class='fl'>
+			<iframe data-aa='17375' src='//ad.a-ads.com/17375?size=468x15' scrolling='no' class='adSpace' allowtransparency='true'></iframe>
+			</div>";
 			echo "<!-- Left Stuff -->
 			<div class='icn fr'>
 				<a href='https://github.com/Almost-There/almostThere' class='icn icon-github2'></a>
