@@ -19,6 +19,7 @@
 	footer .fl {padding-left:8px;}
 	footer .fr {padding-right:8px;}
 	footer .icn {font-size:20px;margin:auto 2px;}
+ 	.adSpace {margin:6px;opacity:0.2;width:468px;height:15px;border:0px;padding:0;overflow:hidden}
 	
 /* Icon Reset Styles */
 	.icn {font-family:'icomoon' !important;text-decoration:none !important;;}
