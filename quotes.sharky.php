@@ -291,7 +291,8 @@ $quotes = array(
     "We promised we would never quit",
     "If the laws of physics do not not apply in the future, god help you!",
     "sarcasm self-test complete *boop*",
-    "We're sort of like 7-Eleven - We're not always doing business, But we're always open."
+    "Did you know we had a server? I didnt....",
+    "We're sort of like 7-Eleven - We're not always doing business, But we're always open.",
     "REMEMBER: You're here forever!"
 );
 $rQuote = rand(0, count($quotes) - 1);
