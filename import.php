@@ -26,9 +26,7 @@ $colorPick = array(
 "#4d55FF", "#5687FF", "#0099CC", "#76608A", "#7B68EE", "#4169E1", "#6A5ACD",
 "#CD5C5C", "#F08080", "#6495ED", "#008B8B", "#ED2939", "#800000", "#A52A2A",
 "#FFA500", "#15FF3E", "#03BCFF", "#00FF7F", "#90EE90", "#FB8758", "#F67D6C", 
-"#F37873", "#F27289", "#E06794", "#B66DA4", "#B376B2", "#AD8244", "$FF29DD"
-
-);
+"#F37873", "#F27289", "#E06794", "#B66DA4", "#B376B2", "#AD8244", "$FF29DD" );
 
 function head() {
 			global $pageSeed, $theColor;
@@ -92,10 +90,15 @@ function preBody() {
 						"/irc.php" => Chat
 						);
 		foreach ($navLinks as $k => $v) { echo "<li><a href='$k'> $v</a>" . $slash . "</li>\n"; }
-		echo "</ul><div class='fr budge'><a>Settings</a>&nbsp;<a class='icon-cog icn'></a></div></div>\n";
-		echo "\n<!-- /navList() -->\n"; 
-	};
+		echo "</ul>";
+		echo "\n<!-- /navList() -->\n"; };
 	navList();
+		echo "<div id='settingsButton' class='fr budge'>
+			<a href='openSettings'>Settings</a>&nbsp;
+			<a class='icon-cog icn'></a>
+		</div>
+	</div>\n";
+
 	echo "</header>";
 	echo "<div id='allOfTheThings'>";
 	echo "\n<!-- /preBody() -->\n";
