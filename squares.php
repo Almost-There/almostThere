@@ -168,7 +168,7 @@ function spawnSquare($=)
 			"YXdOAUKCc0k",	// Red Hot Chili Peppers - By The Way
 			"PlJBUaozeM8",	// 30 Seconds to Mars - Edge of the Earth
 			"d1wGFgoocKk",	// Schoolboy - Project No-Autotune
-			"8aSHmH9XCNU",	// SKazi - My Way
+			"8aSHmH9XCNU",	// Skazi - My Way
 			"yp3-jmRXIww",	// Shallow Gravy - Jacket
 			"HEkLU2AiJCs",	// Shiny Toy Guns - Stripped
 			"v_09wFxoaeQ",	// Slipknot - Before I forget
@@ -188,6 +188,7 @@ function spawnSquare($=)
 			"lG5aSZBAuPs"	// XXYYXX - About You
 			);
 			shuffle($yts);
+			// There is this part of me that still doesn't believe random is random so just to double check we shuffle too.
 			$rYt = rand(0,count($yts)-1);
 			$yt= $yts[$rYt];
 			echo $yt . "?autoplay=0&amp;theme=dark&amp;color=white;wmode=transparent' allowfullscreen>" ?>
