@@ -37,6 +37,7 @@ $quotes = array(
     "Simulcast on crazy people's fillings",
     "Larva-Tested Pupa-Approved",
     "For external use only",
+    "REMEMER: You're here forever!",
     "Fuck your poison",
     "Do not inhale",
     "Touch eyeballs to screen for cheap laser surgery",
