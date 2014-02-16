@@ -1,4 +1,4 @@
-﻿ /* Font Imports */
+ /* Font Imports */
 	@import url('neoSans.css');
 	@import url('icomoon.css');
 
@@ -30,10 +30,12 @@
 	a:link .icn {text-decoration:none !important;}
 	a:hover .icn {text-decoration:none !important;}
 	
-/* Reset HTML Styles */
+/* Default Link Styles */
 	a, a:link {color:#FFFFFF;text-decoration:none;}
 	a:hover {text-decoration:underline;}
 	a:visited {color:#FFFFFF;}
+	
+/* Reset HTML Styles */
 	iframe {border:0;}
 	h1 {margin: 0 0 10px 8px;padding:0;}
 	table {width:100%;margin:0px auto;background-color:#222222;}
@@ -101,14 +103,20 @@
 
 /* Navigation Bar Styles */
 	#navBody * {list-style:none;}
-	#navBody {position:absolute;top:130px;width:100%;height:25px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+5;}
+	#navBody {position:absolute;top:127px;width:100%;height:23px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+5;}
 	#navBody span {font-size:16px;}
-	#navBody a {font-family:'neoSans';text-decoration:none;font-size:18px;}
-	#navBody a:link {text-decoration:none;}
+	#navBody a, #navBody a:link, #settingsButton a, #settingsButton a:link {font-family:'neoSans';text-decoration:none;font-size:18px;line-height:1.5;}
 	#navBody ul {margin-left:8px;}
 	#navBody li {float:left;margin:0 4px;}
 	#navBody li a, #navBody li a:link {color:#D6D6D6;text-decoration:none;}
 	#navBody li a:hover {cursor:pointer;text-decoration:none;text-shadow: 0 0 4px #FFFFFF;color:#FFFFFF;}
+
+/* Settings Menu Styles */
+	#settingsMenu {display:none;color:#EFEFEF;padding:0px;background-color:#232323;position:absolute;right:0px;top:22px}
+	#settingsButton .icn {position:relative;top:2px;}
+	#settingsButton:hover {color:#FFFFFF;cursor:pointer;}
+	.settingsMenuBlock {width:200px;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:10px;}
+	.settingsMenuBlock #colorPicker {height:180px;width:200px;}
 
 /* Video Player Styles */
 	.youTube {width:650px;height:390px;overflow:hidden;}
@@ -125,15 +133,6 @@
 	.previewIcon {font-size:80px;font-family:'icomoon';margin:40px;color:#222222;}
 	.previewIcon:hover {opacity:0.9;color:#FFFFFF !important;text-decoration: none;}
 
-/* Settings Menu Styles */
-	#settingsMenu {display:none;color:#EFEFEF;padding:0px;background-color:#232323;position:absolute;right:0px;top:22px}
-	#settingsButton {float:right;margin-right:6px;}
-	#settingsButton a, #settingsButton a:link {text-decoration:none;}
-	#settingsButton .icn {position:relative;top:2px;}
-	#settingsButton:hover {color:#FFFFFF;cursor:pointer;}
-	.settingsMenuBlock {width:200px;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:10px;}
-	.settingsMenuBlock #colorPicker {height:180px;width:200px;}
-
 /* Color Picker Styles */
 	#colorPicker a:before {font-family:'icomoon' !important;font-size:18px;float:left;background:#222222;display:block;border-radius:5px;border:4px solid #222222;margin:2px;}
 	#colorPicker a:hover:before {cursor:pointer;margin:1px;font-size:20px;}
@@ -146,7 +145,7 @@
 	.sqTitle {margin:2px 5px;font-size:18px;height:25px;overflow:hidden;color:#222222;font-family:'neoSans';font-weight:bold;}
 	.sqTitle .icn {color:#333333;font-size:16px;}
 	.sqTitle .sqSettings {color:#222222;font-size:18px;opacity:0.2;float:right;}
-	.sqTitle .sqSettings:hover {opacity:0.8;}
+	.sqTitle .sqSettings:hover {animation:fadeIn 0.5s;-webkit-animation:fadeIn 0.5s;opacity:1;}
 	.sqBody {margin:4px 0px;font-size:12px;overflow:hidden;}
 	.sqBody, .sqBody2, .sqBody3, .sqBody4 {margin:5px;height:155px;color:#222222;}
 	.sqBody2, .sqBody3, .sqBody4 {display:none;}
@@ -205,6 +204,10 @@
 	@keyframes bubblewobble {0% {margin-left: 0;} 50% {margin-left:0px;}}
 	@keyframes caret{ 50%{ opacity:0.1; transform:scaleY(.8); } }
 	@-webkit-keyframes caret{50%{ opacity:0.1; -webkit-transform:scaleY(.8); } }
+
+/* Misc Animations */
+	@keyframes fadeIn {from {opacity:0.2;} to {opacity:1;} }
+	@-webkit-keyframes fadeIn {from {opacity:0.2;} to {opacity:1;} }
 
 /* Browser Compatibility Bloat */
 	#colorPicker a:before; {-webkit-border-radius: 4px;-moz-border-radius: 4px;}
