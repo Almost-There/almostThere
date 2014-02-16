@@ -76,6 +76,7 @@ $quotes = array(
     "Trust me, in a minute sexy things will happen",
     "I think they found the first body",
     "You know you want some of this fruit's punch",
+    "Understanding us is Underestimating us",
     "Hey man, do you have chlamydia?",
     "Every time you smoke, you turn 0.005% more black",
     "I know the website is sexy but get your damn hand out of your pants!",
