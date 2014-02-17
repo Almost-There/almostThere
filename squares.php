@@ -80,6 +80,7 @@ function spawnSquare($=)
 			"fxvGHQHiY70",	// Animal Collective - Peacebone
 			"nm_rtM2HgI4",	// ASAP Rocky - Brand New Guy feat. ScHoolboy Q
 			"qLrnkK2YEcE",	// The Avalanches - Frontier Psychiatrist
+			"OG-RNq7oRUM",	// Attack Attack! - Smokahontas
 			"DAQRNnNXb6w",	// AWOLNATION - Sail (Borgore Remix)
 			"uQu71l1WQ3g",	// Becky - Less than Three
 			"SREZ-ggSDjM",	// The Birthday Massacre - Looking Glass
@@ -94,6 +95,7 @@ function spawnSquare($=)
 			"ShU3_-Y6SH0",	// Celldweller - Goodbye 2012 Revision
 			"I744rclQLfQ",	// Celldweller - Unshakeable
 			"e2QKlmMT8II",	// 2Chains - I'm Different
+			"-xAw_ZR5YkI",	// Netsky - Pirate Bay
 			"Xu3FTEmN-eg",	// The Chemical Brothers - Galvanize
 			"xsV8TrF4gN0",	// Crystal Castles - Not in Love
 			"A12-KN5UijA",	// The Crystal Method - Name of the Game
@@ -105,7 +107,9 @@ function spawnSquare($=)
 			"etdlQtRP9zw",	// Deadmau5 - My Pet Coelacanth
 			"m0AKJMGxwpE",	// Depeche Mode - Enjoy the Silence
 			"_f0zHgs0GpI",	// Depeche Mode - Useless
+			"Q77YBmtd2Rw",	// Die Antwoord - Zef Side
 			"3m3yWUqC8ZM",	// Disturbed - Decadence
+			"Z-zL_paDVTc",	// Dope D.O.D. - What happened
 			"5AA1rfKkWkI",	// Ellie Goulding - Explosions (Gemini Remix)
 			"hAuo8IOFNuE",	// Eminem - 3AM
 			"YVkUvmDQ3HY",	// Eminem - Without Me
@@ -114,6 +118,7 @@ function spawnSquare($=)
 			"-5nUg3EvUS8",	// Figure - Must Distroy
 			"iWIADZKU9dw",	// Flyleaf - I'm So Sick
 			"kbpqZT_56Ns",	// Foo Fighters - Rope
+			"Pb55ep-DrSo",	// Foreign Beggars - Contact
 			"FMBDrB_Scqs",	// Franz Ferdinand - Do You Want To (Metronomy remix)
 			"0x6PhH6v0Ls",	// Gemini - Graduation
 			"YeawPUpTHJA",	// Goldfrapp - Strict Machine
@@ -121,7 +126,8 @@ function spawnSquare($=)
 			"nhPaWIeULKk",	// Gorillaz - Stylo
 			"QRg-aDBaVdc",	// Gorillaz - Dare
 			"f5qICl3Fr3w",	// Gwen Stefani - What You Waiting For?
-			"ON-7v4qnHP8",	// Harry Enfield: loadsamoney
+			"ON-7v4qnHP8",	// Harry Enfield - loadsamoney
+			"Z-zL_paDVTc",	// Hopsin - Sag My Pants
 			"Z6hL6fkJ1_k",	// Infected Mushroom - Becoming Insane
 			"6-uqXH-oPLs",	// Infected Mushroom - Killing Time (Remix)
 			"lM7XgAmcXp8",	// InnerPartySystem - American Trash
@@ -150,7 +156,9 @@ function spawnSquare($=)
 			"n9nntf5_JXc",	// MSD - I Feel You (Bluescreens Remix)
 			"9nVvojfQVBY",	// Mudvayne - Death Blooms
 			"B3JHH14xEoQ",	// Muzzy - Endgame
+			"lv8IsdbYR9g",	// Neoon Indian - Sleep Paralysist
 			"9QZ2ZvueDbA",	// Neonlight - Computer Music
+			"WPJpXu1O7mM",	// Noisia - Exodia Feat Mayhem, KRS One
 			"0NS53Ydzq6o",	// Noisia - Stigma (NeoSignal Remix)
 			"j34juXrJWqw",	// Ozzy Osborne - Miricle Man
 			"FaJytyOISmE",	// Pasafire - Rubber Bands
@@ -163,6 +171,8 @@ function spawnSquare($=)
 			"LWNteSeRHec",	// Pretty Lights - Hot like Dimes
 			"8wCgxkQj_Qo",	// Pretty Lights - I Know The Truth
 			"tVL1u1eLX3I",	// The Prodigy - Baby's got a Temper
+			"BgVfjXA_QY0",	// Queens of the Stone Age - 3s & 7s
+			"69e8oa85F3g",	// Queens of the Stone Age - In my Head
 			"0NvnWJU5Ak8",	// Rammstien - Ich tu dir weh
 			"LOwHX8PmnMU",	// Rammstien - Ich Will
 			"YXdOAUKCc0k",	// Red Hot Chili Peppers - By The Way
@@ -173,6 +183,7 @@ function spawnSquare($=)
 			"HEkLU2AiJCs",	// Shiny Toy Guns - Stripped
 			"v_09wFxoaeQ",	// Slipknot - Before I forget
 			"9rQz0xGaTCE",	// Slipknot - Left Behind
+			"Ro8shNTlzTY",	// Smashing Pumpkins -  Tarantula
 			"t5-QSLt56JY",	// SOFI - Bring out the Devil
 			"312Sb-2PovA",	// Suicide Silence - You Only Live Once
 			"Z0NefmRM81Y",	// Sunchase - Remember Me feat. Yana Kay

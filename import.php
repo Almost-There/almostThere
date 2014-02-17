@@ -5,7 +5,7 @@ $pageSeed = rand(1024, 2048);
 if (isset($_COOKIE["setColor"]))
 			$theColor = $_COOKIE["setColor"];
 else
-			$theColor = "#bada55";
+			$theColor = "#FF8C00";
 $colorPick = array(
 "#EE5078", "#FF8039", "#FFA533", "#FFC233", "#FFE030", "#FFF933", "#D7FF20",
 // Splash lights, thoughts, place
@@ -92,7 +92,7 @@ function preBody() {
 		foreach ($navLinks as $k => $v) { echo "<li><a href='$k'> $v</a>" . $slash . "</li>\n"; }
 		echo "</ul>";
 		echo "\n<!-- /navList() -->\n"; };
-	navList();
+		navList();
 		echo "<div id='settingsButton' class='fr budge'>
 			<a href='openSettings'>Settings</a>&nbsp;
 			<a class='icon-cog icn'></a>

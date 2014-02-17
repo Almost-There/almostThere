@@ -51,7 +51,7 @@
 /* Font AntiAliasing */
 	.antialias { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 
-/* Quick Styles */
+/* Ditto Styles (Soon to become its own boostrap) */ 
 	.bold {font-weight:bold;} .underline {text-decoration:underline;} .Italic {font-style:oblique;}
 	/* Underline, Bold, Italic Text */
 	.oneline {white-space: nowrap;}
@@ -105,16 +105,18 @@
 	#navBody * {list-style:none;}
 	#navBody {position:absolute;top:127px;width:100%;height:23px;margin:0 auto;background-color:rgba(22, 22, 22, 0.6);z-index:+5;}
 	#navBody span {font-size:16px;}
-	#navBody a, #navBody a:link, #settingsButton a, #settingsButton a:link {font-family:'neoSans';text-decoration:none;font-size:18px;line-height:1.5;}
+	#navBody a, #navBody a:link, #settingsButton a, #settingsButton a:link {color:#D6D6D6;text-decoration:none;font-family:'neoSans';text-decoration:none;font-weight:500;font-size:15px;line-height:1.5;}
 	#navBody ul {margin-left:8px;}
 	#navBody li {float:left;margin:0 4px;}
-	#navBody li a, #navBody li a:link {color:#D6D6D6;text-decoration:none;}
-	#navBody li a:hover {cursor:pointer;text-decoration:none;text-shadow: 0 0 4px #FFFFFF;color:#FFFFFF;}
+
+	#navBody li a:hover, #settingsButton a:hover {cursor:pointer;text-decoration:none;text-shadow: 0 0 4px #FFFFFF;color:#FFFFFF;}
 
 /* Settings Menu Styles */
 	#settingsMenu {display:none;color:#EFEFEF;padding:0px;background-color:#232323;position:absolute;right:0px;top:22px}
-	#settingsButton .icn {position:relative;top:2px;}
+	#settingsButton a {position:relative;bottom:1px;}
+	#settingsButton .icn {position:relative;top:1px;}
 	#settingsButton:hover {color:#FFFFFF;cursor:pointer;}
+	
 	.settingsMenuBlock {width:200px;border-left:1px dashed #757575;border-bottom:1px dashed #757575;padding:10px;}
 	.settingsMenuBlock #colorPicker {height:180px;width:200px;}
 
@@ -144,8 +146,8 @@
 	.sqDub, .sqYt iframe {width:370px;}
 	.sqTitle {margin:2px 5px;font-size:18px;height:25px;overflow:hidden;color:#222222;font-family:'neoSans';font-weight:bold;}
 	.sqTitle .icn {color:#333333;font-size:16px;}
-	.sqTitle .sqSettings {color:#222222;font-size:18px;opacity:0.2;float:right;}
-	.sqTitle .sqSettings:hover {animation:fadeIn 0.5s;-webkit-animation:fadeIn 0.5s;opacity:1;}
+	.sqTitle .sqSettings {color:#222222;font-size:18px;opacity:0.2;float:right;margin-top:1px;}
+	.sqTitle .sqSettings:hover {animation:fadeIn 0.5s;-webkit-animation:fadeIn 0.5s;opacity:1;cursor:pointer;}
 	.sqBody {margin:4px 0px;font-size:12px;overflow:hidden;}
 	.sqBody, .sqBody2, .sqBody3, .sqBody4 {margin:5px;height:155px;color:#222222;}
 	.sqBody2, .sqBody3, .sqBody4 {display:none;}
@@ -165,7 +167,7 @@
 	.sqAltContent {padding:20px;display:none;} 
 /* .sqAltContent ul {list-style:none;} */
 /* .sqAltContent ul li {float:left;} */
-	.sqYt iframe {height:180px;border:0;}
+	.sqYt iframe {height:179px;margin-top:1px;}
 /* .sqYt .sqTitle {position:relative;color:#FFFFFF;z-index:+2} */
 	
 /* Fridge Styles */
