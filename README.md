@@ -1,18 +1,19 @@
 <h1>Almost-There 2014 Redesign</h1>
 
 View live page at <a href='http://almost-there.org'>http://almost-there.org/</a>
+The purpose of this website is to connect gamers together from across many games while balancing a social community, discussion board, and other projects.
 
-The purpose of this website is to connect gamers together from across many games while balancing a social community and discussion board.
+Must Support the following Operating Systems
+	Windows 7+, Linux, OSX (10.6.8), Android (2.2+ froyo), iOS 4+, Steam OS
+Must Support the following Browser
+	Firefox, Chrome, IE(10+), Safari, Steam In-Game, Lynx/Links
+	Blink, Webkit, Gecko, IE
+	Website must be accessable for screen readers as well as search engines wishing to browse the site
+Goal to support: all major platforms. specifically steam-in game browser, lynx, and mobile browsers.
+	
+Only using the following languages
+	PHP, Javascript, HTML5, CSS 3 / SCSS, SVG
 
-We are currently looking to support.
-
-Must Support [OS]
-Windows, Linux, iOS/OSX, Android, Steam OS
-
-Must Support [Browser]
-Firefox, Chrome, IE(9+10+?), Safari, Steam In-Game, Lynx
-
-Only using [Languages]
-PHP, JS, HTML5, CSS3, SVG
-
-Goal to support: all major platforms and specifically steam-in game browser, lynx, and mobile browsers.
+Main Features
+	File Uploading, User Management, Forum, Social Networking, Site Economy, Gaming Community
+	

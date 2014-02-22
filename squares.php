@@ -17,11 +17,16 @@ else { include 'import.php'; } ?>
    ////////////////////////////////////////////////////
 
 3 Variables to create each square
-//Square Title, Square Size, Square Data
+//Square Title, Square Size, Square Data. 
 
 //Square Title = String = "name of Square"
+//Square Icon = String = "name of icon to be applied before square title"
 //Square Title = Interger = 0="Do not Display", 1="Small Square", 2="Double Square", 3="Resizable Square"
+//Square Style = Does a value exist? = If data is given, theBGcolor is not used. A "style='background: <variable>' " 
+	is applied to the square and it awaits either an alternate color or background image.
+
 //Square Data = Function = The function to be executed within the square.
+
 
 function sq_color() {
 	global $colorPick;
@@ -49,8 +54,27 @@ function spawnSquare($=)
 		echo "Argument $i is: " . $arg_list[$i] . "<br />\n";
 	}
 }
-	*/
+
+function square_default() {
+	$squareTitle=''
+	$squareSize=''
+	$squareBackground=''
+	$squareIcon=''
+	echo "<!-- Default Square -->";
+	echo "<div class='sqDub theBGcolor'>
+			<div class='sqTitle'>
+				<a class='icn icon-users2'>&nbsp;</a>"
+// Square Name  . .
+			   "<a class='sqSettings icn icon-settings'></a>
+			</div>";
+
+}	*/
+
 ?>
+
+<? 
+function square_recentlogins() {
+echo "
 
     <!-- Recent Logins Square -->
 	<div class='sq theBGcolor'>
@@ -58,7 +82,7 @@ function spawnSquare($=)
 		<div class='sqBody'>
 			<span class='blink'>Error! No Data Recieved!</span>
 		</div>
-		<div class='sqAltContent'>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -67,12 +91,15 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- End of Recent Logins Square -->
+"; };
 
+function square_youtube() {
+echo "
 	<!-- Youtube Square -->
 	<div class='sqDub theBGcolor'>
 		<div class='youtubeTitle sqTitle'><a class='icn icon-youtube'>&nbsp;</a>YouTube Music<a class='sqSettings icn icon-settings'></a></div>
-		<div class='sqYt'>
-		<? echo "<iframe src='//www.youtube.com/embed/";
+		<div class='sqYt'>";
+		echo "<iframe src='//www.youtube.com/embed/";
 		$yts = array(
 			"xVYp7khUDbw",	// Air - Mer du Japon The Teenagers Remix
 			"CDOIG8HKUZA",	// The Airplane Boys - Beau Monde
@@ -202,10 +229,10 @@ function spawnSquare($=)
 			// There is this part of me that still doesn't believe random is random so just to double check we shuffle too.
 			$rYt = rand(0,count($yts)-1);
 			$yt= $yts[$rYt];
-			echo $yt . "?autoplay=0&amp;theme=dark&amp;color=white;wmode=transparent' allowfullscreen>" ?>
-			</iframe>
+			echo $yt . "?autoplay=0&amp;theme=dark&amp;color=white;wmode=transparent' allowfullscreen>";
+			echo "</iframe>
 		</div>
-		<div class='sqAltContent'>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -216,14 +243,17 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- End of Youtube Square -->
+"; };
 
+function square_minecraftserver() {
+echo "
 	<!-- Minecraft Server Status Square -->
 	<div class='sqDub minecraftBG theBGcolor'>
 		<div class='sqTitle'><a class='icn icon-console'>&nbsp;</a>Minecraft Server<a class='sqSettings icn icon-settings'></a></div>
 		<div class='sqBody'>
 			<span class='blink'>Error! No Data Recieved!</span>
 		</div>
-		<div class='sqAltContent'>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -233,14 +263,17 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- End of Minecraft Server Status Square -->
+"; };
 
+function square_hitcounter() {
+echo "
 	<!-- HitCounter Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'><a class='icn icon-history'>&nbsp;</a>Visits<a class='sqSettings icn icon-settings'></a></div>
 		<div class='sqBody'>
 			<span class='blink'>Error! No Data Recieved!</span>
 		</div>
-		<div class='sqAltContent'>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -249,14 +282,17 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- End HitCounter Square -->
+"; };
 
+function square_unreadinfo() {
+echo "
 	<!-- Unreads Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'><a class='icn icon-newspaper'>&nbsp;</a>Unreads<a class='sqSettings icn icon-settings'></a></div>
 		<div class='sqBody'>
 			<span class='blink'>Error! No Data Recieved!</span>
 		</div>
-		<div class='sqAltContent'>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -265,14 +301,17 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- End Unreads Square -->
+"; };
 
+function square_forumthreads() {
+echo "
 	<!-- Forum Threads Square -->
 	<div class='sq  theBGcolor'>
 		<div class='sqTitle'><a class='icn icon-bubbles2'>&nbsp;</a>Forum Posts<a class='sqSettings icn icon-settings'></a></div>
 		<div class='sqBody'>
 			<span class='blink'>Error! No Data Recieved!</span>
 		</div>
-		<div class='sqAltContent'>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -281,14 +320,17 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- Forum Threads Square -->
+"; };
 
+function square_colorpicker() {
+echo "
 	<!-- Color Picker Square -->
 	<div class='sqDub theBGcolor'>
 		<div class='sqTitle'><a class='icn icon-paint-format'>&nbsp;</a>Color Picker<a class='sqSettings icn icon-settings'></a></div>
-		<div class='sqBody'>
-			<? colorForm(); ?>
-		</div>
-		<div class='sqAltContent'>
+		<div class='sqBody'>";
+	 colorForm();
+		echo" </div>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -297,14 +339,18 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- Color Picker Square -->
+	";
+};
 
+function square_steam() {
+echo "
 	<!-- Steam Group Square -->
 	<div class='sqDub  theBGcolor'>
 		<div class='sqTitle'><a class='icn icon-steam2'>&nbsp;</a>Steam Announcements<a class='sqSettings icn icon-settings'></a></div>
 		<div class='sqBody'>
 			<span class='blink'>Error! No Data Recieved!</span>
 		</div>
-		<div class='sqAltContent'>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -313,14 +359,18 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- Steam Group Square -->
+";
+};
 
+function square_facebook() {
+echo "
 	<!-- Facebook Square -->
 	<div class='sqDub  theBGcolor'>
 		<div class='sqTitle'><a class='icn icon-facebook2'>&nbsp;</a>Facebook<a class='sqSettings icn icon-settings'></a></div>
 		<div class='sqBody'>
-			<div class="fb-like-box" data-href="https://www.facebook.com/AlmostThereGaming" data-width="370" data-height="137" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+			<div class='fb-like-box' data-href='https://www.facebook.com/AlmostThereGaming' data-width='370' data-height='137' data-colorscheme='light' data-show-faces='true' data-header='true' data-stream='false' data-show-border='true'></div>
 		</div>
-		<div class='sqAltContent'>
+		<div class='sqBack'>
 			<ul>
 				<li><a>Show/Hide Square</a></li>
 				<li><a>Display Order</a></li>
@@ -330,6 +380,20 @@ function spawnSquare($=)
 		</div>
 	</div>
 	<!-- End Facebook Square -->
+";
+};
+
+//square_facebook();
+//square_steam();
+square_colorpicker();
+//square_forumthreads();
+//square_unreadinfo();
+square_youtube();
+//square_minecraftserver();
+//square_recentlogins();
+//square_hitcounter();
+
+?>
 
 </div>
 <? postBody(); ?>

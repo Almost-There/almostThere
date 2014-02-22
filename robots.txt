@@ -1,3 +1,7 @@
 User-agent: *
 Disallow: /files/
 Disallow: /fridge/
+Disallow: /dev/
+Disallow: /uploads/
+Disallow: /sty/
+Disallow: /scr/

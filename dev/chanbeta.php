@@ -5,7 +5,7 @@ else { include 'import.php'; } ?>
 <html>
 <head>
 <? head(); ?>
-<title class='dynTitle'>AlmostChan!</title>
+<title class='dynTitle'>AlmostChan Beta</title>
 </head>
 <body>
 <? preBody(); ?>
@@ -13,12 +13,14 @@ else { include 'import.php'; } ?>
 <?
 $arr = array(AT, b, wg, pol, soc, x, frg, epic, art, tv, film, mp3, pic, mc, cs, steam, vg, mj, drugs, trip, beer);
 foreach ($arr as &$value) {
-    echo "<a href='chan.php?" . $value . "'><span class='theColor'>" . $value . " </span></a><span> / </span>";
+    echo "<a href='chanbeta.php?" . $value . "'><span class='theColor'>" . $value . " </span></a><span> / </span>";
 }
 $qs = $_SERVER['QUERY_STRING'];
+$includer = "/var/www/almost-there.org/public_html/new/chan/" . $qs . "/index.html";
 
-echo "<iframe src='chan/" . $qs . "/index.html' class='chan fullw'></iframe>"; 
+echo $includer;
 
+include $includer;
 ?>
 
 </div>

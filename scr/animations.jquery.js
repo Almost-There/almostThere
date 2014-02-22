@@ -125,35 +125,71 @@ $(function () {
         }
     }
     unscramble('.msg-type');
-    setTimeout(waitForDoc, 200);
 
-    function waitForDoc() {
-        var i = -1;
-        var arr = $(".animateSquare");
-        (function () {
-            if (arr[++i])
-                $(arr[i]).delay(100).animate({
-                    height: "175px"
-                }, 50, "linear", arguments.callee);
-        })();
-    }
+//Condition 1
+    //Play Square Animation once and save the cookie that it has been seen.
+//Event
+    //A user navigates to a page with sqField on it for the first time [TO BE IMPLIMENTED] and also has fancy graphics turned on [TO BE IMPLIMENTED]
 
-// This makes one square fade in after another.
-$(function() {
-      $('#sqField div').each(function(i) {
-    $(this).delay((i++) * 50).fadeTo(1000, 1); })
-});
-// This does SOMETHING I forget exactly what though...
+
+//Condition 2
+    //Display Squares, do not play animation
+//Event
+    //A user navigates to a page with sqField on it a repeat time for that session, [TO BE IMPLIMENTED] or has fancy graphics off [TO BE IMPLIMENTED]
+
+
+//Condition 3
+    //Do not check for cookie or play animation, do not save cookie.
+//Event
+    //The page does not contain any squares to play the animation on, so it is not run
+
+/*
 $(function () { 
-    var sq=$(".sq")
-    var sqDub=$(".sqDub")
-    var youtubeTitle=$(".youtubeTitle")
-    sqDub.animate({height:'180px'},"slow");
-    sq.delay( 200 ).animate({height:'180px'},"slow");
+    if ($('sq').length)
+    {
+        console.log('#sqField was not found on the page, No animation functions were performed.');
+    }
+    else 
+    {
+    var seenYes=$.cookie('seen_fadeIn');
+    if (seenYes!='1')
+        {
+        $('#sqField div').delay( 500 ).each(function(i)
+            {
+                $(this).delay((i++) * 50).fadeTo(1000, 1);
+            }
+        );
+        $.cookie('seen_fadeIn', '1');
+        console.log( 'Animation has been played, Cookie set for the rest of this session.');
+        }
+    else 
+        {
+            $('sqField .sq').css( "display", "inline" );
+            $('sqfield .sqDub').css( "display", "inline" );
+            console.log('Animation already seen this session, Not playing FadeIn Animation. Have a nice Day!');
+        }
+    }
+} );
+*/
 
+    //Temporary while the function above is fixed.
+$(function(){
+    $('#sqField .sq').css( "display", "inline" )
+    $('#sqField .sqDub').css( "display", "inline" );
+});
+
+$(function(){
+    $( "#settingsButton" ).click(function() {
+        $( "#allOfTheThings" ).animate({ "left": "-250px" }, "fast" );
+    });
+});
+
+// This plays stage two animations.
+$(function () { 
+    var adSpace=$(".adSpace")
+    var youtubeTitle=$(".youtubeTitle")
+    adSpace.animate({opacity:'1'}, "slow");
     youtubeTitle.delay( 1000 ).slideUp( "slow" );
 
-} );
-
-
 });
+} );
