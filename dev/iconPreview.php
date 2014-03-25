@@ -1,10 +1,10 @@
-<?php if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
-else { include 'import.php'; } ?>
+<?php if(!file_exists("../import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
+else { include '../import.php'; } ?>
 <!DOCTYPE html>
 <html>
 <head>
 <? head(); ?>
-<title class='dynTitle'>Almost There - Home</title>
+<title class='dynTitle'>Almost There - Icon Preview</title>
 </head>
 <body>
 <? preBody(); ?>
@@ -14,13 +14,6 @@ else { include 'import.php'; } ?>
 		<div class='sqTitle oneline'>Color Picker<a href='' class='sqAltButton'>#</a></div>
 		<div class='sqContent'>
 			<? colorForm(); ?>
-		</div>
-		<div class='sqAltContent'>
-			<ul>
-				<li><a>Show/Hide Square</a></li>
-				<li><a>Display Order</a></li>
-				<li><a>Copy Info to Clipboard</a></li>
-			</ul>
 		</div>
 	</div>
 	<!-- Color Picker Square -->

@@ -9,8 +9,49 @@ else { include 'import.php'; } ?>
 <body>
 <? preBody(); ?>
 
-<center style='margin-top:40px;'><a style='font-size:200px;display:box;' class='theColor icn icon-lab'></a><br /><p class='write'>Soon</p></center>
-
+<ul>
+	<li>
+		<div class='settingsIcon'><a class='icn icon-phone'>&nbsp;</a></div>
+		Sounds
+		<div class='settingSwitch'>ON</div>
+	</li>
+	<li>
+		<a class='icn icon-phone'>&nbsp;</a>
+		Mobile View
+		<div class='settingSwitch'>ON</div>
+	</li>
+	<li>
+		<a class='icn icon-bug'>&nbsp;</a>
+		Debug Mode
+		<ul>
+			<li>Advanced Graphics</li>
+			<li>Console Output</li>
+			<li>Auto Refresh</li>
+			<li>Bug Reporter</li>
+		</ul>
+		<div class='settingSwitch'>OFF</div>
+	</li>
+	<li>
+		Privacy Mode
+		<div class='settingSwitch'>OFF</div>
+	</li>
+	<li>
+		Show all Squares
+		<div class='settingSwitch'>OFF</div>
+	</li>
+	<li>
+		Color Picker1 GB Ram 75GB storage 1.5TB bandwith
+		<div>
+			<!-- colorpicker here -->
+			<div><current color></div>
+			<a class='randomColors icn icon-paint-format'></a>
+		</div>
+	</li>
+	<li>
+		<p>Resize Page<br />slider thing<<br />slider pixel indicator</p>
+	</li>
+</ul>
+<div>
 <? postBody(); ?>
 </body>
 </html>

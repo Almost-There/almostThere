@@ -28,6 +28,291 @@ function displaySource() {
 .3d:after {position:absolute;left:5px;top:2px;content:inherit;color:rgba(255,0,0,0.5);}
 
 
+class square {
+	var $squareName="Default";
+	var $squareID="default";
+	var $squareIcon="icon-console";
+	var $squareSize="sq";
+// 	var $squareBackground="none";
+	var $squareContent="<span class='blink'>Error! No Data Recieved</span>";
+
+// check visibility function
+
+	function spitSquare() {
+		echo "<!-- We are now executing " . $this->squareID . " square -->";
+		// squareBackground function
+		echo "<div id='" . $this->squareID . "' class='" . $this->squareSize . " theBGcolor'> \n";
+			echo "<div class='sqTitle'><a class='icn " . $this->squareIcon . "'>&nbsp;</a>" . $this->squareName . "<a class='sqSettings icn icon-settings'></a></div>";
+			echo "<div class='sqBody'>\n<div class='nudge'>\n" . $this->squareContent . "\n</div>\n</div>";
+			//Square Settings function
+			echo "<div class='sqBack'><ul><li>Pin Square</li><li>Hide Square</li><li>Share Square</li></ul></div>";
+		echo "</div>";
+		echo "<!-- We are no longer executing " . $this->squareID . " square -->";
+	}
+};
+}; */
+
+// Square Template Class
+
+/*
+function square_unreadinfo() {
+echo "
+	<!-- Unreads Square -->
+	<div class='sq  theBGcolor'>
+		<div class='sqTitle'><a class='icn icon-newspaper'>&nbsp;</a>Unreads<a class='sqSettings icn icon-settings'></a></div>
+		<div class='sqBody'>
+			<span class='blink'>Error! No Data Recieved!</span>
+		</div>
+		<div class='sqBack'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- End Unreads Square -->
+"; };
+
+function square_forumthreads() {
+echo "
+	<!-- Forum Threads Square -->
+	<div class='sq  theBGcolor'>
+		<div class='sqTitle'><a class='icn icon-bubbles2'>&nbsp;</a>Forum Posts<a class='sqSettings icn icon-settings'></a></div>
+/*
+	function youtubePlayer() {
+		echo "	<div class='sqDub theBGcolor'>
+				<div class='youtubeTitle sqTitle'><a class='icn icon-youtube'>&nbsp;</a>YouTube Music<a class='sqSettings icn icon-settings'></a></div>
+				<div class='sqYt'>";
+		echo $yt . "?autoplay=0&amp;theme=dark&amp;color=white;wmode=transparent' allowfullscreen>";
+		echo "</iframe></div>"; };
+	};
+	*/
+/* function emptySquare() {
+	echo "<div class='emptySquare'>
+			<div class='sqBody theColor'>
+				<span>Place Square Here</span>
+			</div>
+		</div>";
+		<div class='sqBody'>
+			<span class='blink'>Error! No Data Recieved!</span>
+		</div>
+		<div class='sqBack'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Forum Threads Square -->
+"; };
+
+function square_colorpicker() {
+echo "
+	<!-- Color Picker Square -->
+	<div class='sqDub theBGcolor'>
+		<div class='sqTitle'><a class='icn i'>&nbsp;</a>Color Picker<a class='sqSettings icn icon-settings'></a></div>
+		<div class='sqBody'>";
+	 colorForm();
+		echo" </div>
+		<div class='sqBack'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Color Picker Square -->
+"; };
+
+function square_facebook() {
+echo "
+	<!-- Facebook Square -->
+	<div class='sqDub  theBGcolor'>
+		<div class='sqTitle'><a class='icn icon-facebook2'>&nbsp;</a>Facebook<a class='sqSettings icn icon-settings'></a></div>
+		<div class='sqBody'>
+			<div class='fb-like-box' data-href='https://www.facebook.com/AlmostThereGaming' data-width='370' data-height='137' data-colorscheme='light' data-show-faces='true' data-header='true' data-stream='false' data-show-border='true'></div>
+		</div>
+		<div class='sqBack'>
+			<ul>
+				<li><a>Show/Hide Square</a></li>
+				<li><a>Display Order</a></li>
+				<li><a>Like Button</a></li>
+				<li><a>Copy Info to Clipboard</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- End Facebook Square -->
+
+class square_recentlogins extends square {
+	var $squareName="Recent Logins";
+	var $squareId="recentlogins";
+	var $squareIcon="icon-users2";
+	var $squareSize="sq";
+//	var $squareContent="hello";
+};
+
+class square_minecraftserver extends square {
+	var $squareName="Minecraft Server Status";
+	var $squareId="minecraftserver";
+	var $squareIcon="icon-console";
+	var $squareSize="sqDub";
+//	var $squareContent="hello";
+//	var $squareBackground="/img/minecraft-tile-background.png";
+};
+
+class square_hitcounter extends square {
+	var $squareName="Hit Counter";
+	var $squareID="hitcounter";
+	var $squareIcon="icon-users2";
+	var $squareSize="sq";
+//	var $squareContent="hello";
+};
+
+class square_youtube extends sqaure {
+	var $sqaureName="Your Music!";
+	var $squareID="yourmusic";
+	var $squareIcon="icon-youtube";
+	var $squareSize="sqDub";
+	var $squareContent="<span class='blink'>Error: Unable to contact youtube</span>";
+};
+
+function hello() {
+	echo "<!DOCTYPE html><html><head>";
+	head(); 
+	echo "<title class='dynTitle'>Almost There - Squares</title></head><body>";
+	preBody();
+
+	postBody();
+	echo "</body></html>";
+};
+
+
+// Parent Class Template
+// More Variables and functions to be added
+// background image location, visability toggle, refresh?, square settings functions
+/* class square_default {
+// Display name of square
+	var $squareName='Default';
+// Technical reference for square (for neatness should be kept to class name) (function to echo class name?)
+	var $squareID='default';
+// Icon Applied to square
+	var $squareIcon='icon-console';
+// Write switch for 0 to equal no visiabiltiy, 1 for 'sq', 2 for 'sqDub'
+	var $squareSize='sq';
+// By default an empty variable, when given a hexidecimal color it should output a "style='background: etc... ' tag, when given a URL it will set the background
+// image to cover the background of the square. Depending on height, will add CSS3 animations. PHP will pre-process the image for the square"
+	var $squareBackground='none';
+// Content given to square, currently kept simple, will later be expanded to accept data and interpreted into templates
+	var $squareContent='<span class=\'blink\'>Error! No Data Recieved!</span>';
+
+//	 function checkVisibility() {
+//		if $_SERVER['COOOKIE'];		squareID='' } ;
+
+	function buildSquare() {
+		echo "<!-- We are now executing " . $squareName . " Square -->";
+		// Write function to swap theBG color class with a style attribute with the background URL if it is a URL or color if a color is given
+		echo "
+			<div id='" . $squareID . "' class='" . $squareSize . " theBGcolor'>
+				<div class='sqTitle'><a class='icn " . $squareIcon . "'>&nbsp;</a>" . $squareName . "<a class='sqSettings icn icon-settings'></a></div>";
+		echo "	<div class='sqBody'>" . $squareContent . "</div>
+			  	<div class='sqBack'>
+			  		<ul>
+			  			<li><a>Pin Square</a></li>
+			  			<li><a>Hide Square</a></li>
+			  			<li><a>Share Square</a></li>
+			  		</ul>
+			  	</div>
+			</div>";
+		echo "<!-- We are no longer executing " . $squareName . " Square -->";
+	};
+};
+*/
+
+
+/*
+
+	 ////////////////////////////////////////////////////
+	// Work in progress here, yes this is intentional //
+   ////////////////////////////////////////////////////
+
+3 Variables to create each square
+//Square Title, Square Size, Square Data.
+
+//Square Title = String = "name + icon of Square"
+	//Square Icon = String = "icon to be applied before square title"
+	//Square Name = String = "name of the function used for the square"
+//Square Title = Interger = 0="Do not Display", 1="Small Square", 2="Double Square", 3="Resizable Square"
+//Square Style = Does a value exist? = If data is given, theBGcolor is not used. A "style='background: <variable>' " 
+	is applied to the square and it awaits either an alternate color or background image.
+
+//Square Data = Function = The function to be executed within the square.
+
+
+function sq_color() {
+	global $colorPick;
+	foreach ($colorPick as $v) { echo "<a class='changeColor icon-droplet' style='color:$v'></a>\n"; };
+};
+
+function spawnSquare(ColorPicker, 1, $colorPick) {
+	echo "\n<!--  -->\n";
+	echo "<div id='colorPicker'>";
+	//Set color clientside with jquery, while saving the cookie to be read on next load with PHP
+	
+	echo "\n</div>";
+	echo "\n<!-- /colorForm() -->\n";
+}; 
+
+function spawnSquare($=)
+{
+	$numargs = func_num_args();
+	echo "Number of arguments: $numargs<br />\n";
+	if ($numargs >= 2) {
+		echo "Second argument is: " . func_get_arg(1) . "<br />\n";
+	}
+	$arg_list = func_get_args();
+	for ($i = 0; $i < $numargs; $i++) {
+		echo "Argument $i is: " . $arg_list[$i] . "<br />\n";
+	}
+}
+
+function square_default() {
+	$squareTitle=''
+	$squareSize=''
+	$squareBackground=''
+	$squareIcon=''
+	echo "<!-- Default Square -->";
+	echo "<div class='sqDub theBGcolor'>
+			<div class='sqTitle'>
+				<a class='icn icon-users2'>&nbsp;</a>"
+// Square Name  . .
+			   "<a class='sqSettings icn icon-settings'></a>
+			</div>";
+
+}	*/
+
+
+nt-type: image/png'); i don't get the error but i don't see the image either. All i see is this :-
+
+‰PNG ��� IHDR���È���d���ùHíH���PLTEÌÌÌ���Ó33d���MIDATH‰c£Àx�§” Nf*k²Ã)Ãø�§”•5}À)ÅS†ÚšpJUà”a§²¦œ2ÔŽw<špJ‚Q0 †;�� uTBúŸ����IEND®B‚ `
+
+
+nt-type: image/png'); i don't get the error but i don't see the image either. All i see is this :-
+
+‰PNG ��� IHDR���È���d���ùHíH���PLTEÌÌÌ���Ó33d���MIDATH‰c£Àx�§” Nf*k²Ã)Ãø�§”•5}À)ÅS†ÚšpJUà”a§²¦œ2ÔŽw<špJ‚Q0 †;�� uTBúŸ����IEND®B‚ `
+
+
+        imageline($myImage, 15, 35, 1
+        imageline($myImage, 15, 35, 1
+        imageline($myImage, 15, 35, 1
+        imageline($myImage, 15, 35, 1
+//DIE afenchn;lknj;laj;lefjca;lscmkelkm        imageline($myImage, 15, 35, 1
+        imageline($myImage, 15, 35, 1
+        imageline($myImage, 15, 35, 1
+        imageline($myImage, 15, 35, 1
+
 var sqTitle=$(".sqTitle")
     sqTitle.animate({right:'-600px'},"slow");
     
@@ -48,7 +333,6 @@ echo "
 styleDynamics();
  ?>
 
-
 <?php
 	$pageSeed=rand(1, 1024);
 	// Use this variable with a dummy query string afterCSS/JS documents to prevent caching
@@ -56,9 +340,6 @@ styleDynamics();
 
 	// Color Changing Function
 	// Colors chooseable in the ColorPicker
-
-
-
 
 function preBody() {
 	echo "\n<!-- preBody() -->";
@@ -117,6 +398,15 @@ echo "\n<!-- /postBody -->\n";
 }
 ?>
 
+#dubstep
+and now we enter dubstepmode
+wubwubwub wubuwubuwubuwubbbb woooo wubwuwbuwubwubwuwuwbuwwuuuuwbbbwuwub wubuwuuuuubwbuuuubwuuuubwu
+Woooowoowoooo wub wbuw--wub wub wub wub woo wub wub wub woo wubwubuwubuwubw wahhhh wub wubw scricthc wububwubuwubw
+swahbhwbuwhah wubwubwubwubwubwuwubwuuuwubwubbwibiwbinwnnw Wwe know... dubstep... dubstep mally aquafeena... 
+
+
+
+#settingsmenu
 	<div class='settingsMenuBlock'>				
 					<span class='fl cf'>Show NSFW things?</span>
 							<label class='switch fr'>
@@ -167,7 +457,7 @@ foreach ($configMatrix as $v1) {
 }
 */
 
-
+#getbrowserwidth
     function myFunction()
     {
     var x = "Total Width: " + screen.width + "px";
@@ -264,7 +554,7 @@ foreach ($configMatrix as $v1) {
 -        $.gl.step = 0.00;
 -    }
 -}                
--                
+-               #textunscrambler 
 -$(document).ready(function () {
 -    $.gl.orig = $('#msg').text().split('');                    
 -    $('#msg').empty();
@@ -277,9 +567,6 @@ foreach ($configMatrix as $v1) {
 -    } 
 -    unscramble('#msg');
 -});
--	
--	
--	
 -	
 -	
 - /*
@@ -410,25 +697,11 @@ foreach ($configMatrix as $v1) {
 /* Link Fading Styles NOT WORKING */
 	.fade {-o-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -khtml-transition: all 0.5s linear; -webkit-transition: all 0.5s linear; -ms-transition: all 0.5; linear;transition: all 0.5s linear;}
 
-
+#youtubeloadingsquare
 <div class='youTube' >
 	<iframe src="//www.youtube.com/embed/<? 
 	$yts = array(
 	"OKxaPkIx4WY", 		/* Oxygen - Moguai feat. Fiora */
-	"d1wGFgoocKk",		/* Schoolboy - Project No-Autotune */
-	"n9nntf5_JXc", 		/* MSD - I Feel You (Bluescreens Remix) */
-	"lG5aSZBAuPs",		/* XXYYXX - About You */
-	"lM7XgAmcXp8",		/* InnerPartySystem - American Trash */
-	"2qN5ewi44N8",		/* Motionless in White - AMERICA */
-	"uxelXPg961M", 		/* Mastodon - Divinations */
-	"7kCyPj6ZFTA",		/* AWOLNATION - Sail (Borgore Remix) */
-	"reHGIYHAR2Q",		/* Borgore - Nympho */
-	"fxvGHQHiY70",		/* Animal Collective - Peacebone */
-	"FaJytyOISmE", 		/* Pasafire - Rubber Bands */
-	"xsV8TrF4gN0",		/* Not In Love - Crystal Castles */
-	"C-9v68o5Gfs",		/* Voicans - Loyal Friend */
-	"k8gpHUIZaVQ",		/* Boreta - Honey Heart */
-	"HEkLU2AiJCs",		/* Shiny Toy Guns - Stripped */
 	"8wCgxkQj_Qo", 		/* Pretty Lights - I Know The Truth */
 	"f9EM8T5K6d8",		/* Modstep - Another Day (Xcore Remix) */
 	"PQ1PU1XOQIk",		/* Styles of Beyond - Bleach */
@@ -470,6 +743,31 @@ foreach ($configMatrix as $v1) {
 	squares( $squareTitle='Logged in Today'			);
 	squares( $squareTitle='Trending Profanities'	); 
 ?></div>
+
+<?php if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
+else { include 'import.php'; } ?>
+<!DOCTYPE html>
+<html>
+<head>
+<? head(); ?>
+<title class='dynTitle'>Almost There - Labs</title>
+</head>
+<body>
+<? preBody(); ?>
+
+<div id='sqField'>
+	<div class='sqDub theBGcolor'>
+		<div class='sqTitle'><a class='icn icon-console'>&nbsp;</a>Almost-There Wallpaper<a class='sqSettings icn icon-settings'></a></div>
+		<div class='nudge fl sqBody'>
+			<a class='sqImgBody' href='/uploads/wallpaper(001).png'><img src='/uploads/wallpaper(001).png' alt='almost-there.org wallpaper number 1' /></a>
+			<a href='/uploads/wallpaper(001).png'><p class='writeDark nudge' >Click here to Download this Wallpaper</p></a>
+		</div>
+	</div>
+</div>
+
+<? postBody(); ?>
+</body>
+</html>
 
 	<li><a href='steam://url/GroupSteamIDPage/103582791430342520'>Steam</a></li>
 			<li><a href='#servers'>Servers</a></li>

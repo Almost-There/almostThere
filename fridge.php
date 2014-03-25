@@ -1,71 +1,74 @@
+<?php if(!file_exists("import.php")) { die("<meta http-equiv='refresh' content='10' ><p style='font-family:Tahoma, Geneva, sans-serif;'><span style='color:red;'>Fatal Error</span><br />import.php was not found.<br />Almost-There Cannot be Loaded<br /></p>"); } else { include 'import.php'; }; ?>
 <?php
-if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
-else { include 'import.php'; }
 
 $includeurl = false;
 	// If this script is being included, define the URL to this variable script (relative from the host)
 $startdir = './uploads/';
 	// Must be relative to this file, can't cd up either ghey....
 $showthumbnails = false;
-	// gen thumbnails for images
+	// Generate thumbnails for images
 $memorylimit = false;
 	// Set memory limit in MB
 $showdirs = true;
 	// View directories?
 $forcedownloads = false;
-	// type this, expressions work with this as well
+	// Type this, expressions work with this as well
 $hide = array( 'dlf', 'index.php', 'Thumbs', '.htaccess', '.htpasswd');
 	// comment out to disable this, must add file extention to list to view it etc.
 $showtypes = array( 'jpg', 'png', 'gif', 'zip', 'txt', 'mp3' );
 $displayindex = false;
 $allowuploads = true;
-// allowed file types to be uploaded.
+	// allowed file types to be uploaded.
 $uploadtypes = array( 'zip', 'gif', 'doc', 'png', 'jpg', 'mp4', 'mp3', 'mov', 'swf' );
 
-// If a  file gets uploaded with the same name as another file; override it?
+	// If a  file gets uploaded with the same name as another file; override it?
 $overwrite = false;
-// Index files - The follow array contains all the index files that will be used if $displayindex (above) is set to true. Feel free to add, delete or alter these
+	// Index files - The follow array contains all the index files that will be used if $displayindex (above) is set to true. Feel free to add, delete or alter these
 $indexfiles = array ( 'index.html', 'index.htm', 'default.htm', 'default.html', 'index.php' );
-//File Icons - If you want to add your own special file icons use  this section below. Each entry relates to the extension of the  given file, in the form <extension> => <filename>.  These files must be located within the dlf directory.
+	// File Icons - If you want to add your own special file icons use  this section below. Each entry relates to the extension of the  given file, in the form <extension> => <filename>.  These files must be located within the dlf directory.
 $filetypes = array (
 				//Audio Types
-		'mp3'		=> 'music.png',		// MPEG-3 Digital Audio Format
-		'ogg'		=> 'music.png',		// Ogg-Vorbis Digital Audio Format
-		'flac'		=> 'music.png',		// Vorbis Compressionless Audio Format
-		'wav'		=> 'audio.png',		// Windows Compressed Wave Sound Format
+		'mp3'	=> 'music.png',		// MPEG-3 Compressed Digital Audio Format
+		'ogg'	=> 'music.png',		// Ogg-Vorbis Digital Audio
+		'flac'	=> 'music.png',		// Vorbis Compressionless Audio
+		'wav'	=> 'audio.png',		// Windows Compressed Wave Sound
 				//Video Types
-		'mp4'		=> 'video.png',		// MPEG-4 Part 14 Video Container Format
-		'mkv'		=> 'video.png',		// Matroska Video Container Format
-		'mpg' 		=> 'video.png',		// MPEG Video Format
-		'mpeg' 		=> 'video.png',		// MPEG Video Format
-		'mov' 		=> 'video.png',		// QuickTime Video File Format
-		'avi' 		=> 'video.png',		// Audio Video Interleaved File Format
+		'mp4'	=> 'video.png',		// MPEG-4 Part 14 Video Container
+		'mkv'	=> 'video.png',		// Matroska Video Container
+		'mpg' 	=> 'video.png',		// MPEG Video
+		'mpeg' 	=> 'video.png',		// MPEG Video
+		'mov' 	=> 'video.png',		// QuickTime Video File
+		'avi' 	=> 'video.png',		// Audio Video Interleaved File
 				//Image Types
-		'png'		=> 'images.png',	// Portable Notable Graphics Vector Format
-		'bmp' 		=> 'images.png',	// Bitmap Image Format
-		'jpeg'		=> 'images.png',	// JPEG Compressed Image Format
-		'jpg' 		=> 'images.png', 	// JPEG Compressed Image Format
-		'gif' 		=> 'images.png',	// Graphics Interchange Format
+		'png'	=> 'images.png',	// Portable Notable Graphics Vector
+		'bmp' 	=> 'images.png',	// Bitmap Image
+		'svg'	=> 'images.png',	// Scalable Vector Graphics
+		'jpeg'	=> 'images.png',	// JPEG Compressed Image
+		'jpg' 	=> 'images.png', 	// JPEG Compressed Image
+		'gif' 	=> 'images.png',	// Graphics Interchange Format
 				//Document Types
-		'fla' 		=> 'fla.png',		// Adobe Flash Source File
-		'txt' 		=> 'text.png',		// Plaintext File
-		'pdf' 		=> 'pdf.png',		// Adobe PDF Document
-		'psd' 		=> 'psd.png',		// Photoshop Document
-		'xls' 		=> 'xls.png',		// Microsoft Excel Document
-		'doc' 		=> 'doc.png',		// Microsoft Word Document
+		'fla' 	=> 'fla.png',		// Adobe Flash Source File
+		'txt' 	=> 'text.png',		// Plaintext File
+		'pdf' 	=> 'pdf.png',		// Adobe PDF Document
+		'psd' 	=> 'psd.png',		// Photoshop Document
+		'xls' 	=> 'xls.png',		// Microsoft Excel Document
+		'doc' 	=> 'doc.png',		// Microsoft Word Document
+		'docx'	=> 'doc.png',		// Microsoft Word 2007+ Document
 				//Website Types
-		'swf' 		=> 'swf.png',		// Adobe Shockwave Flash Format
-		'htm' 		=> 'html.png',
-		'html'	 	=> 'html.png',
+		'htm' 	=> 'html.png',		// Hyper-text Markup Language Webpage
+		'html'	=> 'html.png',		// Hyper-text Markup Language Webpage
 				//Archives Types
-		'zip' 		=> 'archive.png',
-		'rar' 		=> 'archive.png',
+		'zip' 	=> 'archive.png',	// Compressed archive
+		'rar' 	=> 'archive.png',	// RAR Compressed archive
 				//Executable Types
-		'php'		=> 'web.png',		//PHP Script
-		'sh'		=> 'shell.png',		//Shell Script
-		'apk'		=> 'android.png',	//Android Package File
-		'jar'		=> 'java.png',		//Java Executable File
-		'exe' 		=> 'exe.png'		//NT Executable File
+		'php'	=> 'web.png',		// PHP Script
+		'sh'	=> 'shell.png',		// Shell Script
+		'swf' 	=> 'swf.png',		// Adobe Shockwave Flash Format
+		'apk'	=> 'android.png',	// Android Package File
+		'jar'	=> 'java.png',		// Java Executable File
+		'exe' 	=> 'exe.png',		// NT Executable File
+		'app'	=> 'exe.png'		// OSX Application
+
 			);
 
 if($includeurl)
@@ -123,9 +126,9 @@ if($allowuploads && $_FILES['file']) {
 				else if($i != 1) $uploaderror.= ', ';
 				$uploaderror.= '.'.strtoupper($v);
 				$i++;
-			}
-		}
-	}
+			} // and now
+		} // we fall down
+	} // the stairs!
 
 	if($upload) {
 		move_uploaded_file($_FILES['file']['tmp_name'], $includeurl.$leadon . $_FILES['file']['name']);
@@ -196,6 +199,8 @@ if($_GET['order']=="desc") {$files = @array_reverse($files);}
 $dirs = @array_values($dirs); $files = @array_values($files);
 ?>
 
+
+
 <? // Build HTML ?>
 <!DOCTYPE html>
 <html>
@@ -204,15 +209,58 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 <title class='dynTitle'>Almost There - Home</title>
 </head>
 <body>
-<? preBody(); ?>
+<? preBody();
+
+
+
+function buildPage() {
+	echo "<!DOCTYPE html>\n<html>\n<head>"
+	head();
+	echo "<title class='dynTitle'>Almost There - Fridge</title>\n</head>\n><body>";
+	preBody();
+	// Build the Table
+	echo "
+		<table id='fileTable'>
+			<tr>
+				<td colspan='3' class='theBGcolor'>
+					<span style='color#FFFFFF;'>Fridge listing of ";
+	echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;
+	echo "			</span>
+				</td>
+			</tr>
+		<tr style='display:none;'>
+			<td colspan='3>
+				<div class='theLinkColor' id='breadcrumbs'>
+				<a href='"; echo strip_tags($_SERVER['PHP_SELF']); echo "'>Fridge</a>";
+					$breadcrumbs = split('/', str_replace($startdir, '', $leadon));
+				if(($bsize = sizeof($breadcrumbs))>0) {
+					$sofar = '';
+					for($bi=0;$bi<($bsize-1);$bi++) {
+						$sofar = '';
+						for($bi=0;$bi<($bsize-1);$bi++) {
+							$sofar = $sofar . $breadcrumbs[$bi] . '/';
+							echo '&gt; <a href="'.strip_tags($_SERVER['PHP_SELF']).'"?dir='.strip_tags($sofar).'">'.$breadcrumbs[$bi].'</a></div></td></tr>';
+						}
+					}
+				}
+				$baseurl = $strip_tags($_SERVER['PHP_SELF']) . '?dir='.strip_tags($_GET['dir']) . '&amp;';
+}
+
 <table class='cf' id='fileTable'>
-<tr><td colspan='3' class='theBGcolor'><span style='color:#FFFFFF;' >Fridge Listing of <?php echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;?></span></td></tr>
-<tr style="display:none;">
-<td colspan='3'>
-		<div  class='theLinkColor' id="breadcrumbs">
+	<tr><td colspan='3' class='theBGcolor'>
+			<span style='color:#FFFFFF;' >
+
+				Fridge Listing of <?php echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;?>
+
+			</span>
+
+
+		</td></tr>
+	<tr style="display:none;">
+	<td colspan='3'>
+			<div  class='theLinkColor' id="breadcrumbs">
 			<a href="<?php echo strip_tags($_SERVER['PHP_SELF']);?>">/Fridge/</a> 
-		  <?php
-		 	 $breadcrumbs = split('/', str_replace($startdir, '', $leadon));
+			  <?php	 $breadcrumbs = split('/', str_replace($startdir, '', $leadon));
 		  	if(($bsize = sizeof($breadcrumbs))>0) {
 		  		$sofar = '';
 		  		for($bi=0;$bi<($bsize-1);$bi++) {

@@ -13,9 +13,6 @@ switch ($qs) {
     case "colorForm":
     	colorForm();
     	break;
-    case "readDoc";
-    	readDoc();
-    	break;
 }
 
 //Use this variable in a querystring after a link to prevent the page from being cached.
@@ -24,19 +21,19 @@ $pageSeed = rand(1024, 2048);
 if (isset($_COOKIE["setColor"]))
 			$theColor = $_COOKIE["setColor"];
 else
-			$theColor = "#FF8C00";
+			$theColor = "#E84D5B";
 $colorPick = array(
 "#EE5078", "#FF8039", "#FFA533", "#FFC233", "#FFE030", "#FFF933", "#D7FF20",
 "#3CB371", "#00FA9A", "#808000", "#2E8B57", "#FF0000", "#FF4500", "#FF8C00",
-// Splash lights, thoughts, place
-// color peace set in time
-// red green blue all the clues
 "#D2691E", "#FF7F50", "#DC143C", "#E9967A", "#FF1493", "#B22222", "#FF69B4",
 "#483D8B", "#00BFFF", "#1E90FF", "#ADD8E6", "#20B2AA", "#87CEFA", "#B0C4DE",
 "#708090", "#4682B4", "#008080", "#40E0D0", "#0099CC", "#EA8224", "#BADA55",
 "#62BDFF", "#5FE2FF", "#54FDD7", "#45FD9F", "#48FD82", "#3BFD4A", "#6AFD46",
 "#DAC73A", "#DAB83C", "#DAAA49", "#DA9540", "#DA7F40", "#DA663A", "#DA5839",
 "#DA2858", "#DA2A81", "#DA27A4", "#DA23C2", "#C731DA", "#AD2CDA", "#901BDA",
+// Splash lights, thoughts, place
+// color peace set in time
+// red green blue all the clues
 "#6E6DB1", "#6B74B7", "#5170B3", "#297CC2", "#008DB8", "#0094AA", "#00A29F",
 "#00A79D", "#00B081", "#69C264", "#88CB62", "#AFD54E", "#D4DD4C", "#E8D958",
 "#FEE449", "#FFDA41", "#FFD23B", "#FFC92B", "#FFBB40", "#FEB23A", "#FEA348",
@@ -45,7 +42,7 @@ $colorPick = array(
 "#4d55FF", "#5687FF", "#0099CC", "#76608A", "#7B68EE", "#4169E1", "#6A5ACD",
 "#CD5C5C", "#F08080", "#6495ED", "#008B8B", "#ED2939", "#800000", "#A52A2A",
 "#FFA500", "#15FF3E", "#03BCFF", "#00FF7F", "#90EE90", "#FB8758", "#F67D6C", 
-"#F37873", "#F27289", "#E06794", "#B66DA4", "#B376B2", "#AD8244", "$FF29DD" );
+"#F37873", "#F27289", "#E06794", "#B66DA4", "#B376B2", "#AD8244", "#FF29DD" );
 
 function head() {
 			global $pageSeed, $theColor;
@@ -59,9 +56,14 @@ function head() {
 			//Echo CSS, Fonts, and Page Styles
 			echo "
 		<link rel='stylesheet' type='text/css' href='/sty/style.css?=" . $pageSeed . "'>
+		<link rel='stylesheet' type='text/css' href='/sty/ditto.css?=" . $pageSeed . "'>
+		<link rel='stylesheet' type='text/css' href='/sty/normalize.css'>
+		<link rel='stylesheet' type='text/css' href='/sty/animated.css?=" . $pageSeed . "'>
 		<style>.theColor {color:" . $theColor . ";} .theBGcolor {color:#222222;background-color:" . $theColor . ";}</style>";
 			//Echo Javascript, jQuery and Page Scripts
 			echo "
+		<!-- Google Analytics Tracking Code -->
+			<script src='/scr/ga.js?rnd=" . $pageSeed . "'></script>
 		<!-- jQuery -->
 			<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
 		<!-- jQuery UI -->
@@ -96,24 +98,26 @@ function preBody() {
 			<img alt='Click here to return home' src='/img/logo.png' /></a><br />
 			<span class='quote msg-type'>";
 	// import snarky quotes
-		include("quotes.sharky.php");
+		//include("quotes.sharky.php");
 	echo "</span>\n</div><!-- logoArea -->\n<div id='navBody'>\n<ul>";
 	function navList() {
 		echo "\n<!-- navList() -->\n";
 			$slash    = "<span class='theColor'>&nbsp;/</span>\n";
 			$navLinks = array(
-						"/squares.php" => Squares,
-						// "/chan.php" => Chan,
-						"/forums" => Forums,
-						"/fridge.php" => Fridge,
-						"/irc.php" => Chat,
-						"/labs.php" => Labs
+						"/squares.php" => "Squares",
+						// "/chan.php" => "Chan",
+						"/forums" => "Forums",
+						"/fridge.php" => "Fridge",
+						"/irc.php" => "Chat",
+						"/labs.php" => "Labs"
 						);
 		foreach ($navLinks as $k => $v) { echo "<li><a href='$k' id='#nav$v'> $v</a>" . $slash . "</li>\n"; }
 		echo "</ul>";
 		echo "\n<!-- /navList() -->\n"; };
 		navList();
-		echo "<div id='settingsButton' class='fr budge'> <a>Settings</a>&nbsp;<a class='icon-cog icn'></a> </div>
+		echo "<div id='settingsButton' class='fr budge'>
+				<a>Settings</a>&nbsp;<a id='settingsButtonIcon' class='icon-cog icn'></a>
+			</div>
 	</div>\n";
 
 	echo "</header>";
@@ -176,4 +180,16 @@ function colorsAvailable() {
 	$result = count($colorPick);
 	echo $result;
 };
+/*
+function sayHello() {
+	echo "<!DOCTYPE html><html><head>". head(); . "<title class='dynTitle'>Almost There - Import.PHP</title></head><body>" . preBody(); . "
+	
+	<h1>Welcome to Import.php</h1>
+	<p>Import.php is a functional document for Almost-There and does not contain content for the normal user to read or use.</p>
+	<p>This page accepts the following arguements</p>
 
+
+	" . postBody(); . "</body></html>";
+}; */
+
+?>

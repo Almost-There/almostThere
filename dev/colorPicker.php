@@ -1,5 +1,5 @@
-<?php if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
-else { include 'import.php'; } ?>
+<?php if(!file_exists("/var/www/almost-there.org/public_html/import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
+else { include '../import.php'; } ?>
 
 <!DOCTYPE html>
 <html>

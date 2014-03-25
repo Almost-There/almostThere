@@ -180,14 +180,20 @@ $(function(){
 
 $(function(){
     $( "#settingsButton" ).click(function() {
-        $( "#allOfTheThings" ).animate({ "left": "-250px" }, "fast" );
+        $( "#settingsButtonIcon" ).switchClass( "icon-cog", "icon-close" );
+//        $( "#settingsMenu" ).css({
+//            "display": "inline",
+//            "position": "relative",
+//            "right": "-200px"
+//        });
+//        $( "#settingsMenu" ).animate( "right": )
     });
 });
 
 // This plays stage two animations.
 $(function () { 
     var adSpace=$(".adSpace")
-    var youtubeTitle=$(".youtubeTitle")
+    var youtubeTitle=$("#yourmusicSquare .sqTitle")
     adSpace.animate({opacity:'1'}, "slow");
     youtubeTitle.delay( 1000 ).slideUp( "slow" );
 
