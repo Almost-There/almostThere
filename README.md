@@ -1,33 +1,27 @@
-<h1>Almost-There 2014 Redesign</h1>
+<h1>Almost-There.org</h1>
+The purpose of this website was to connect gamers together from across many games while balancing a social community, discussion board, and other projects.
 
-View live page at <a href='http://almost-there.org'>http://almost-there.org/</a>
-The purpose of this website is to connect gamers together from across many games while balancing a social community, discussion board, and other projects.
+In 2022 a plan is made for this website to be re-coded and maintained for  'legacy purposes' and if any traction or intrest comes of it may try an attempt at reincorporation and reunion.
 
-Must Support the following Operating Systems
-	Windows 7+, Linux, OSX (10.6.8), Android (2.2+ froyo), iOS 4+, Steam OS
-Must Support the following Browser
-	Firefox, Chrome, IE(10+), Safari, Steam In-Game, Lynx/Links
-	Blink, Webkit, Gecko, IE
-	Website must be accessable for screen readers as well as search engines wishing to browse the site
-Goal to support: all major platforms. specifically steam-in game browser, lynx, and mobile browsers.
-	
-Only using the following languages
-	PHP, Javascript, HTML5, CSS 3 / SCSS, SVG
+Almost-There had an incredible community with amazing flair and inginuity unseen before and was an intregal part of our lives.
 
 Main Features
 	The Fridge
-		The Fridge is a File uploader/Social Networking experiment.
+		The Fridge was a File uploader/Social Networking experiment.
 
-		Users will be able to upload quality or popular files in exchange for hosting those files and recieving points
-		Points may be redeemed for different features to be used across the site.
+		Users sometimes were able to upload files.
 	
 	Forums
-		Almost There in previous versions has been home to a popular forum with a small userbase that continues thier loyalty
+		Almost There was home to a popular forum with a small userbase that continues thier loyalty
 
-		Forums will start off using Vanilla forum software to begin, then later custom forum software will be developed.
+		Forums started off using Vanilla forum software to begin.
 
-	Gaming Community
-		Movie Nights
-		Chat Room
-		Game Servers
-		Structured Events
+		Forums will not be making a comeback however historical threads may be made available in the future with help and contributions by user 'Kenny'
+
+		Redesign is to utilize discord or a newsfeed style webpage for modernity.
+		An imageboard style forum could also be included in new redesign.
+
+	Gameservers and Community Events
+		Events with our users organized to bring together old friends.
+
+		Gameservers hosted to continue the community.
