@@ -94,31 +94,37 @@ function preBody() {
 			echo "<header class='theBGcolor'>
 		<div class='bubbles layerUp'></div>
 		<div class='logoArea'>
-		<a href='http://almost-there.org/index.php'>
-			<img alt='Click here to return home' src='/img/logo.png' /></a><br />
+		<a href='index.php'>
+			<img alt='Click here to return home' src='sty/img/logo.png' /></a><br />
 			<span class='quote msg-type'>";
-	// import snarky quotes
-		//include("quotes.sharky.php");
+	// import ("db/wordpig.php");
+		include ("db/wordpig.php");
 	echo "</span>\n</div><!-- logoArea -->\n<div id='navBody'>\n<ul>";
-	function navList() {
+	/* function navList() {
 		echo "\n<!-- navList() -->\n";
-			$slash    = "<span class='theColor'>&nbsp;/</span>\n";
-			$navLinks = array(
-						"/squares.php" => "Squares",
-						// "/chan.php" => "Chan",
-						"/forums" => "Forums",
-						"/fridge.php" => "Fridge",
-						"/irc.php" => "Chat",
-						"/labs.php" => "Labs"
-						);
-		foreach ($navLinks as $k => $v) { echo "<li><a href='$k' id='#nav$v'> $v</a>" . $slash . "</li>\n"; }
+		$slash    = "<span class='theColor'>&nbsp;/</span>\n";
+		$navLinks = array(
+			"squares.php" => "Squares",
+			// "/chan.php" => "Chan",
+			"forums" => "Forums",
+			"fridge.php" => "Fridge",
+			"irc.php" => "Chat",
+			"labs.php" => "Labs"
+		);
+		foreach ($navLinks as $k => $v) {
+			echo "<li><a href='$k' id='#nav$v'> $v</a>" . $slash . "</li>\n";
+		}
 		echo "</ul>";
-		echo "\n<!-- /navList() -->\n"; };
-		navList();
+		echo "\n<!-- /navList() -->\n";
+	}
+	
+		navList(); // Call navList here
+		// Rest of preBody content...
+	
 		echo "<div id='settingsButton' class='fr budge'>
 				<a>Settings</a>&nbsp;<a id='settingsButtonIcon' class='icon-cog icn'></a>
 			</div>
-	</div>\n";
+	</div>\n"; */
 
 	echo "</header>";
 	echo "<div id='allOfTheThings' class='pr'>";
@@ -131,11 +137,10 @@ function preBody() {
 
 function postBody() {
 global $pageSeed, $theColor;
-	function displayAds() {
+	/* function displayAds() {
 		echo "<div style='width:400px;height:50px;' class='write small'>";
-		//put this here http://pastebin.com/raw.php?i=NwpQp6ui
 		echo "</div>";
-	};
+	}; */
 	echo "\n<!-- postBody() -->\n";
 	echo "</div>";
 	/* #allOfTheThings */

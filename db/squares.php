@@ -1,9 +1,9 @@
-<?php if(!file_exists("import.php")) { die("<meta http-equiv='refresh' content='10' ><p style='font-family:Tahoma, Geneva, sans-serif;'><span style='color:red;'>Fatal Error</span><br />import.php was not found.<br />Almost-There Cannot be Loaded<br /></p>"); } else { include 'import.php'; };
+<?php
 // Squares.php by LuckyMonkey
 
 class square 
 {
-	public $squareName			=	"default";
+	public $squareName			=	"default";	
 	public $squareID			=	"default";
 	public $squareIcon			=	"icon-console";
 	public $squareSize			=	"sq";

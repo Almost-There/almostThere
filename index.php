@@ -40,7 +40,7 @@
 		</div>
 	</div>
 	<!-- End Index Square -->
-<? include 'squares.php?square_youtube'; ?>
+	<? include 'db/squares.php'; ?>
 
 </div>
 </div>
