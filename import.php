@@ -1,19 +1,4 @@
 <?php
-$qs = $_SERVER['QUERY_STRING'];
-switch ($qs) {
-    case "head":
-        head();
-    break;
-    case "preBody":
-        preBody();
-    break;
-    case "postBody":
-        postBody();
-    break;
-    case "colorForm":
-    	colorForm();
-    	break;
-}
 
 //Use this variable in a querystring after a link to prevent the page from being cached.
 $pageSeed = rand(1024, 2048);
@@ -31,9 +16,6 @@ $colorPick = array(
 "#62BDFF", "#5FE2FF", "#54FDD7", "#45FD9F", "#48FD82", "#3BFD4A", "#6AFD46",
 "#DAC73A", "#DAB83C", "#DAAA49", "#DA9540", "#DA7F40", "#DA663A", "#DA5839",
 "#DA2858", "#DA2A81", "#DA27A4", "#DA23C2", "#C731DA", "#AD2CDA", "#901BDA",
-// Splash lights, thoughts, place
-// color peace set in time
-// red green blue all the clues
 "#6E6DB1", "#6B74B7", "#5170B3", "#297CC2", "#008DB8", "#0094AA", "#00A29F",
 "#00A79D", "#00B081", "#69C264", "#88CB62", "#AFD54E", "#D4DD4C", "#E8D958",
 "#FEE449", "#FFDA41", "#FFD23B", "#FFC92B", "#FFBB40", "#FEB23A", "#FEA348",
@@ -47,13 +29,8 @@ $colorPick = array(
 function head() {
 			global $pageSeed, $theColor;
 			echo "\n<!-- head() -->\n";
-			//Function used to load JS, CSS, and Meta Attributes into the HTML's <head> tag.
-			//Echo Meta Attributes and SEO
 			echo "
 		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n
-		<meta name='copyright' content='Almost-There is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.' />\n
-		<meta description='Your favorate internet!' /> ";
-			//Echo CSS, Fonts, and Page Styles
 			echo "
 		<link rel='stylesheet' type='text/css' href='/sty/style.css?=" . $pageSeed . "'>
 		<link rel='stylesheet' type='text/css' href='/sty/ditto.css?=" . $pageSeed . "'>

@@ -1,0 +1,50 @@
+.bold {font-weight:bold;} .underline {text-decoration:underline;} .italic {font-style:oblique;}
+	/* Underline, Bold, Italic Text */
+	.oneline {white-space: nowrap;}
+	/* Force text to only occupy one line of space */
+	.nudge {margin-left:10px;}
+	/* Knock Element over to the right 10 pixels */
+	.budge {margin-right:10px;}
+	/* Knock Element over to the left 10 pixels */
+	.fl {float:left;} .fr {float:right;}
+	/* Float Left/Right */
+	.db {display:block;}
+	/* Display Block */ 
+	.oh {overflow:hidden;}
+	/* Hide overflowing Elements */
+	.vw {min-width:100vw;} .vh {min-height:100vh;}
+	/* CSS Variable height class */
+	.pr {position:relative;}
+	/* Use relative positioning on Element */
+	.full {width:100%;height:100%;} 
+	/* Fill all available space by Element */
+	.fullw {width:100%;} 
+	/* Fill all horizontal space by Element */
+	.fullh {height:100%;}
+	/* Fill all vertical space by Element */
+	.tint {background-color:rgba(22, 22, 22, 0.6) !important;}
+	/* When an element covering another object to 'darken' its color */
+	.layerUp {z-index:+1;}
+	/* When an element is covering another object */
+	.layerDown {z-index:-1;}
+	/* When you want an element to cover another object */
+	.ma {margin-left:auto;margin-right:auto;}
+	/* This is a pretty hack to cener things with a width attribute applied */
+	.ctr {text-align:center;margin-left:auto;margin-right:auto;}
+	/* Same as above with Text-Align Center also applied */
+	.big {font-size:28px !important;} .small {font-size:9px !important;}
+	/* Class to be used on any element to make it blink */
+	.blink {animation:blink 0.4s infinite; -webkit-animation:blink 0.4s infinite;} @keyframes blink { from {opacity:0.1;} to {opacity:1;} } @-webkit-keyframes blink { from {opacity:0.1;} to {opacity:1;} } };
+	/* To be used with text classes ie class='write big' */	
+	.write, .writeDark {font-family:Tahoma, Geneva, sans-serif;font-size:14px;opacity:1;} .write {color:#FFFFFF;} .writeDark {color:#222222;}
+	/* Default Text Styling */
+	.mirror {display:block; -webkit-transform: matrix(-1, 0, 0, 1, 0, 0); -moz-transform: matrix(-1, 0, 0, 1, 0, 0); -o-transform: matrix(-1, 0, 0, 1, 0, 0); transform: matrix(-1, 0, 0, 1, 0, 0); }
+	/* Flip text completely backwards */
+	.reverse {direction: rtl;unicode-bidi:bidi-override;}
+	/* Flip text to read backwards */
+	.upsideDown {-webkit-transform:rotate(-180deg); -moz-transform:rotate(-180deg); -o-transform:rotate(-180deg); transform:rotate(-180deg); ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);}
+	/* Flip text upside down */
+	.ninjas, .hide, .goAway {position:absolute;top:9000000px;bottom:9000000px;display:none;color:#000000;}
+	/* Hide Element */
+	.rotate { -webkit-animation-name: rotate; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; -webkit-transition-timing-function: linear; animation-name: rotate; animation-duration: 2s; animation-iteration-count:  infinite; transition-timing-function: linear;} @-webkit-keyframes rotate { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(359deg); } } @-moz-keyframes rotate { from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(359deg); } } @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(359deg); } }
+	/* Rotate Elements */
