@@ -31,7 +31,6 @@ function head() {
 			echo "\n<!-- head() -->\n";
 			echo "
 		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n
-			echo "
 		<link rel='stylesheet' type='text/css' href='/sty/style.css?=" . $pageSeed . "'>
 		<link rel='stylesheet' type='text/css' href='/sty/ditto.css?=" . $pageSeed . "'>
 		<link rel='stylesheet' type='text/css' href='/sty/normalize.css'>
