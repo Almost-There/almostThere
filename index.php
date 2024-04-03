@@ -4,7 +4,7 @@
 <html>
 <head>
 <? head(); ?>
-<title class='dynTitle'>Almost There - Home</title>
+<title>Almost There - Home</title>
 </head>
 <body>
 <? preBody(); ?>

@@ -3,13 +3,13 @@ $qs = $_SERVER['QUERY_STRING'];
 switch ($qs) {
     case "head":
         head();
-        break;
+    break;
     case "preBody":
         preBody();
-        break;
+    break;
     case "postBody":
         postBody();
-        break;
+    break;
     case "colorForm":
     	colorForm();
     	break;
