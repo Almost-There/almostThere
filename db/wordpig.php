@@ -1,5 +1,6 @@
-<!-- Begining of qutoes.sharky.php -->
+<!-- Begining of wordpig.php -->
 <?php
+
 $quotes = array(
 "Almost-There, driving you're gaming addiction... One game at a time!",
 "She is offending my thinkin' words with her talkin' brains",
@@ -187,6 +188,7 @@ $quotes = array(
 "If the laws of physics do not not apply in the future, god help you!",
 "sarcasm self-test complete *boop*",
 "We're sort of like 7-Eleven - We're not always doing business, But we're always open.");
+
 $rQuote = rand(0,count($quotes)-1);
 $quote = $quotes[$rQuote];
 /* Begin the NSFW quotes (Oh baby!) 
@@ -238,5 +240,5 @@ $quote = $quotes[$rQuote];
 "That minority over there using a bike must have bought it himself.",
 "Free baby with purchase!",
 "That white stuff all over your convertable's seats isn't bird poop...",
-"Have you seen Jesus?<br />Yeah I saw him yesturday and he was pissed!", */
+"Have you seen Jesus?<br />Yeah I saw him yesturday and he was pissed!",
 ?>

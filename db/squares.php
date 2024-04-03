@@ -209,6 +209,6 @@ function hello() {
 	echo "</body></html>";
 };
 
-hello();
+// hello();
 
 ?>

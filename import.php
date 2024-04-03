@@ -33,11 +33,14 @@ function head() {
 		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n
 		<link rel='stylesheet' type='text/css' href='/sty/style.css?=" . $pageSeed . "'>
 		<link rel='stylesheet' type='text/css' href='/sty/ditto.css?=" . $pageSeed . "'>
-		<link rel='stylesheet' type='text/css' href='/sty/normalize.css'>
 		<link rel='stylesheet' type='text/css' href='/sty/animated.css?=" . $pageSeed . "'>
 		<style>.theColor {color:" . $theColor . ";} .theBGcolor {color:#222222;background-color:" . $theColor . ";}</style>";
 			//Echo Javascript, jQuery and Page Scripts
 			echo "
+
+
+			<!-- dude what the f____ get rid of jquery and fix google analytics wow wtf get rid of jquery everything!! -->
+
 		<!-- Google Analytics Tracking Code -->
 			<script src='/scr/ga.js?rnd=" . $pageSeed . "'></script>
 		<!-- jQuery -->
@@ -57,23 +60,12 @@ function head() {
 function preBody() {
 			global $pageSeed, $theColor, $quote;
 			echo "\n<!-- preBody() -->\n";
-		// Here we include the Facebook API
-			echo "<div id='fb-root'></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = '//connect.facebook.net/en_US/all.js#xfbml=1';
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>";
-			
 			echo "<header class='theBGcolor'>
 		<div class='bubbles layerUp'></div>
 		<div class='logoArea'>
 		<a href='index.php'>
 			<img alt='Click here to return home' src='sty/img/logo.png' /></a><br />
 			<span class='quote msg-type'>";
-	// import ("db/wordpig.php");
 		include ("db/wordpig.php");
 	echo "</span>\n</div><!-- logoArea -->\n<div id='navBody'>\n<ul>";
 	/* function navList() {
@@ -93,7 +85,6 @@ function preBody() {
 		echo "</ul>";
 		echo "\n<!-- /navList() -->\n";
 	}
-	
 		navList(); // Call navList here
 		// Rest of preBody content...
 	
@@ -124,7 +115,7 @@ global $pageSeed, $theColor;
 	<footer class='fullw theBGcolor'>
 		<div class='full tint'>
 			<div class='fl'>
-			<iframe data-aa='17375' src='//ad.a-ads.com/17375?size=468x15' scrolling='no' class='adSpace' allowtransparency='true'></iframe>
+		
 			</div>";
 			echo "<!-- Left Stuff -->
 			<div class='icn fr'>
@@ -138,39 +129,5 @@ global $pageSeed, $theColor;
 	</footer>";
 	echo "\n<!-- /postBody() -->\n";
 };
-
-function colorForm() {
-	global $colorPick;
-	// Shuffle contents in colorPick array
-	shuffle($colorPick);
-	echo "\n<!-- colorForm() -->\n";
-		echo "<div id='colorPicker'>";
-		//Set color clientside with jquery, while saving the cookie to be read on next load with PHP
-		foreach ($colorPick as $v) {
-			echo "<a class='changeColor icon-droplet' style='color:$v'></a>\n";
-				// Only allow 46 Colors to be shown at a time
-			if ($i++ > 46)
-				break;
-		};
-		echo "\n</div>";
-	echo "\n<!-- /colorForm() -->\n";
-};
-
-function colorsAvailable() {
-	global $colorPick;
-	$result = count($colorPick);
-	echo $result;
-};
-/*
-function sayHello() {
-	echo "<!DOCTYPE html><html><head>". head(); . "<title class='dynTitle'>Almost There - Import.PHP</title></head><body>" . preBody(); . "
-	
-	<h1>Welcome to Import.php</h1>
-	<p>Import.php is a functional document for Almost-There and does not contain content for the normal user to read or use.</p>
-	<p>This page accepts the following arguements</p>
-
-
-	" . postBody(); . "</body></html>";
-}; */
-
+// rebuild colorpicker plugin
 ?>
