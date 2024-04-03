@@ -240,5 +240,5 @@ $quote = $quotes[$rQuote];
 "That minority over there using a bike must have bought it himself.",
 "Free baby with purchase!",
 "That white stuff all over your convertable's seats isn't bird poop...",
-"Have you seen Jesus?<br />Yeah I saw him yesturday and he was pissed!",
+"Have you seen Jesus?<br />Yeah I saw him yesturday and he was pissed!", */
 ?>

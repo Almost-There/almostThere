@@ -35,27 +35,23 @@ function head() {
 		<link rel='stylesheet' type='text/css' href='/sty/ditto.css?=" . $pageSeed . "'>
 		<link rel='stylesheet' type='text/css' href='/sty/animated.css?=" . $pageSeed . "'>
 		<style>.theColor {color:" . $theColor . ";} .theBGcolor {color:#222222;background-color:" . $theColor . ";}</style>";
-			//Echo Javascript, jQuery and Page Scripts
-			echo "
+};
+
+function yell() {
+	global $yellData;
+	echo "<span id='yell'>" . $yellData . "</span>";
+};
+
+function console() {
+	// echo "<form id'console'><input submit shit></input></form>"
+};
 
 
-			<!-- dude what the f____ get rid of jquery and fix google analytics wow wtf get rid of jquery everything!! -->
 
-		<!-- Google Analytics Tracking Code -->
-			<script src='/scr/ga.js?rnd=" . $pageSeed . "'></script>
-		<!-- jQuery -->
-			<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-		<!-- jQuery UI -->
-			<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'></script>
-		<!-- jQuery Cookie Reading plugin -->
-			<script src='/scr/cookie.jquery.js'></script>
-		<!-- jQuery Sizzle CSS Selector support plugin -->
-			<script src='/scr/sizzle.jquery.js'></script>
-		<!-- Custom jQuery Animations script -->
-			<script src='/scr/animations.jquery.js?rnd=" . $pageSeed . "'></script>
-		<!-- Floating header bubbles script -->
-			<script src='/scr/bubbles.jquery.js?rnd=" . $pageSeed . "'></script> ";
-			echo "\n<!-- /head() -->\n"; };
+function navList() {
+
+	// lets look at the navlist function below
+};
 
 function preBody() {
 			global $pageSeed, $theColor, $quote;
