@@ -25,16 +25,10 @@
 	.un {z-index:-1;}
 
 	.ma {margin:auto}
-	.ct {text-align:center;margin-auto}
-	
-	.big {font-size:28px !important;} .small {font-size:9px !important;}
-	/* Class to be used on any element to make it blink */
-	/* Class to be used on any element to make it mirror */
-	/* Class to be used on any element to make it type out and marquee */
-	/* Flip text upside down */
-	/* Flip text completely backwards */
-	.reverse {direction: rtl;unicode-bidi:bidi-override;}	
-	.ninjas, .hide, .goAway {position:absolute;top:9000000px;bottom:9000000px;display:none;color:#000000;}
-	/* Hide Element */
-	.rotate { -webkit-animation-name: rotate; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; -webkit-transition-timing-function: linear; animation-name: rotate; animation-duration: 2s; animation-iteration-count:  infinite; transition-timing-function: linear;} @-webkit-keyframes rotate { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(359deg); } } @-moz-keyframes rotate { from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(359deg); } } @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(359deg); } }
-	/* Rotate Elements */
+	.ct {text-align:center;margin:auto}
+	.bi {font-size:28px !important;} 
+	.sm {font-size:9px !important;}
+	.rv {direction: rtl;unicode-bidi:bidi-override;}	
+	.hi {display:none;}
+	.no {position:absolute;top:9000000px;bottom:9000000px;display:none;color:#000000;}
+	.ro { -webkit-animation-name: rotate; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; -webkit-transition-timing-function: linear; animation-name: rotate; animation-duration: 2s; animation-iteration-count:  infinite; transition-timing-function: linear;} @-webkit-keyframes rotate { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(359deg); } } @-moz-keyframes rotate { from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(359deg); } } @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(359deg); } }
