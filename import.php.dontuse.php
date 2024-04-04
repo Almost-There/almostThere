@@ -7,7 +7,6 @@ $privacy = false;
 $sfw = false;
 
 // Description (Doubles as a variable!)
-$description = "Soon to be your favourite website, a collective effort by a group of gamers to enjoy games, share ideas, and create awesome things.";
 $name = "Almost-There";
 $url = "http://almost-there.org";
 
@@ -68,20 +67,6 @@ function head() {
 
 // Required tag declaring unicode conformity in the HTML
 echo "\n <meta http-equiv='Content-Type' content='text/html'; charset='utf-8' />";
-// SEO Description Tag (For Google, Yahoo, Bing etc)
-echo "\n <meta description='" . $description . "'>";
-// SEO Facebook Properties
-echo "\n <meta property='og:title' content='" . $name . "' />";
-echo "\n <meta property='og:type' content='website' />";
-	//	echo "\n <meta property='og:image' content='" . $largeIcon . "' />";
-echo "\n <meta property=”og:url” content=”" . $url . "'/>";
-// This declares to mobile devices that this website is capable of running as an application
-echo "\n <meta name='apple-mobile-web-app-capable' content='yes' />";	// IOS and Safari
-echo "\n <meta name='application-name' content='" . $name . "' />";		// Windows IE9, Windows Phone
-// IE9 Jumplists Application Links
-foreach ($navLinks as $k => $v) { echo "\n	<meta name='msapplication-task' content='name=$k;action-uri=" . $url . "/$v' />"; };
-// Copyright (or lack thereof) Declaration
-echo "\n <meta name='copyright' content='" . $name . " is licensed under a Creative Commons Attribution-ShareAlike License' />";
 	
 	/*
 // Favicon

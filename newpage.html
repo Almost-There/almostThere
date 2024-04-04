@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <title>Almost-There</title>
+        <style>
+body {font-family:'tahoma';margin:0;background-color:#222222;}
+header {height:20vh;}
+header, footer, nav {width:100%}
+nav {position:absolute;top:15vh;height:5vh;background-color: rgba(0, 0, 0, 0.8);color:white;z-index:+1;overflow:hidden;font-size:3vh;}
+footer {height:5vh;bottom:0px;position:absolute;}
+.sticky {position:fixed;top:0;width:100%;}
+
+h1, h2, h3, h4, h5, h6 {margin:0;}
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {content:"\00a0";}
+
+.color {background-color:#ff4350;color:black;transition: background-color 0.5s ease;}
+.grey, .gray {background-color:#333333;color:white;}
+.square {float:left;width:300px;height:150px;margin:10px 0px 0px 10px;overflow-y:auto;}
+
+.tack, .cross {float:right;filter:brightness(20%) grayscale(100%);cursor:pointer}
+.square .tack::after, .square .cross::after {content:"\00a0";}
+
+.iconGrid {display:grid;font-size:2em;grid-template-columns: repeat(5, 1fr);gap: 10% 0;list-style:none;}
+.iconGrid li {display:flex;justify-content:center;align-items:center;width:calc(100% / 5 - 10px);height:calc(100% / 5 - 10px);}
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    var toggleSpan = document.querySelector('.toggle');
+
+    toggleSpan.addEventListener('click', function() {
+        var tack = toggleSpan.querySelector('.tack');
+        var cross = toggleSpan.querySelector('.cross');
+        if (tack.style.display === 'none') {
+            tack.style.display = 'inline';
+            cross.style.display = 'none';
+        } else {
+            tack.style.display = 'none';
+            cross.style.display = 'inline';
+        }
+    });
+});
+
+// JavaScript for sticky Navbar
+window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('nav');
+  var sticky = navbar.offsetTop;
+
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky color");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+});
+
+
+// Function to change the background color of .color elements
+function changeColor(newColor) {
+  // Get all elements with the 'color' class
+  var elements = document.querySelectorAll('.color');
+  
+  // Loop through the NodeList and change the background color
+  elements.forEach(function(el) {
+    el.style.backgroundColor = newColor;
+  });
+}
+
+// Helper function to set a cookie
+function setCookie(name, value, daysToLive) {
+  var expires = "";
+  if (daysToLive) {
+    var date = new Date();
+    date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+// Helper function to get a cookie
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// Function to change the background color of .color elements and set a cookie
+function changeColor(newColor) {
+  // Set the color cookie to last 7 days
+  setCookie('colorPreference', newColor, 7);
+
+  // Apply the color change to .color elements
+  var elements = document.querySelectorAll('.color');
+  elements.forEach(function(el) {
+    el.style.backgroundColor = newColor;
+  });
+}
+
+// Function to check for a color preference cookie and set the color on load
+function setColorFromCookie() {
+  var preferredColor = getCookie('colorPreference');
+  if (preferredColor) {
+    changeColor(preferredColor);
+  }
+}
+
+        </script>
+    </head>
+    <body>
+        <header class='color'>
+            <h2><img src='logo.png' alt='almost there' width=100 height=600 /></h2>
+           </header>
+           <nav><h3><span>/Home&nbsp;</span><span>/Fridge&nbsp;</span>/Github&nbsp;
+           <span>/Alice&nbsp;</span>
+           <span>/Forums</span></h3>
+           </nav>
+           <main id='squares'>
+           <div class="color square">
+             <h4 class="title">square title
+               <span class="toggle">
+                 <span class="tack" style="display:none;">📌</span>
+                 <span class="cross">☒</span>
+               </span>
+               </h4>
+            <ul>
+               <li>😤 negative nancy</li>
+               <li>😫 farting fanny</li>
+               <li>😩 meanie megan</li>
+               <li>😓 bitchy becky</li>
+               <li>😞 debby downer</li>
+               <li>😣 kookoo karen</li>
+               <li>😖 lously linda</li>
+               <li>😱 sassy susan</li>
+               <li>😭 moaning moana</li>
+               <li>😢 jerky jennifer</li>
+               <li>😤 terrible tina</li>
+             </ul>
+           </div>
+           
+           <div class="grey square">
+             <h4 class="title">square title
+               <span class="toggle">
+                 <span class="tack" style="display:none;">📌</span>
+                 <span class="cross">☒</span>
+               </span>
+               </h4>
+            <ul class="iconGrid">
+               <li>😤</li>
+               <li>😫</li>
+               <li>😩</li>
+               <li>😓</li>
+               <li>😞</li>
+               <li>😣</li>
+               <li>😖</li>
+               <li>😱</li>
+               <li>😭</li>
+               <li>😢</li>
+               <li>😤</li>
+               <li>😫</li>
+               <li>😩</li>
+               <li>😓</li>
+               <li>😞</li>
+               <li>😣</li>
+               <li>😖</li>
+               <li>😱</li>
+               <li>😭</li>
+               <li>😢</li>
+             </ul>
+           </div>
+           </main>
+           <div class="grey square">
+             <h4 class="title">square number three
+               <span class="toggle">
+                 <span class="tack" style="display:none;">📌</span>
+                 <span class="cross">☒</span>
+               </span>
+               <iframe width="300" height="150" src="https://www.youtube.com/embed/8C9umQ74JSc?si=xzjudQuckvykzhI6&amp;start=2420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               </h4>
+               </div>
+           <div class="color square">
+             <h4 class="title">square four
+               <span class="toggle">
+                 <span class="tack" style="display:none;">📌</span>
+                 <span class="cross">☒</span>
+               </span>
+               </h4>
+           
+           
+           <a href="#" class="color-change" data-color="#ff4350" onclick="changeColor('#ff4350'); return false;">Change to Red</a>
+           <a href="#" class="color-change" data-color="#00ff00" onclick="changeColor('#00ff00'); return false;">Change to Green</a>
+           <a href="#" class="color-change" data-color="#0099cc" onclick="changeColor('#0099cc'); return false;">Change to Blue</a>
+           
+           
+               </div>
+           <footer class='color'><h6>Almost-There</h6></footer>
+           <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            setupColorChangeLinks();
+            setColorFromCookie(); // This will set the color if the cookie is already there
+          }); </script>
+    </body>
+</html>
