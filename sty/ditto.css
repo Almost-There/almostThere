@@ -1,37 +1,32 @@
-.bold {font-weight:bold;} .underline {text-decoration:underline;} .italic {font-style:oblique;}
-	/* Underline, Bold, Italic Text */
-	.oneline {white-space: nowrap;}
-	/* Force text to only occupy one line of space */
-	.nudge {margin-left:10px;}
-	/* Knock Element over to the right 10 pixels */
-	.budge {margin-right:10px;}
-	/* Knock Element over to the left 10 pixels */
+	.bo {font-weight:bold;} 
+	.un {text-decoration:underline;} 
+	.it {font-style:oblique;}
+	.ol {white-space: nowrap;}
+	.nu {margin-left:10px;}
+	.bu {margin-right:10px;}
+
 	.fl {float:left;} .fr {float:right;}
-	/* Float Left/Right */
 	.db {display:block;}
-	/* Display Block */ 
 	.oh {overflow:hidden;}
-	/* Hide overflowing Elements */
+	.os {overflow-y:scroll;}
+	.oa {overflow:auto;}
 	.vw {min-width:100vw;} .vh {min-height:100vh;}
-	/* CSS Variable height class */
 	.pr {position:relative;}
-	/* Use relative positioning on*/
-	.full {width:100%;height:100%;} 
-	/* Fill all available space*/
-	.fullw {width:100%;} 
-	/* Fill all horizontal space*/
-	.fullh {height:100%;}
-	/* Fill all vertical space*/
-	.tint {background-color:rgba(22, 22, 22, 0.6) !important;}
-	/* When an element covering another object to 'darken' its color */
-	.above {z-index:+1;}
-	/* When an element is covering another object */
-	.under {z-index:-1;}
-	/* When you want an element to cover another object */
-	.ma {margin-left:auto;margin-right:auto;}
-	/* This is a pretty hack to cener things with a width attribute applied */
-	.ctr {text-align:center;margin-left:auto;margin-right:auto;}
-	/* Same as above with Text-Align Center also applied */
+	.pa {position:absolute;}
+	.st {position:static;}
+	
+	.fu {width:100%;height:100%;} 
+	.fw {width:100%;} 
+	.fh {height:100%;}
+	
+	.ti {background-color:rgba(22, 22, 22, 0.6) !important;}
+	
+	.ab {z-index:+1;}
+	.un {z-index:-1;}
+
+	.ma {margin:auto}
+	.ct {text-align:center;margin-auto}
+	
 	.big {font-size:28px !important;} .small {font-size:9px !important;}
 	/* Class to be used on any element to make it blink */
 	/* Class to be used on any element to make it mirror */
