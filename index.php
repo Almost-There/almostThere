@@ -36,7 +36,7 @@
 				<li><a>Display Order</a></li>
 				<li><a>Like Button</a></li>
 				<li><a>Copy Info to Clipboard</a></li>
-			</ul>
+</ul>
 		</div>
 	</div>
 	<!-- End Index Square -->

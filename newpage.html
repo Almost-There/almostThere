@@ -54,17 +54,6 @@ window.addEventListener('scroll', function() {
 });
 
 
-// Function to change the background color of .color elements
-function changeColor(newColor) {
-  // Get all elements with the 'color' class
-  var elements = document.querySelectorAll('.color');
-  
-  // Loop through the NodeList and change the background color
-  elements.forEach(function(el) {
-    el.style.backgroundColor = newColor;
-  });
-}
-
 // Helper function to set a cookie
 function setCookie(name, value, daysToLive) {
   var expires = "";
