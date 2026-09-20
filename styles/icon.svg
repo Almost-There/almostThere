@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Almost There">
+  <!--
+    The site's own mark: the neobrutalist square it is built from - a hard
+    offset shadow with no blur, a hairline border, and the accent colour.
+    Readable at 16px, which rules out anything with interior detail.
+  -->
+  <rect x="7" y="7" width="20" height="20" rx="3" fill="#000" opacity="0.5"/>
+  <rect x="4" y="4" width="20" height="20" rx="3" fill="#e84d5b" stroke="#ffffff" stroke-opacity="0.18"/>
+  <!-- The square-title bar, the one element every panel on the site shares. -->
+  <rect x="4" y="4" width="20" height="6" rx="3" fill="#222222" opacity="0.22"/>
+</svg>
