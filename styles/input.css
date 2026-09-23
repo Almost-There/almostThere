@@ -1,0 +1,275 @@
+/* Fonts, self-hosted from npm rather than fetched from Google at runtime. */
+/* Latin subsets only. The full package also ships Cyrillic, Greek and
+   Vietnamese, which is 78 font files for an English-language site. */
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/rubik/latin-400.css";
+@import "@fontsource/rubik/latin-500.css";
+@import "@fontsource/rubik/latin-700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --the-color: #e84d5b;
+
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* ---- the neobrutalist surface ------------------------------------------- */
+/* Hard offset shadows with no blur, a hairline border, and a 2px lift on
+   hover. This is the whole visual identity; everything else follows from it. */
+
+.floating-bg {
+  position: absolute; inset: 0;
+  pointer-events: none; z-index: 0; overflow: hidden;
+
+  /* How far a square climbs before it restarts.
+     This used to be a full viewport height, inherited from a design where the
+     header filled the screen. Here the header is 12rem and clips everything
+     above it, so each square spent roughly four fifths of its cycle out of
+     sight: the field looked sparse, and what you could see crawled. Rising
+     just past the top of the header keeps every square visible for its whole
+     life, which is most of why this now reads as faster. */
+  --float-rise: 17rem;
+}
+.floating-element {
+  /* #222222 - the same dark ink the logo and the panel titles use, which is
+     what made this read as part of the site rather than as a screensaver.
+     It was briefly white here, and white over a mid-tone accent at low alpha
+     is effectively invisible, which is why the field looked like it had
+     vanished.
+
+     Transparency is applied by the animation's peak opacity rather than an
+     `opacity` declaration: a keyframe beats a declaration, so the original
+     `opacity: 0.2` on this rule never took effect at all and these rendered
+     as solid slabs. --float-peak is set per element, so the field has depth
+     instead of being one flat layer. */
+  background-color: #222222;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Its own compositing layer: these move continuously behind a large title,
+     and promoting them keeps the work on the GPU instead of repainting the
+     header every frame. */
+  will-change: transform, opacity;
+}
+
+.square {
+  @apply bg-card text-card-foreground rounded-md overflow-hidden relative;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.square:hover {
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+.square-title {
+  @apply font-medium text-lg px-3 py-2 border-b border-border flex justify-between items-center;
+  background-color: var(--the-color);
+  color: #222222;
+}
+.square-content { @apply p-3; }
+
+.neo-navbar {
+  /* Solid black, not the page background. The panels below are #222222 and
+     the old bg-background (#121212) sat too close to them to read as a
+     separate bar - particularly once it became sticky and had content
+     scrolling underneath it. Black gives it an edge of its own. */
+  @apply border-b border-border;
+  background-color: #000000;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.65);
+
+  /* Sticks to the top once the coloured header has scrolled past. It only
+     works because the nav is a sibling of <header> rather than inside it: a
+     sticky element cannot travel outside its containing block, so nesting it
+     would have pinned it for the height of the header and no further.
+     The background is opaque for the same reason - content scrolls under it. */
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+.site-logo { text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3); }
+
+.squares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 640px) { .squares-grid { justify-items: center; } }
+
+.add-square {
+  @apply bg-card text-card-foreground rounded-md flex items-center justify-center;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 180px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.add-square:hover {
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.board-list { @apply flex flex-wrap gap-2 mb-4; }
+.board-item {
+  @apply px-3 py-2 rounded-md font-mono transition-all;
+  background-color: var(--the-color);
+  color: #222222;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.board-item:hover {
+  @apply brightness-110;
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.tab-content { transition: opacity 0.3s ease, transform 0.3s ease; }
+
+.thread { @apply border border-border rounded-md mb-4 p-4; }
+.thread-header { @apply flex justify-between items-center mb-2; }
+.thread-content { @apply mb-2; }
+.thread-footer { @apply text-sm text-muted-foreground; }
+.post { @apply border-t border-border pt-2 mt-2; }
+.post-header { @apply flex justify-between items-center mb-1 text-sm; }
+.post-content { @apply mb-1; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ---- sign in with fridge -------------------------------------------------
+   Deliberately understated. Signing in is optional on this site, so the badge
+   should read as an offer rather than a gate — it sits in the nav at the same
+   weight as the other controls, not as a call to action. */
+.fridge-badge {
+  /* The image IS the button - it already has its own shape, shadow and
+     lettering, so wrapping it in a second border and background only fought
+     with it. All this adds is the lift on hover the rest of the site uses. */
+  @apply inline-block rounded-lg transition-transform;
+  line-height: 0;
+}
+.fridge-badge:hover { transform: translateY(-1px); }
+.fridge-badge:active { transform: translateY(0); }
+.fridge-badge:focus-visible {
+  outline: 2px solid var(--the-color);
+  outline-offset: 3px;
+}
+.fridge-badge-img { @apply block; }
+
+/* The Steam group panel. */
+.steam-group { @apply flex gap-4 items-start; }
+.steam-avatar {
+  @apply rounded-md flex-none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+.steam-counts { @apply flex flex-wrap gap-x-4 gap-y-1 mt-3 text-sm text-muted-foreground; }
+.steam-counts strong { @apply font-semibold; color: var(--the-color); }
+
+/* The board you are reading, pinned in the sticky bar. Takes the board's own
+   colour, so /mu/ and /ck/ are told apart at a glance rather than read. */
+.nav-board {
+  @apply ml-2 px-2 py-0.5 rounded-md text-sm font-medium;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #222222;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* A project on the Projects page: its own block, with its entries indented
+   under one heading rather than repeating the project name on every line. */
+.project {
+  @apply rounded-md overflow-hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.project-head {
+  @apply flex flex-wrap items-baseline gap-x-3 gap-y-1 px-4 py-2;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.project-name { @apply text-lg font-semibold; }
+.project-meta { @apply ml-auto text-xs text-muted-foreground; }
+.project-entries { @apply p-3 space-y-2; }
+/* Inside a project block the entries are already scoped, so they drop the
+   heavy left rule that separates them on the bulletin feed. */
+.project-entries .bulletin { border-left-width: 2px; }
+
+/* The bulletin.
+   A dense, readable feed rather than a grid of cards: there are sixty-odd of
+   these and the point is to be able to scan down them. The accent rule on the
+   left is what ties one project's entry to the day it sits under. */
+.bulletin-feed { @apply space-y-3; }
+
+.bulletin-day {
+  @apply text-sm font-semibold tracking-wide uppercase pt-5 pb-1;
+  color: var(--the-color);
+}
+.bulletin-day:first-child { @apply pt-0; }
+
+.bulletin {
+  @apply rounded-md px-4 py-3;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--the-color);
+}
+
+.bulletin-head { @apply flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2; }
+.bulletin-project { @apply font-semibold; }
+.bulletin-title { @apply text-sm; }
+.bulletin-count { @apply ml-auto text-xs text-muted-foreground whitespace-nowrap; }
+
+.bulletin-topics { @apply flex flex-wrap gap-1; }
+.bulletin-topic {
+  @apply text-[10px] uppercase tracking-wider rounded-full px-2 py-0.5;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bulletin-list { @apply space-y-1 text-sm text-muted-foreground; }
+.bulletin-list li { @apply pl-4 relative; }
+.bulletin-list li::before {
+  content: '\2022';
+  @apply absolute left-0;
+  color: var(--the-color);
+}
+.bulletin-more { @apply text-xs opacity-60; }
+.bulletin-more::before { content: '' !important; }
+
+/* The logo sits on --the-color, exactly as the square titles below it do, so
+   it takes the same ink. Using white here made the header a different surface
+   from the panels; this makes the whole page one material. */
+.site-logo {
+  color: #222222;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+  line-height: 0.95;
+}
