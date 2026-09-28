@@ -2,8 +2,8 @@
 
 //Use this variable in a querystring after a link to prevent the page from being cached.
 $pageSeed = rand(1024, 2048);
-// Look for setColor Cookie, if it isn't there, set theColor to 0099FF
-if (isset($_COOKIE["setColor"]))
+// Look for setColor Cookie, if it isn't there (or isn't a hex/rgb color), set theColor to E84D5B
+if (isset($_COOKIE["setColor"]) && is_string($_COOKIE["setColor"]) && preg_match('/^(#[0-9a-fA-F]{3,8}|rgba?\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*(,\s*[\d.]+\s*)?\))$/', $_COOKIE["setColor"]))
 			$theColor = $_COOKIE["setColor"];
 else
 			$theColor = "#E84D5B";
