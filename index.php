@@ -26,7 +26,6 @@
 			<p class='text-sm mt-3'><a class='text-the-color hover:text-foreground transition-colors' target='_blank' rel='noopener' href='https://docs.google.com/forms/d/1tIpOCsndOkGLXeFpaXmcS2pUGcIfaHOKyWZ29ukINxw/viewform'>Join Almost There's Testing Team &rarr;</a></p>
 		</div>
 	</article>
-	<? include 'db/squares.php'; ?>
 </div>
 <? postBody(); ?>
 </body>

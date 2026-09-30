@@ -8,15 +8,26 @@ case "no":       no();          break;
 case "redirect": redirect();    break;
 case "login":    login();       break;
 case "logout":   logout();      break;
-case "admin":    logout();      break;
+case "admin":    admin();       break;
 default:         sayHello();    break;
+};
+
+// Every handler below renders a whole page: document shell, site chrome, then its content.
+function openPage($title) {
+    echo "<!DOCTYPE html>\n<html lang='en' class='dark'>\n<head>";
+    head();
+    echo "<title>Almost There - " . $title . "</title></head><body>";
+    preBody();
+};
+
+function closePage() {
+    postBody();
+    echo "</body></html>";
 };
 
 function sayHello() {
     $title="Fractal";
-    head(); 
-    echo "<title>Almost There - " . $title . " </title></head><body>";
-    preBody();
+    openPage($title);
     echo "<p>This document has different arguements that can be passed to it.<br />You can try the following Query Strings
     <ul>
         <li>notfound</li>
@@ -26,44 +37,39 @@ function sayHello() {
         <li>logout</li>
         <li>admin</li>
     </ul>";
-    postBody();
-    echo "</body></html>";
+    closePage();
 };
 
 function notfound() { 
-    global $A, $B, $C;
     $title='404 File not found';
-    echo $A; head(); echo $B; preBody();
+    openPage($title);
     echo "
-        <div class='nudge'><div class='square max-w-md'>
+        <div class='square max-w-md'>
             <div class='square-title'>Error</div>
             <div class='square-content'>
      <p class='text-6xl font-rubik font-bold'>404</p>
      <span class='text-sm text-muted-foreground'>File or resource cannot<br />be located</span></div></div>"; 
-    postBody(); echo $C; 
+    closePage(); 
 };
 
 function no() {
-    global $A, $B, $C;
     $title='Denied';
-    echo $A; head(); echo $B; preBody(); 
+    openPage($title); 
     echo "No we aren't going to allow you to access that."; 
-    postBody(); echo $C; 
+    closePage(); 
 };
 
 function redirect() {
-    global $A, $B, $C;
     $title='Redirecting';
-    echo $A; head(); echo $B; preBody();
+    openPage($title);
     echo "You will be redirected to your intended destination in a moment.";
-    postBody(); echo $C;
+    closePage();
 };
 
 function login() {
-    global $A, $B, $C;
     $title='Login';
-    echo $A; head(); echo $B; preBody();
-    echo "<div id='sqField' class='nudge'>
+    openPage($title);
+    echo "<div>
     <!-- Login Square -->
     <div class='square max-w-md'>
         <div class='square-title'>Login</div>
@@ -73,14 +79,13 @@ function login() {
     </div>
     <!-- End Login Square -->
     </div>";
-    postBody(); echo $C;
+    closePage();
 };
 
 function logout() {
-    global $A, $B, $C;
     $title='Logout';
-    echo $A; head(); echo $B; preBody();
-    echo "<div id='sqField' class='nudge'>
+    openPage($title);
+    echo "<div>
     <!-- Logout Square -->
     <div class='square max-w-md'>
         <div class='square-title'>Login</div>
@@ -90,15 +95,14 @@ function logout() {
     </div>
     <!-- End Logout Square -->
     </div>";
-    postBody(); echo $C;
+    closePage();
 };
 
 function admin() {
-    global $A, $B, $C;
     $title='Administrative Access';
-    echo $A; head(); echo $B; preBody();
+    openPage($title);
     echo "This is a secure area, you may not enter";
-    postBody(); echo $C;
+    closePage();
 };
 
 ?>
