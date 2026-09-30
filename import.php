@@ -52,6 +52,7 @@ function navList() {
 	$slash    = "<li class='text-the-color select-none'>/</li>\n";
 	$navLinks = array(
 		"/" => "Home",
+		"/forums/" => "Forums",
 		"https://steamcommunity.com/groups/Almost_There" => "Steam",
 		"https://github.com/Almost-There/almostThere" => "GitHub"
 	);
