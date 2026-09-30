@@ -30,11 +30,12 @@ function head() {
 			global $pageSeed, $theColor;
 			echo "\n<!-- head() -->\n";
 			echo "
-		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n
-		<link rel='stylesheet' type='text/css' href='/sty/style.css?=" . $pageSeed . "'>
-		<link rel='stylesheet' type='text/css' href='/sty/ditto.css?=" . $pageSeed . "'>
-		<link rel='stylesheet' type='text/css' href='/sty/animated.css?=" . $pageSeed . "'>
-		<style>.theColor {color:" . $theColor . ";} .theBGcolor {color:#222222;background-color:" . $theColor . ";}</style>";
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<meta name='theme-color' content='#121212'>
+		<link rel='icon' href='/styles/icon.svg' type='image/svg+xml'>
+		<link rel='stylesheet' type='text/css' href='/styles/app.css?=" . $pageSeed . "'>
+		<style>:root {--the-color:" . $theColor . ";} .theColor {color:var(--the-color);} .theBGcolor {color:#222222;background-color:var(--the-color);}</style>";
 };
 
 function yell() {
@@ -46,51 +47,49 @@ function console() {
 	// echo "<form id'console'><input submit shit></input></form>"
 };
 
-
-
 function navList() {
-
-	// lets look at the navlist function below
+	echo "\n<!-- navList() -->\n";
+	$slash    = "<li class='text-the-color select-none'>/</li>\n";
+	$navLinks = array(
+		"/" => "Home",
+		"https://steamcommunity.com/groups/Almost_There" => "Steam",
+		"https://github.com/Almost-There/almostThere" => "GitHub"
+	);
+	$here  = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+	$first = true;
+	foreach ($navLinks as $k => $v) {
+		if (!$first) echo $slash;
+		$first  = false;
+		$ext    = strpos($k, 'http') === 0 ? " target='_blank' rel='noopener'" : "";
+		$active = ($k === '/' && ($here === '/' || $here === '/index.php')) ? "text-the-color font-medium" : "hover:text-the-color";
+		echo "<li><a href='$k'$ext class='px-3 py-2 transition-colors $active'>$v</a></li>\n";
+	}
+	echo "\n<!-- /navList() -->\n";
 };
 
 function preBody() {
 			global $pageSeed, $theColor, $quote;
 			echo "\n<!-- preBody() -->\n";
-			echo "<header class='theBGcolor'>
-		<div class='bubbles layerUp'></div>
-		<div class='logoArea'>
-		<a href='index.php'>
-			<img alt='Click here to return home' src='sty/img/logo.png' /></a><br />
-			<span class='quote msg-type'>";
+			echo "<div class='bg-background text-foreground min-h-screen flex flex-col'>
+<header class='relative'>
+	<div class='h-48 flex items-center px-6 relative overflow-hidden' style='background-color: var(--the-color)'>
+		<div class='floating-bg' id='floatingBg' aria-hidden='true'></div>
+		<div class='z-10 relative'>
+			<a href='/' class='block'>
+				<h1 class='text-6xl sm:text-7xl lg:text-8xl font-rubik font-bold tracking-wide site-logo'>Almost There</h1>
+			</a>
+			<p class='text-sm mt-2 font-medium' style='color:#222222;'>";
 		include ("db/wordpig.php");
-	echo "</span>\n</div><!-- logoArea -->\n<div id='navBody'>\n<ul>";
-	/* function navList() {
-		echo "\n<!-- navList() -->\n";
-		$slash    = "<span class='theColor'>&nbsp;/</span>\n";
-		$navLinks = array(
-			"squares.php" => "Squares",
-			// "/chan.php" => "Chan",
-			"forums" => "Forums",
-			"fridge.php" => "Fridge",
-			"irc.php" => "Chat",
-			"labs.php" => "Labs"
-		);
-		foreach ($navLinks as $k => $v) {
-			echo "<li><a href='$k' id='#nav$v'> $v</a>" . $slash . "</li>\n";
-		}
-		echo "</ul>";
-		echo "\n<!-- /navList() -->\n";
-	}
-		navList(); // Call navList here
-		// Rest of preBody content...
-	
-		echo "<div id='settingsButton' class='fr budge'>
-				<a>Settings</a>&nbsp;<a id='settingsButtonIcon' class='icon-cog icn'></a>
-			</div>
-	</div>\n"; */
-
-	echo "</header>";
-	echo "<div id='allOfTheThings' class='pr'>";
+	echo "</p>
+		</div>
+	</div>
+</header>
+<nav class='neo-navbar h-12 flex items-center px-4'>
+	<ul class='flex items-center space-x-1'>";
+	navList();
+	echo "</ul>
+</nav>";
+	echo "<main id='allOfTheThings' class='container mx-auto py-6 px-4 flex-1 w-full max-w-6xl'>";
 	echo "\n<!-- /preBody() -->\n";
 };
 
@@ -100,29 +99,45 @@ function preBody() {
 
 function postBody() {
 global $pageSeed, $theColor;
-	/* function displayAds() {
-		echo "<div style='width:400px;height:50px;' class='write small'>";
-		echo "</div>";
-	}; */
 	echo "\n<!-- postBody() -->\n";
-	echo "</div>";
+	echo "</main>";
 	/* #allOfTheThings */
 	echo "
-	<footer class='fullw theBGcolor'>
-		<div class='full tint'>
-			<div class='fl'>
-		
-			</div>";
-			echo "<!-- Left Stuff -->
-			<div class='icn fr'>
-				<a class='icn icon-css3'></a>
-				<a class='icn icon-html5'></a>
-				<a href='https://github.com/Almost-There/almostThere' class='icn icon-github5'></a>
-				<a href='steam://url/GroupSteamIDPage/103582791430342520' class='icn icon-steam2'></a>
-				<a href='https://github.com/Almost-There/almostThere' class='icn icon-facebook2'></a>
-			</div><!-- Right Stuff -->
+<footer class='h-12 w-full mt-8' style='background-color: var(--the-color)'>
+	<div class='h-full w-full bg-background/80 flex items-center justify-between px-4'>
+		<div class='text-sm text-muted-foreground'>&copy; " . date('Y') . " Almost There</div>
+		<div class='flex space-x-4 text-muted-foreground'>
+			<a href='https://github.com/Almost-There/almostThere' target='_blank' rel='noopener' class='hover:text-foreground transition-colors' aria-label='GitHub'>
+				<svg width='20' height='20' viewBox='0 0 16 16' fill='currentColor' aria-hidden='true'><path d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z'/></svg>
+			</a>
+			<a href='https://steamcommunity.com/groups/Almost_There' target='_blank' rel='noopener' class='hover:text-foreground transition-colors' aria-label='Steam group'>
+				<svg width='20' height='20' viewBox='0 0 16 16' fill='currentColor' aria-hidden='true'><path d='M7.9 0C4 0 .8 3 .5 6.8l4.3 1.8a2.2 2.2 0 0 1 1.3-.4l1.9-2.8v-.1a2.9 2.9 0 1 1 2.9 2.9h-.1l-2.7 2a2.3 2.3 0 0 1-4.5.5L.4 9.4A8 8 0 1 0 7.9 0Zm-2.9 12-1-.4a1.7 1.7 0 0 0 .9.9 1.8 1.8 0 0 0 2.3-1 1.7 1.7 0 0 0 0-1.3 1.7 1.7 0 0 0-1-1 1.8 1.8 0 0 0-1.2 0l1 .4a1.3 1.3 0 0 1-1 2.4Zm5.9-4.3a1.9 1.9 0 1 1 0-3.9 1.9 1.9 0 0 1 0 3.9Zm0-3.3a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z'/></svg>
+			</a>
 		</div>
-	</footer>";
+	</div>
+</footer>
+</div>
+<script>
+// The drifting squares behind the header: one per 100px of width, 20-100px,
+// 7-15s each. Rise distance and peak opacity come from the stylesheet's
+// --float-rise and each square's --float-peak.
+(function () {
+	var bg = document.getElementById('floatingBg');
+	if (!bg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+	var n = Math.max(4, Math.round(window.innerWidth / 100));
+	for (var i = 0; i < n; i++) {
+		var s = document.createElement('div'), size = 20 + Math.random() * 80;
+		s.className = 'floating-element absolute animate-float-up';
+		s.style.width = s.style.height = size + 'px';
+		s.style.left = (Math.random() * 100) + '%';
+		s.style.bottom = (-size) + 'px';
+		s.style.animationDuration = (7 + Math.random() * 8) + 's';
+		s.style.animationDelay = (-Math.random() * 15) + 's';
+		s.style.setProperty('--float-peak', (0.25 + Math.random() * 0.5).toFixed(2));
+		bg.appendChild(s);
+	}
+})();
+</script>";
 	echo "\n<!-- /postBody() -->\n";
 };
 // rebuild colorpicker plugin
