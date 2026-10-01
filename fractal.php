@@ -16,7 +16,7 @@ function sayHello() {
     openPage('Fractal');
     echo "<p>This document has different arguements that can be passed to it.<br />You can try the following Query Strings
     <ul>
-        <li>notfound</li>
+        <li>404</li>
         <li>no</li>
         <li>redirect</li>
         <li>login</li>
