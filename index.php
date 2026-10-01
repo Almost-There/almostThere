@@ -1,13 +1,6 @@
 <?php if(!file_exists("import.php")) { die("<meta http-equiv='refresh' content='10' ><p style='font-family:Tahoma, Geneva, sans-serif;'><span style='color:red;'>Fatal Error</span><br />import.php was not found.<br />Almost-There Cannot be Loaded<br /></p>"); } else { include 'import.php'; }; ?>
 
-<!DOCTYPE html>
-<html lang='en' class='dark'>
-<head>
-<? head(); ?>
-<title>Almost There - Home</title>
-</head>
-<body>
-<? preBody(); ?>
+<? openPage('Home'); ?>
 <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
 	<article class='square'>
 		<div class='square-title'><span class='truncate'>What is Almost There</span></div>
@@ -27,6 +20,4 @@
 		</div>
 	</article>
 </div>
-<? postBody(); ?>
-</body>
-</html>
+<? closePage(); ?>

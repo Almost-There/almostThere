@@ -12,22 +12,8 @@ case "admin":    admin();       break;
 default:         sayHello();    break;
 };
 
-// Every handler below renders a whole page: document shell, site chrome, then its content.
-function openPage($title) {
-    echo "<!DOCTYPE html>\n<html lang='en' class='dark'>\n<head>";
-    head();
-    echo "<title>Almost There - " . $title . "</title></head><body>";
-    preBody();
-};
-
-function closePage() {
-    postBody();
-    echo "</body></html>";
-};
-
 function sayHello() {
-    $title="Fractal";
-    openPage($title);
+    openPage('Fractal');
     echo "<p>This document has different arguements that can be passed to it.<br />You can try the following Query Strings
     <ul>
         <li>notfound</li>
@@ -41,66 +27,45 @@ function sayHello() {
 };
 
 function notfound() { 
-    $title='404 File not found';
-    openPage($title);
+    openPage('404 File not found');
     echo "
         <div class='square max-w-md'>
             <div class='square-title'>Error</div>
             <div class='square-content'>
      <p class='text-6xl font-rubik font-bold'>404</p>
      <span class='text-sm text-muted-foreground'>File or resource cannot<br />be located</span></div></div>"; 
-    closePage(); 
+    closePage();
 };
 
 function no() {
-    $title='Denied';
-    openPage($title); 
+    openPage('Denied');
     echo "No we aren't going to allow you to access that."; 
-    closePage(); 
+    closePage();
 };
 
 function redirect() {
-    $title='Redirecting';
-    openPage($title);
+    openPage('Redirecting');
     echo "You will be redirected to your intended destination in a moment.";
     closePage();
 };
 
-function login() {
-    $title='Login';
-    openPage($title);
-    echo "<div>
-    <!-- Login Square -->
-    <div class='square max-w-md'>
-        <div class='square-title'>Login</div>
-        <div class='square-content'>
-            <p>We currently don't have the ability<br />to log users in at this time.<br /><br />Please check back soon.<br /><br /><a class='text-the-color hover:text-foreground transition-colors' href='/'>Click here to return home</a></p>
-        </div>
-    </div>
-    <!-- End Login Square -->
-    </div>";
-    closePage();
-};
+function login()  { unavailable('Login', 'in'); };
+function logout() { unavailable('Logout', 'out'); };
 
-function logout() {
-    $title='Logout';
-    openPage($title);
-    echo "<div>
-    <!-- Logout Square -->
+function unavailable($what, $direction) {
+    openPage($what);
+    echo "
     <div class='square max-w-md'>
-        <div class='square-title'>Login</div>
+        <div class='square-title'>" . $what . "</div>
         <div class='square-content'>
-            <p>We currently don't have the ability<br />to log users out at this time.<br /><br />Please check back soon.<br /><br /><a class='text-the-color hover:text-foreground transition-colors' href='/'>Click here to return home</a></p>
+            <p>We currently don't have the ability<br />to log users " . $direction . " at this time.<br /><br />Please check back soon.<br /><br /><a class='text-the-color hover:text-foreground transition-colors' href='/'>Click here to return home</a></p>
         </div>
-    </div>
-    <!-- End Logout Square -->
     </div>";
     closePage();
 };
 
 function admin() {
-    $title='Administrative Access';
-    openPage($title);
+    openPage('Administrative Access');
     echo "This is a secure area, you may not enter";
     closePage();
 };

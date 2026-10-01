@@ -1,14 +1,7 @@
  <?php if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
 else { include 'import.php'; } ?>
 
-<!DOCTYPE html>
-<html lang='en' class='dark'>
-<head>
-<? head(); ?>
-<title class='dynTitle'>Almost There - Welcome!</title>
-</head>
-<body>
-<? preBody(); ?>
+<? openPage('Welcome!'); ?>
 	<article class='square max-w-md'>
 		<div class='square-title'><span class='truncate'>Hello Anonymous!</span></div>
 		<div class='square-content space-y-3'>
@@ -33,6 +26,4 @@ echo "</div>";
 ?>
 
 
-<? postBody(); ?>
-</body>
-</html>
+<? closePage(); ?>

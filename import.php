@@ -34,7 +34,7 @@ function head() {
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<meta name='theme-color' content='#121212'>
 		<link rel='icon' href='/styles/icon.svg' type='image/svg+xml'>
-		<link rel='stylesheet' type='text/css' href='/styles/app.css?=" . $pageSeed . "'>
+		<link rel='stylesheet' type='text/css' href='/styles/app.css?v=" . filemtime(__DIR__ . '/styles/app.css') . "'>
 		<style>:root {--the-color:" . $theColor . ";} .theColor {color:var(--the-color);} .theBGcolor {color:#222222;background-color:var(--the-color);}</style>";
 };
 
@@ -57,14 +57,13 @@ function navList() {
 		"https://github.com/Almost-There/almostThere" => "GitHub"
 	);
 	$here  = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
-	$first = true;
+	$items = array();
 	foreach ($navLinks as $k => $v) {
-		if (!$first) echo $slash;
-		$first  = false;
 		$ext    = strpos($k, 'http') === 0 ? " target='_blank' rel='noopener'" : "";
 		$active = ($k === '/' && ($here === '/' || $here === '/index.php')) ? "text-the-color font-medium" : "hover:text-the-color";
-		echo "<li><a href='$k'$ext class='px-3 py-2 transition-colors $active'>$v</a></li>\n";
+		$items[] = "<li><a href='$k'$ext class='px-3 py-2 transition-colors $active'>$v</a></li>\n";
 	}
+	echo implode($slash, $items);
 	echo "\n<!-- /navList() -->\n";
 };
 
@@ -141,5 +140,18 @@ global $pageSeed, $theColor;
 </script>";
 	echo "\n<!-- /postBody() -->\n";
 };
+// A whole page: document shell, then the site chrome around the caller's content.
+function openPage($title) {
+	echo "<!DOCTYPE html>\n<html lang='en' class='dark'>\n<head>";
+	head();
+	echo "<title>Almost There - " . $title . "</title>\n</head>\n<body>";
+	preBody();
+};
+
+function closePage() {
+	postBody();
+	echo "</body>\n</html>";
+};
+
 // rebuild colorpicker plugin
 ?>
