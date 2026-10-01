@@ -1,7 +1,5 @@
 <?php
 
-//Use this variable in a querystring after a link to prevent the page from being cached.
-$pageSeed = rand(1024, 2048);
 // Look for setColor Cookie, if it isn't there (or isn't a hex/rgb color), set theColor to E84D5B
 if (isset($_COOKIE["setColor"]) && is_string($_COOKIE["setColor"]) && preg_match('/^(#[0-9a-fA-F]{3,8}|rgba?\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*(,\s*[\d.]+\s*)?\))$/', $_COOKIE["setColor"]))
 			$theColor = $_COOKIE["setColor"];
@@ -27,7 +25,7 @@ $colorPick = array(
 "#F37873", "#F27289", "#E06794", "#B66DA4", "#B376B2", "#AD8244", "#FF29DD" );
 
 function head() {
-			global $pageSeed, $theColor;
+			global $theColor;
 			echo "\n<!-- head() -->\n";
 			echo "
 		<meta charset='utf-8'>
@@ -68,7 +66,6 @@ function navList() {
 };
 
 function preBody() {
-			global $pageSeed, $theColor, $quote;
 			echo "\n<!-- preBody() -->\n";
 			echo "<div class='bg-background text-foreground min-h-screen flex flex-col'>
 <header class='relative'>
@@ -98,7 +95,6 @@ function preBody() {
 /////////////////////////////////////////////////
 
 function postBody() {
-global $pageSeed, $theColor;
 	echo "\n<!-- postBody() -->\n";
 	echo "</main>";
 	/* #allOfTheThings */

@@ -1,28 +1,22 @@
 <?php if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
 else { include 'import.php'; }
 
-$qs = $_SERVER['QUERY_STRING'];
-switch ($qs) {  
-case "404":      notfound();    break;
-case "no":       no();          break;
-case "redirect": redirect();    break;
-case "login":    login();       break;
-case "logout":   logout();      break;
-case "admin":    admin();       break;
-default:         sayHello();    break;
-};
+// Query string => handler. sayHello() lists these keys, so the two can't drift.
+$routes = array(
+    "404"      => "notfound",
+    "no"       => "no",
+    "redirect" => "redirect",
+    "login"    => "login",
+    "logout"   => "logout",
+    "admin"    => "admin",
+);
+($routes[$_SERVER['QUERY_STRING'] ?? ''] ?? 'sayHello')();
 
 function sayHello() {
+    global $routes;
     openPage('Fractal');
     echo "<p>This document has different arguements that can be passed to it.<br />You can try the following Query Strings
-    <ul>
-        <li>notfound</li>
-        <li>no</li>
-        <li>redirect</li>
-        <li>login</li>
-        <li>logout</li>
-        <li>admin</li>
-    </ul>";
+    <ul>\n        <li>" . implode("</li>\n        <li>", array_keys($routes)) . "</li>\n    </ul>";
     closePage();
 };
 
