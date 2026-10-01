@@ -66,7 +66,6 @@ function navList() {
 };
 
 function preBody() {
-			global $theColor;
 			echo "\n<!-- preBody() -->\n";
 			echo "<div class='bg-background text-foreground min-h-screen flex flex-col'>
 <header class='relative'>
@@ -96,7 +95,6 @@ function preBody() {
 /////////////////////////////////////////////////
 
 function postBody() {
-global $theColor;
 	echo "\n<!-- postBody() -->\n";
 	echo "</main>";
 	/* #allOfTheThings */
