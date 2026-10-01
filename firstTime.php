@@ -1,21 +1,15 @@
  <?php if(!file_exists("import.php")) { die("Error! <br />import.php wasn't imported; File cannot be found.<br /> Almost There cannot be loaded"); }
 else { include 'import.php'; } ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<? head(); ?>
-<title class='dynTitle'>Almost There - Welcome!</title>
-</head>
-<body>
-<? preBody(); ?>
-	<div style='width:360px;height:180px;margin:10px;background-color:#323232;color:#FFFFFF;'>
-		<h2 class='nudge'>Hello Anonymous!</h2>
-		<p class='nudge'>This will be the new user landing page, where one may tour the site, as well as create an account with us,<br />
-		These features have not been built yet.</p><br />
-		<p class='nudge'><a href='/firstTime.php'>We are looking forward to having you join us!</p><br />
-		<a style='color:#FFFFFF;' class='nudge' target='_blank' href='https://docs.google.com/forms/d/1tIpOCsndOkGLXeFpaXmcS2pUGcIfaHOKyWZ29ukINxw/viewform'>Join Almost-There's Testing Team</a>
-	</div>
+<? openPage('Welcome!'); ?>
+	<article class='square max-w-md'>
+		<div class='square-title'><span class='truncate'>Hello Anonymous!</span></div>
+		<div class='square-content space-y-3'>
+			<p>This will be the new user landing page, where one may tour the site, as well as create an account with us.</p>
+			<p class='text-sm text-muted-foreground'>These features have not been built yet.</p>
+			<p class='text-sm'><a class='text-the-color hover:text-foreground transition-colors' target='_blank' rel='noopener' href='https://docs.google.com/forms/d/1tIpOCsndOkGLXeFpaXmcS2pUGcIfaHOKyWZ29ukINxw/viewform'>Join Almost There's Testing Team &rarr;</a></p>
+		</div>
+	</article>
 <?
 /* echo "<div class='ma'>";
 echo "<h1>Welcome user to <span class='theColor'>Almost-There!</span> The coolest website on the internet!</h1>";
@@ -32,6 +26,4 @@ echo "</div>";
 ?>
 
 
-<? postBody(); ?>
-</body>
-</html>
+<? closePage(); ?>
