@@ -1,5 +1,7 @@
-# Use an official PHP runtime as a parent image
-FROM php:7.4-apache
+# Use an official PHP runtime as a parent image.
+# 8.3.36 or newer: earlier builds are open to PHP2Shell (CVE-2026-109618 / CVE-2026-109619), and 7.4 gets no fix.
+# It matches what runs live on fridge (fridge-php:8.3, PHP 8.3.36).
+FROM php:8.3.36-apache
 
 # Set the working directory in the container
 WORKDIR /var/www/html
